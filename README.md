@@ -1,12 +1,12 @@
-# 南科手册 / SUSTech Online Manual
+# 水专手册 / SHOU Online Manual
 
-![GitHub repo size](https://img.shields.io/github/repo-size/SUSTech-CRA/sustech-online-ng)
 [![License](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-sa/4.0/)
-[![Stars](https://img.shields.io/github/stars/SUSTech-CRA/sustech-online-ng?style=social)](https://github.com/SUSTech-CRA/sustech-online-ng)
 
-Online manual for SUSTechers.
+Online manual for SHOUers.
 
-`南科手册` 为南科大学生和校友提供常用信息入口、校园生活指南、服务说明和微信小程序入口。这个仓库主要维护网站内容与 VuePress 构建流程。
+`水专手册` 为水专学生和校友提供常用信息入口、校园生活指南、服务说明和微信小程序入口。这个仓库主要维护网站内容与 VuePress 构建流程。
+
+本仓库为南科指南的Fork. 
 
 ## 目录
 
@@ -21,7 +21,10 @@ Online manual for SUSTechers.
 
 ## 项目内容
 
-仓库当前覆盖的内容包括：
+现仓库当前包含的内容包括：
+- 目前没写
+
+原仓库当前覆盖的内容包括：
 
 - 新生入学、学习、生活、校园设施等主题内容
 - 常用入口与校内服务导航
@@ -30,15 +33,11 @@ Online manual for SUSTechers.
 
 ## 相关仓库
 
-- 主项目：[`SUSTech-CRA/sustech-online-ng`](https://github.com/SUSTech-CRA/sustech-online-ng)
-- 镜像：[`Git@SUSTech`](https://mirrors.sustech.edu.cn/git/sustech-online/sustech-online-ng)
-- 微信小程序：[`SUSTech-CRA/sustech-online-wxapp`](https://github.com/SUSTech-CRA/sustech-online-wxapp)
-- 快讯网：[`SUSTech-CRA/sustech-online-daily-blog`](https://github.com/SUSTech-CRA/sustech-online-daily-blog)
+- 主项目：[`Conduit-Club/shou-online-og`](https://github.com/Conduit-Club/shou-online-og)
 
 ## 在线版本
 
-- 正式版本（master 分支构建）：https://sustech.online/
-- 预发测试版本：Netlify / Cloudflare Pages
+- 目前没有
 
 ## 微信小程序
 
@@ -58,8 +57,8 @@ Online manual for SUSTechers.
 ### 安装依赖
 
 ```bash
-git clone https://github.com/SUSTech-CRA/sustech-online-ng.git
-cd sustech-online-ng
+git clone https://github.com/Conduit-Club/shou-online-og.git
+cd shou-online-og
 pnpm install
 ```
 
@@ -114,9 +113,7 @@ pnpm up
 
 ### 方式 2：代理提交
 
-1. 进入 [南科手册 QQ 群](https://jq.qq.com/?_wv=1027&k=5D8EgDF): `905618908`
-2. 按规范整理 Word 或 Markdown 文件
-3. 提交给管理员协助上传
+1. 目前尚未设计完毕。
 
 如果你不确定内容放在哪个目录，先提 issue 或 PR 草稿也可以。
 
