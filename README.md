@@ -25,7 +25,6 @@ Online manual for SHOUers.
 - 目前没写
 
 原仓库当前覆盖的内容包括：
-
 - 新生入学、学习、生活、校园设施等主题内容
 - 常用入口与校内服务导航
 - VuePress 站点配置、脚本与构建流程
@@ -38,14 +37,6 @@ Online manual for SHOUers.
 ## 在线版本
 
 - 目前没有
-
-## 微信小程序
-
-**微信小程序二维码**
-
-![qrcode](./docs/qr-code.jpg)
-
-更多小程序说明可参考站内 `/miniapp` 页面。
 
 ## 本地开发
 
@@ -119,4 +110,6 @@ pnpm up
 
 ## 许可证
 
-This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
+This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/), like the original project.
+
+目前大多数内容（除修改和增添部分）均来自原南科指南。依据CC 4.0 BY-SA方式分享。

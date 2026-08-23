@@ -1,8 +1,8 @@
-# 📚南科手册
+# 📚水专手册
 
 <WeatherSpan/>
 
-* 为 SUSTecher 提供快捷信息查询服务。
+* 为 SHOUer 提供快捷信息查询服务。
 * 移动端须点击左上角，打开目录。
 * [微信小程序，点击这里](/miniapp)。
 * [内容有问题？功能提建议？手册招维护！](/about)
@@ -14,8 +14,7 @@
 * [图书馆](https://lib.sustech.edu.cn/)
 * [邮箱服务](https://mail.sustech.edu.cn)
 * [Sakai](https://sakai.sustech.edu.cn), [Blackboard](https://bb.sustech.edu.cn/)
-* [联创打印服务](https://pms.sustech.edu.cn)
-* [校园卡二维码](https://campuscard.sustech.edu.cn/epay/thirdconsume/qrcode) -->
+* [联创打印服务](https://pms.sustech.edu.cn) -->
 
 <style type="text/css">
 .tg {
@@ -167,7 +166,7 @@ Please use the [Google translation tool in Chrome](https://support.google.com/ch
 
 ### 关于广告
 
-南科手册的建设与运营均由同学独立完成。为了令「南科手册」能够稳定运行，我们可能会在某些页面的底部和小程序中开屏页面中展示由[微信](https://ad.weixin.qq.com/)和[Google](https://www.google.com/adsense/)提供的广告以维持服务器和CDN的开销，敬请谅解。
+水专手册的建设与运营均由同学独立完成。为了令「水专手册」能够稳定运行，我们可能未来会像南科手册一样在某些页面的底部和小程序中开屏页面中展示由[微信](https://ad.weixin.qq.com/)和[Google](https://www.google.com/adsense/)提供的广告以维持服务器和CDN的开销，敬请谅解。
 
 我们将尽力确保：
 - 应急处理页面内不会出现广告

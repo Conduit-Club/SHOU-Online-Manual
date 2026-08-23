@@ -1,6 +1,6 @@
-# 南科手册-微信小程序
+# 水专手册-微信小程序
 
-## 南科手册Times
+## 水专手册Times
 
 <img  :src="$withBase('./qr-code.jpg')" alt="foo"  max-width="200"/>
 

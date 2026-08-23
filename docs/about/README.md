@@ -1,11 +1,6 @@
 # 帮助我们完善
 
-主项目托管在 [SUSTech-CRA/sustech-online-ng](https://github.com/SUSTech-CRA/sustech-online-ng)
-* 镜像：[Git@SUSTech](https://mirrors.sustech.edu.cn/git/sustech-online/sustech-online-ng)
-
-小程序托管在 [SUSTech-CRA/sustech-online-wxapp](https://github.com/SUSTech-CRA/sustech-online-wxapp)
-
-快讯网托管在 [SUSTech-CRA/sustech-online-daily-blog](https://github.com/SUSTech-CRA/sustech-online-daily-blog)
+主项目托管在 [`Conduit-Club/shou-online-og`](https://github.com/Conduit-Club/shou-online-og)
 
 ## 如何贡献 / 建议
 
@@ -14,22 +9,14 @@
     2. 发起 Merge 请求。
 
 2. 邮件提交
-    1. 发送邮件到 support__at__mail.sustech.online (\_\_at\_\_ 替换为 @)
+    1. 尚未设计
 
 3. 代理提交
-    1. 进入[南科手册 QQ群](https://jq.qq.com/?_wv=1027&k=5D8EgDF): 905618908
-    2. 提交规范编写的Word，Markdown 文件给管理员。
-    3. 管理员整理上传。
-
-## 贡献者
-
-<a href="https://github.com/sustech-cra/sustech-online-ng/graphs/contributors">
-  <br><img src="https://contributors-img.web.app/image?repo=sustech-cra/sustech-online-ng" />
-</a>
-
+    1. 尚未设计
+    
 ### 内容
 
-**感谢以下组织对南科手册所做的贡献**（排名不分先后）
+**感谢以下组织对水专手册所做的贡献**（排名不分先后）
 
 - 树德书院先锋团
 
@@ -38,19 +25,23 @@
 
 ### 开发 & 维护
 
-李子强 ◇ 樊青远 ◇ 陈宇恒
+Org: Conduit-Club
 
 ### 计算支持
 
-**感谢以下个人 / 组织对南科手册所提供的计算支持**（排名不分先后）
-
-孙常超 ◇ 计算机研究协会 CRA
+尚且没有。
 
 ### 软件支持
 
 本手册的部分交互组件开发使用了 [Jetbrains Open Source License](https://www.jetbrains.com/community/opensource/#support) 。
 
-#### 南科手册同时参考了：
+#### 水专手册同时参考了：
+
+##### 本手册的参考项目
+
+- [南科手册](https://github.com/SUSTech-CRA/sustech-online-ng)
+
+##### 上游的参考项目
 
 - [上海科技大学新生手册](https://fresh.geekpie.club/)
 

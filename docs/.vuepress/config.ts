@@ -9,8 +9,8 @@ import { viteBundler } from '@vuepress/bundler-vite'
 import ProcessExitPlugin from './components/vite-plugin-vue-process-exit'
 
 const ogprefix = 'og: http://ogp.me/ns#'
-const title = '南科手册'
-const description = 'Online manual for sustecher'
+const title = '水专手册'
+const description = 'Online manual for SHOUer'
 const color = '#49BF7C'
 const author = 'sustech.online'
 

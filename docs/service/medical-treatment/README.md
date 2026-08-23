@@ -12,7 +12,7 @@
 * 树德书院学长团
 * 南科大应急救援队应急手册·附录D [手册链接（点此）](https://mirrors.sustech.edu.cn/git/sustech-online/sustech-online-ng/-/raw/master/docs/emergency/应急手册Emergency_manual2020.pdf)
 * [不知道就亏大了！深圳二档医保，还有这些就医待遇！](https://mp.weixin.qq.com/s/_QTtJb2yKjKynM27YgR2Eg)
-* 南科手册编辑部
+* 水专手册编辑部
 
 
 ## 报销/缴费
