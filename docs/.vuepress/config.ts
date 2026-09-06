@@ -68,6 +68,7 @@ export default defineUserConfig({
             '/organizations/',
             '/media/',
             '/calendar/',
+            '/site-help/contribution-template.html',
             '/site-help/',
         ],
     }),
