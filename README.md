@@ -1,115 +1,31 @@
 # 水专手册 / SHOU Online Manual
 
-[![License](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-sa/4.0/)
+面向上海海洋大学学生、教师与校友的校园生活手册，提供可靠、易查找的校内信息入口。
 
-Online manual for SHOUers.
+本项目由南科手册 fork 而来，目前正处于内容迁移与重建阶段。通用经验会保留，涉及学校制度、地址、系统、联系方式和时间表的内容必须重新核验后才能发布。
 
-`水专手册` 为水专学生和校友提供常用信息入口、校园生活指南、服务说明和微信小程序入口。这个仓库主要维护网站内容与 VuePress 构建流程。
+## 当前状态
 
-本仓库为南科指南的Fork. 
+- VuePress 站点骨架和构建流程可用。
+- 各栏目已建立海大版本占位页。
+- 海大专属资料正在收集、核验和重写。
 
-## 目录
+## 参与贡献
 
-- [项目内容](#项目内容)
-- [相关仓库](#相关仓库)
-- [在线版本](#在线版本)
-- [微信小程序](#微信小程序)
-- [本地开发](#本地开发)
-- [内容结构](#内容结构)
-- [如何贡献](#如何贡献)
-- [许可证](#许可证)
-
-## 项目内容
-
-现仓库当前包含的内容包括：
-- 目前没写
-
-原仓库当前覆盖的内容包括：
-- 新生入学、学习、生活、校园设施等主题内容
-- 常用入口与校内服务导航
-- VuePress 站点配置、脚本与构建流程
-- 微信小程序相关入口与配套信息
-
-## 相关仓库
-
-- 主项目：[`Conduit-Club/shou-online-og`](https://github.com/Conduit-Club/shou-online-og)
-
-## 在线版本
-
-- 目前没有
+欢迎通过 Issue 或 Pull Request 提供内容。涉及电话、地址、流程、价格、时间表和链接的内容，请附官方来源及核验日期；经验分享请注明适用学年。
 
 ## 本地开发
 
-### 环境要求
-
-- Node.js v24
-- pnpm
-
-### 安装依赖
+环境要求：Node.js 24、pnpm。
 
 ```bash
-git clone https://github.com/Conduit-Club/shou-online-og.git
-cd shou-online-og
 pnpm install
-```
-
-### 常用命令
-
-```bash
-# 本地预览
 pnpm run docs:dev
-
-# 完整构建（包含脚本预处理）
 pnpm run docs:build
-
-# 快速构建
-pnpm run docs:fastbuild
-
-# 清理缓存与构建产物
-pnpm run docs:clean
-
-# 升级依赖
-pnpm up
 ```
-
-## 内容结构
-
-```text
-.
-├── docs/
-│   ├── about/
-│   ├── calendar/
-│   ├── canteen/
-│   ├── contact/
-│   ├── emergency/
-│   ├── facility/
-│   ├── life/
-│   ├── miniapp/
-│   ├── service/
-│   ├── study/
-│   └── transport/
-├── instruct/
-├── scripts/
-├── tools/
-└── package.json
-```
-
-## 如何贡献
-
-### 方式 1：直接提交 Pull Request
-
-1. Fork 本仓库
-2. 完成修改
-3. 发起 Pull Request
-
-### 方式 2：代理提交
-
-1. 目前尚未设计完毕。
-
-如果你不确定内容放在哪个目录，先提 issue 或 PR 草稿也可以。
 
 ## 许可证
 
-This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/), like the original project.
+本项目的文档内容默认以 [知识共享署名-相同方式共享 4.0 国际许可协议（CC BY-SA 4.0）](http://creativecommons.org/licenses/by-sa/4.0/) 发布，完整协议文本见仓库根目录的 [`LICENSE`](./LICENSE)。
 
-目前大多数内容（除修改和增添部分）均来自原南科指南。依据CC 4.0 BY-SA方式分享。
+使用或改编上游内容时，须保留原作者和来源说明，并以相同许可协议分享改编内容。图片、PDF、代码和其他第三方材料如有单独许可或版权声明，以其声明为准，不因收录于本仓库而自动适用 CC BY-SA 4.0。

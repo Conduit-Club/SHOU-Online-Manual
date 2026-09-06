@@ -1,23 +1,7 @@
 # 📅校历
 
-[南科校历|南方科技大学](https://www.sustech.edu.cn/zh/academic-calendar.html)
+上海海洋大学校历将在核对教务处官方发布后补充。
 
-## 【当前学年】2025-2026 学年 春季学期
-
-- [下载校历](https://sustech.edu.cn/uploads/images/2025/11/25155122_83600.jpg)
-
-<a data-fancybox title="" href="https://mirrors.sustech.edu.cn/git/sustech-online/sustech-online-ng/-/raw/master/docs/calendar/pic/2026-1.jpg">![](./pic/2026-1.jpg)</a>
-
-<a data-fancybox title="" href="https://mirrors.sustech.edu.cn/git/sustech-online/sustech-online-ng/-/raw/master/docs/calendar/pic/2026-2.jpg">![](./pic/2026-2.jpg)</a>
-
-## 历史校历（存档）
-
-* [2025-2026 学年](2025-2026.md)
-* [2024-2025 学年](2024-2025.md)
-* [2023-2024 学年](2023-2024.md)
-* [2022-2023 学年](2022-2023.md)
-* [2021-2022 学年](2021-2022.md)
-* [2020-2021 学年](2020-2021.md)
-* [2019-2020 学年](2019-2020.md)
-* [2018-2019 学年](2018-2019.md)
-
+::: warning 待核验
+请以学校教务处当学年校历为准。旧的年份校历已移除，避免误导。
+:::

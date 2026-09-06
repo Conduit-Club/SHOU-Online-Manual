@@ -21,7 +21,7 @@
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",
-    "docs:build": "node ./scripts/index.js && vuepress build docs",
+    "docs:build": "vuepress build docs",
     "docs:fastbuild": "vuepress build docs",
     "docs:clean": "rm -rf docs/.vuepress/.cache docs/.vuepress/.temp docs/.vuepress/dist"
   },

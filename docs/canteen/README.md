@@ -1,12 +1,7 @@
-# 🍜饭堂服务
+# 🍜食堂
 
-<ClientOnly>
-  <Canteen></Canteen>
-</ClientOnly>
+本页用于整理上海海洋大学各校区食堂、营业时间、支付方式和意见反馈渠道。
 
-<br/>
-上线伊始，如有问题欢迎及时反馈: <br/>
-susteen-campus@outlook.com
-
-功能更丰富的食堂服务小程序正在开发中，如果您想查看开发内容或者加入开发，请访问：
-[SUSTeen-campus](https://github.com/SUSTeen-campus)
+::: tip 待收集
+欢迎提交校区、食堂名称、营业时间和官方来源；经验信息请注明日期。
+:::
