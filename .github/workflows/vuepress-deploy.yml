@@ -1,0 +1,135 @@
+name: Build and Deploy
+on: 
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+
+  sync-to-sustech-gitlab:
+    # Ensures that only one mirror task will run at a time.
+    concurrency:
+      group: git-mirror
+      cancel-in-progress: true
+    runs-on: ubuntu-latest
+    name: sync site to sustech git
+    if: github.event_name != 'pull_request' && github.repository_owner == 'SUSTech-CRA'
+    steps:
+    - name: Push to sustech-git
+      run: |
+        tmp_dir=$(mktemp -d -t ci-XXXXXXXXXX)
+        echo $tmp_dir
+        cd $tmp_dir
+        git clone --bare "${GITHUB_REPO_URL}" this_repo
+        cd this_repo
+        git config --global http.version HTTP/1.1
+        git config --global http.postBuffer 1048576000
+        git config --global https.postBuffer 1048576000
+        export GIT_TRACE_PACKET=1
+        export GIT_TRACE=1
+        export GIT_CURL_VERBOSE=1
+        git push --verbose --force --mirror "https://${USER}:${PERSONAL_TOKEN}@${REMOTE_REPO_URL}"
+      env:
+        USER: ${{ secrets.SUSTECH_GITLAB_SYNC_USER }}
+        PERSONAL_TOKEN: ${{ secrets.SUSTECH_GITLAB_SYNC_TOKEN }}
+        GITHUB_REPO_URL: https://github.com/SUSTech-CRA/sustech-online-ng.git
+        REMOTE_REPO_URL: "mirrors.sustech.edu.cn/git/sustech-online/sustech-online-ng.git"
+
+  build:
+    runs-on: ubuntu-latest
+    name: Build site
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - uses: szenius/set-timezone@v2.0
+      with:
+        timezoneLinux: "Asia/Shanghai"
+
+    - name: Check Time
+      run: date
+
+    - uses: actions/setup-node@v4
+      name: Install Node.js
+      with:
+        node-version-file: '.nvmrc'
+
+    - uses: pnpm/action-setup@v4
+      name: Install pnpm
+      with:
+        version: 10
+        # pnpm、node兼容性矩阵：https://pnpm.io/installation#compatibility
+
+    - name: Install Dependencies
+      run: pnpm install
+
+    - name: Check pnpm / node version
+      run: |
+        echo "pnpm version `pnpm --version`"
+        echo "node version `node -v`"
+        pnpm list
+
+    - name: Build Site
+      run: |
+        pnpm docs:clean
+        pnpm docs:build
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: 'sustech-online-build'
+        path: './docs/.vuepress/dist/'
+
+  deploy-on-master:
+    name: Deploy site (master)
+    runs-on: "ubuntu-latest"
+    needs: build
+    if: github.repository_owner == 'SUSTech-CRA' && github.ref == 'refs/heads/master'
+    steps:
+    - uses: actions/download-artifact@v4
+      with:
+        name: sustech-online-build
+        path: "./docs/.vuepress/dist/"
+
+    - name: Display structure of downloaded files
+      run: ls -R
+      working-directory: "./docs/.vuepress/dist/"
+
+    - name: Deploy to GitHub page
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs/.vuepress/dist/
+        force_orphan: true
+
+    - name: copy file to server CAN-ZQ
+      uses: burnett01/rsync-deployments@5.0
+      with:
+        switches: -avzr --delete
+        path: "./docs/.vuepress/dist/"
+        remote_path: ${{ secrets.HTML_PATH }}
+        remote_host: ${{ secrets.HOST_CAN_ZQ }}
+        remote_user: ${{ secrets.USERNAME }}
+        remote_key: ${{ secrets.SSH_KEY }}
+
+    - name: copy file to server SZX
+      uses: burnett01/rsync-deployments@5.0
+      with:
+        switches: -avzr --delete
+        path: "./docs/.vuepress/dist/"
+        remote_path: ${{ secrets.HTML_PATH_SZX }}
+        remote_host: ${{ secrets.HOST_SZX }}
+        remote_user: ${{ secrets.USERNAME_SZX }}
+        remote_key: ${{ secrets.SSH_KEY_SZX }}
+
+    - name: copy file to server CAN
+      uses: burnett01/rsync-deployments@5.0
+      with:
+        switches: -avzr --delete
+        path: "./docs/.vuepress/dist/"
+        remote_path: ${{ secrets.HTML_PATH_SZX }}
+        remote_host: ${{ secrets.HOST_CAN }}
+        remote_user: ${{ secrets.USERNAME_SZX }}
+        remote_key: ${{ secrets.SSH_KEY_SZX }}
