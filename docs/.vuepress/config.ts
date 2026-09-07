@@ -58,6 +58,7 @@ export default defineUserConfig({
             '/if-you-are-a-freshman/',
             '/study/',
             '/service/',
+            '/service/official-entrances.html',
             '/life/',
             '/canteen/',
             '/facility/',
