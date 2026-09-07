@@ -31,7 +31,6 @@
   "dependencies": {
     "@turf/turf": "^7.4.0",
     "axios": "^1.19.0",
-    "download": "^8.0.0",
     "echarts": "^6.1.0",
     "maplibre-gl": "^5.24.0",
     "pmtiles": "^4.5.0",
