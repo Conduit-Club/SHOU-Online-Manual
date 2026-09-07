@@ -10,6 +10,7 @@
 
 - Aer
 - [Moeary](https://github.com/Moeary)
+- [Aaron Ruan](https://github.com/Aaron-212)
 
 ## 如何贡献
 
