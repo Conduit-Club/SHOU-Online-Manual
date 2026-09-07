@@ -10,6 +10,7 @@ const color = '#49BF7C'
 
 export default defineUserConfig({
     bundler: viteBundler(),
+    shouldPrefetch: false,
     locales: {
         '/': {
             title,
@@ -44,9 +45,9 @@ export default defineUserConfig({
             { text: '关于', link: '/about/' },
             { text: '站点帮助', link: '/site-help/' },
         ],
-        repo: 'Conduit-Club/shou-online-og',
+        repo: 'Conduit-Club/shou-online-guide',
         repoLabel: '在 GitHub 上查看',
-        docsRepo: 'Conduit-Club/shou-online-og',
+        docsRepo: 'Conduit-Club/shou-online-guide',
         docsDir: 'docs',
         editLinkText: '一起完善这本手册！',
         lastUpdatedText: '上次更新',

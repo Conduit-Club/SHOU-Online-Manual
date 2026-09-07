@@ -37,7 +37,7 @@ pixi run start     # 构建后在 http://localhost:8080 预览产物
 
 GitHub Actions 使用 `pixi run --locked build` 验证构建并保存产物。网站由 Vercel 的 Git 集成自动部署，不再通过工作流发布 GitHub Pages。
 
-在 Vercel 导入 `Conduit-Club/shou-online-og`，Framework Preset 选择 **Other**，根目录为仓库根目录。`vercel.json` 已配置：
+在 Vercel 导入 `Conduit-Club/shou-online-guide`，Framework Preset 选择 **Other**，根目录为仓库根目录。`vercel.json` 已配置：
 
 | 配置 | 值 |
 | --- | --- |
