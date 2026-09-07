@@ -30,6 +30,15 @@ export default defineUserConfig({
         tocPlugin(),
     ],
     theme: defaultTheme({
+        themePlugins: {
+            git: {
+                contributors: {
+                    transform: (contributors) => contributors.filter(
+                        ({ name }) => ['aer', 'moeary'].includes(name.toLowerCase()),
+                    ),
+                },
+            },
+        },
         navbar: [
             { text: '主页', link: '/' },
             { text: '关于', link: '/about/' },

@@ -1,75 +1,34 @@
-name: Build and Deploy
-on: 
+name: Build with Pixi
+on:
   push:
+    branches: [master, dev]
   pull_request:
+    branches: [master, dev]
   workflow_dispatch:
 
-jobs:
+permissions:
+  contents: read
 
+jobs:
   build:
     runs-on: ubuntu-latest
-    name: Build site
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: prefix-dev/setup-pixi@v0.9.0
+        with:
+          pixi-version: v0.76.2
+          cache: true
+          locked: true
+      - name: Build site
+        run: pixi run --locked build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: shou-online-build
+          path: docs/.vuepress/dist/
+          include-hidden-files: true
+          if-no-files-found: error
 
-    - uses: szenius/set-timezone@v2.0
-      with:
-        timezoneLinux: "Asia/Shanghai"
-
-    - name: Check Time
-      run: date
-
-    - uses: actions/setup-node@v4
-      name: Install Node.js
-      with:
-        node-version-file: '.nvmrc'
-
-    - uses: pnpm/action-setup@v4
-      name: Install pnpm
-      with:
-        version: 12
-
-    - name: Install Dependencies
-      run: pnpm install --frozen-lockfile
-
-    - name: Check pnpm / node version
-      run: |
-        echo "pnpm version `pnpm --version`"
-        echo "node version `node -v`"
-        pnpm list
-
-    - name: Build Site
-      run: |
-        pnpm docs:clean
-        pnpm docs:build
-
-    - name: Upload artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: 'shou-online-build'
-        path: './docs/.vuepress/dist/'
-
-  deploy-on-master:
-    name: Deploy site (master)
-    runs-on: "ubuntu-latest"
-    needs: build
-    if: github.ref == 'refs/heads/master'
-    steps:
-    - uses: actions/download-artifact@v4
-      with:
-        name: shou-online-build
-        path: "./docs/.vuepress/dist/"
-
-    - name: Display structure of downloaded files
-      run: ls -R
-      working-directory: "./docs/.vuepress/dist/"
-
-    - name: Deploy to GitHub page
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./docs/.vuepress/dist/
-        force_orphan: true
+# Vercel's Git integration handles deployment:
+# master -> Production, dev / pull requests -> Preview.

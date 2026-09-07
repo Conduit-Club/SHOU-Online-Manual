@@ -1,0 +1,18 @@
+[workspace]
+name = "shou-online-manual"
+version = "0.1.0"
+description = "上海海洋大学校园信息手册"
+authors = ["Aer", "Moeary"]
+channels = ["conda-forge"]
+platforms = ["win-64", "linux-64", "osx-arm64", "osx-64"]
+requires-pixi = ">=0.76.2"
+
+[dependencies]
+nodejs = "24.*"
+pnpm = "12.3.4.*"
+
+[tasks]
+install = "pnpm install --frozen-lockfile"
+dev = { cmd = "pnpm run docs:dev", depends-on = ["install"] }
+build = { cmd = "pnpm run docs:build", depends-on = ["install"] }
+start = { cmd = "pnpm exec serve docs/.vuepress/dist --listen 8080", depends-on = ["build"] }

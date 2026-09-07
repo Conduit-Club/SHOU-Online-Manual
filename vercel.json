@@ -1,0 +1,8 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "bash scripts/vercel-install.sh",
+  "buildCommand": ".vercel/pixi/bin/pixi run --locked build",
+  "outputDirectory": "docs/.vuepress/dist",
+  "devCommand": "pixi run dev"
+}

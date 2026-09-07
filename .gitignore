@@ -5,3 +5,8 @@ node_modules/
 
 package-lock.json
 yarn.lock
+.pixi/
+.vercel/
+.backups/
+docs/.vuepress/.cache/
+docs/.vuepress/.temp/
