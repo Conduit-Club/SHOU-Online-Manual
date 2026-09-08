@@ -28,14 +28,14 @@ GitHub Student Developer Pack（下称学生包）把多家服务商的学生优
 
 以下按 **2026-09-08** 的[学生包项目列表](https://education.github.com/pack#offers)整理。两个域名来自不同服务商，是分别申请的首年优惠；是否可领还取决于各自的账号资格和可注册域名。
 
-| 项目 | 能拿到什么、适合做什么 | 期限与领取提醒 |
-| --- | --- | --- |
-| GitHub Pro | 学生期间免费使用 GitHub Pro，适合管理代码仓库和个人开发项目 | 保持有效学生身份；与 Copilot 是两项不同权益 |
-| GitHub Copilot Student | 经验证学生可免费激活的 AI 编程助手计划，提供无限 IDE 代码补全及一定 GitHub AI Credits，可辅助写代码、解释代码与测试 | 聊天和 agent 有用量限制，模型采用自动选择；具体额度看账号当前页面，不等于所有模型和功能无限用 |
-| JetBrains | IntelliJ IDEA Ultimate、PyCharm Professional、CLion、Rider 等“全家桶”教育授权，适合课程与非商业开发学习 | 授权 1 年，可按学生资格续期；领取方式与限制见下文 |
-| Microsoft Azure | Azure for Students 的 100 美元额度，可用于学习云服务、部署课程项目 | 12 个月；年满 18 岁，并通过 Microsoft 的申请审核，详见下文 |
-| Namecheap | 1 年免费 `.me` 域名注册及 1 年 SSL 证书，可用于个人主页、作品集 | 从学生包的 Namecheap 条目领取；次年续费另计，续费价格以注册商为准 |
-| Name.com | 一个首年免费域名，可选 25 种以上后缀，例如 `.live`、`.studio`、`.software`、`.app`、`.dev` | 从学生包的 Name.com 链接进入并用 GitHub 登录；需填写可验证的真实联系信息，首年后按标准价格续费 |
+| 项目                   | 能拿到什么、适合做什么                                                                                              | 期限与领取提醒                                                                                 |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| GitHub Pro             | 学生期间免费使用 GitHub Pro，适合管理代码仓库和个人开发项目                                                         | 保持有效学生身份；与 Copilot 是两项不同权益                                                    |
+| GitHub Copilot Student | 经验证学生可免费激活的 AI 编程助手计划，提供无限 IDE 代码补全及一定 GitHub AI Credits，可辅助写代码、解释代码与测试 | 聊天和 agent 有用量限制，模型采用自动选择；具体额度看账号当前页面，不等于所有模型和功能无限用  |
+| JetBrains              | IntelliJ IDEA Ultimate、PyCharm Professional、CLion、Rider 等“全家桶”教育授权，适合课程与非商业开发学习             | 授权 1 年，可按学生资格续期；领取方式与限制见下文                                              |
+| Microsoft Azure        | Azure for Students 的 100 美元额度，可用于学习云服务、部署课程项目                                                  | 12 个月；年满 18 岁，并通过 Microsoft 的申请审核，详见下文                                     |
+| Namecheap              | 1 年免费 `.me` 域名注册及 1 年 SSL 证书，可用于个人主页、作品集                                                     | 从学生包的 Namecheap 条目领取；次年续费另计，续费价格以注册商为准                              |
+| Name.com               | 一个首年免费域名，可选 25 种以上后缀，例如 `.live`、`.studio`、`.software`、`.app`、`.dev`                          | 从学生包的 Name.com 链接进入并用 GitHub 登录；需填写可验证的真实联系信息，首年后按标准价格续费 |
 
 想搭个人网站，可从两个域名优惠中选择合适后缀；想学编程，先领取 GitHub Pro、Copilot 和 JetBrains；想练习云部署，再按课程需要开通 Azure。域名注册与服务器托管是两项服务，领到域名后仍需配置网站托管和 DNS。
 
