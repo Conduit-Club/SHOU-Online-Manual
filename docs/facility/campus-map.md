@@ -15,3 +15,5 @@
 :::
 
 目前只收录临港校区地图；军工路校区不在本手册的当前校园范围内。
+
+<CampusMap :center="[121.89284, 30.88462]" :zoom="15" height="960px" pmtiles="/maps/campus.pmtiles" />

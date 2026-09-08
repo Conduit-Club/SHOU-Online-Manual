@@ -39,12 +39,12 @@ GitHub Actions 使用 `pixi run --locked build` 验证构建并保存产物。�
 
 在 Vercel 导入 `Conduit-Club/shou-online-guide`，Framework Preset 选择 **Other**，根目录为仓库根目录。`vercel.json` 已配置：
 
-| 配置 | 值 |
-| --- | --- |
-| Install Command | `bash scripts/vercel-install.sh` |
-| Build Command | `.vercel/pixi/bin/pixi run --locked build` |
-| Output Directory | `docs/.vuepress/dist` |
-| Development Command | `pixi run dev` |
+| 配置                | 值                                         |
+| ------------------- | ------------------------------------------ |
+| Install Command     | `bash scripts/vercel-install.sh`           |
+| Build Command       | `.vercel/pixi/bin/pixi run --locked build` |
+| Output Directory    | `docs/.vuepress/dist`                      |
+| Development Command | `pixi run dev`                             |
 
 安装脚本从 Pixi 官方来源安装与 CI 相同的版本，再通过锁文件安装依赖。Vercel 的 Production Branch 在项目的 Environments → Production 中设置为 `master`；首次可选择 `dev` 部署，随后切回 `master`。
 
