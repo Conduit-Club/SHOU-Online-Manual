@@ -8,6 +8,9 @@
     "docs:clean": "rm -rf docs/.vuepress/.cache docs/.vuepress/.temp docs/.vuepress/dist"
   },
   "dependencies": {
+    "@protomaps/basemaps": "^5.7.2",
+    "maplibre-gl": "^6.7.0",
+    "pmtiles": "^4.5.0",
     "vue": "^3.5.41"
   },
   "devDependencies": {
