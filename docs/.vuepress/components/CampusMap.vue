@@ -1,7 +1,7 @@
 <script setup>
 import { onBeforeUnmount, onMounted, ref, watch } from "vue";
 import { useDarkMode } from "@vuepress/theme-default/client";
-import { layers, namedFlavor } from "@protomaps/basemaps";
+import { layers, LIGHT, DARK } from "@protomaps/basemaps";
 import { withBase } from "vuepress/client";
 import { loadPmtiles } from "./campusOverlay.js";
 import "maplibre-gl/dist/maplibre-gl.css";
@@ -15,8 +15,19 @@ const props = defineProps({
 });
 
 const isDark = useDarkMode();
+const flavors = {
+  light: {
+    ...LIGHT,
+    water: "#9bd8f0",
+    buildings: "#d5cec4",
+    school: "#f3e8cf",
+    park_a: "#d9ead3",
+    park_b: "#b8ddb0",
+  },
+  dark: DARK,
+};
 const flavorName = () => (isDark.value ? "dark" : "light");
-const basemapLayers = () => layers("campus", namedFlavor(flavorName()), { lang: "zh-Hans" });
+const basemapLayers = () => layers("campus", flavors[flavorName()], { lang: "zh-Hans" });
 const mapStyle = () => ({
   version: 8,
   glyphs: "https://protomaps.github.io/basemaps-assets/fonts/{fontstack}/{range}.pbf",
