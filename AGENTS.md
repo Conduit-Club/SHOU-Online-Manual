@@ -46,13 +46,6 @@
 - 保持变更最小且可回滚；无关重排、批量改名和格式化不要混入功能提交。
 - 提交信息应简洁、明确地描述结果；一个提交尽量只包含一个逻辑主题。
 
-## 跨 Shell 使用 Pixi
-
-- Windows 上需要 Bash 时使用标准 Git Bash（例如 `D:\Programs_Dev\Git\usr\bin\bash.exe`），不要改用 w64devkit 或其他 Bash 兼容层。
-- Pixi 使用现有的全局配置和 `PIXI_HOME`；如果它已指向 `D:\Programs_Dev\Pixihome`，必须保留并直接使用，不得为了仓库命令改写系统或用户环境变量。
-- PowerShell 7 和 Git Bash 均从仓库根目录直接运行 `pixi run --locked build`。不要在仓库中添加会自动设置 `HOME`、`PIXI_HOME` 或重写 Windows/Unix 路径的包装脚本。
-- 若 shell 未继承正确的 `HOME`、`PIXI_HOME` 或 `pixi` 路径，应报告具体环境问题；除非用户明确授权，不要通过新建目录、持久化环境变量或删除其他 Pixi 目录来绕过问题。
-
 ## 推荐工作流程
 
 1. 开始前确认工作区、当前分支和远端状态，保留与任务无关的现有改动。
