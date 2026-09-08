@@ -21,20 +21,25 @@
 先安装 [Pixi](https://pixi.sh/latest/installation/)。项目由 Pixi 管理 Node.js 24、pnpm 12 和常用任务，无需另行全局安装 Node.js 或 pnpm。支持 Windows x64、Linux x64 和 macOS Intel / Apple Silicon。
 
 ```bash
-pixi run dev       # 安装锁定依赖并启动开发服务器，支持热更新
-pixi run build     # 安装锁定依赖并构建静态站点
-pixi run start     # 构建后在 http://localhost:8080 预览产物
+pixi run dev                 # 安装锁定依赖并启动开发服务器，支持热更新
+pixi run --locked build      # 安装锁定依赖并构建静态站点
+pixi run start               # 构建后在 http://localhost:8080 预览产物
 ```
 
-首次运行会自动创建 `.pixi` 环境并安装依赖。构建产物位于 `docs/.vuepress/dist/`。传参示例：`pixi run dev --host 0.0.0.0`。
+首次运行会自动创建 `.pixi` 环境并安装依赖。构建产物位于 `docs/.vuepress/dist/`。传参示例：`pixi run dev --host 0.0.0.0`。代码格式检查使用 `pixi run --locked fmt-check`。
 
 `pixi.lock` 锁定工具环境，`pnpm-lock.yaml` 锁定 JavaScript 依赖，两者都须纳入版本控制。仅安装依赖可运行 `pixi run install`；新增前端依赖使用 `pixi run pnpm add <package>`，更新后提交对应清单与锁文件。
+
+### Windows Shell
+
+需要 Bash 时使用标准 Git Bash（例如 `D:\Programs_Dev\Git\usr\bin\bash.exe`），不要使用 w64devkit。PowerShell 7 和 Git Bash 都应从仓库根目录直接运行上面的 `pixi` 命令，并保留现有全局 `PIXI_HOME` 配置；本仓库不提供会改写 `HOME`、`PIXI_HOME` 或路径的包装脚本。
 
 ## 分支与部署
 
 - `dev`：日常开发与 Vercel 预览。
 - `master`：正式发布，Vercel Production Branch 设为 `master`。
-- 首次使用 `dev` 部署以检查效果；确认后通过 Pull Request 合并到 `master` 发布。
+- 所有 feature 分支必须先通过 Pull Request 合并到 `dev`，并在 `dev` 完成构建验证；禁止 feature 分支直接提交、推送或合并到 `master`。
+- 首次使用 `dev` 部署以检查效果；确认后只能通过 `dev` 到 `master` 的 Pull Request 发布。
 
 GitHub Actions 使用 `pixi run --locked build` 验证构建并保存产物。网站由 Vercel 的 Git 集成自动部署，不再通过工作流发布 GitHub Pages。
 
