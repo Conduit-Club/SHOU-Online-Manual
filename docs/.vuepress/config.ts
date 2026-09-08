@@ -94,7 +94,14 @@ export default defineUserConfig({
             '/canteen/',
             '/facility/',
             '/facility/campus-map.html',
-            '/transport/',
+            {
+                text: '交通',
+                link: '/transport/',
+                children: [
+                    { text: '机场到校', link: '/transport/airports.html' },
+                    { text: '火车站到校', link: '/transport/railway-stations.html' },
+                ],
+            },
             '/surroundings/',
             '/contact/',
             '/emergency/',
