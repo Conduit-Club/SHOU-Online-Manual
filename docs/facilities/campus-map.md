@@ -1,12 +1,12 @@
 # 校园地图
 
-## 临港校区校园总平图
+## 校园总平图
 
 目前先使用上海海洋大学后勤与基建管理处公开的 **校园总平图 202509**。
 
-![上海海洋大学临港校区校园总平图](../assets/campus-map-202509.jpg)
+![上海海洋大学校园总平图](/assets/campus-map-202509.jpg)
 
-- [下载原始 PDF](../assets/campus-map-202509.pdf)
+- [下载原始 PDF](/assets/campus-map-202509.pdf)
 - [后勤与基建管理处原页面](https://hqc.shou.edu.cn/2024/0822/c9765a333088/page.htm)
 - [学校官网校园地图栏目](https://www.shou.edu.cn/xydt/list.htm)
 

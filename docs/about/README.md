@@ -10,6 +10,7 @@
 
 - Aer
 - [Moeary](https://github.com/Moeary)
+- [Aaron Ruan](https://github.com/Aaron-212)
 
 ## 如何贡献
 
@@ -24,5 +25,5 @@
 本站基于[南科手册](https://github.com/SUSTech-CRA/sustech-online-ng)的文档结构与部分内容改编，上游作者署名可查阅其[提交历史](https://github.com/SUSTech-CRA/sustech-online-ng/commits/master/)。原作者和来源会在改编页面中保留并逐项补充。当前维护者名单仅表示本手册的维护责任，不替代上游原创内容的署名。
 
 ::: tip 许可证
-除特别声明外，本项目文档内容遵循 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.zh)，完整协议见仓库根目录 [`LICENSE`](../../LICENSE)。改编上游内容须保留署名并以相同方式共享；第三方图片、PDF、代码或其他材料以其自身许可为准。
+除特别声明外，本项目文档内容遵循 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.zh)，完整协议见仓库根目录 [`LICENSE`](https://github.com/Conduit-Club/shou-online-guide/blob/master/LICENSE)。改编上游内容须保留署名并以相同方式共享；第三方图片、PDF、代码或其他材料以其自身许可为准。
 :::

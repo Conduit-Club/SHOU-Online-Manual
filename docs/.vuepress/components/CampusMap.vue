@@ -5,6 +5,10 @@ import { layers, LIGHT, DARK } from "@protomaps/basemaps";
 import { withBase } from "vuepress/client";
 import { loadPmtiles } from "./campusOverlay.js";
 import "maplibre-gl/dist/maplibre-gl.css";
+import { setWorkerUrl } from "maplibre-gl";
+
+import workerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url";
+setWorkerUrl(workerUrl);
 
 const props = defineProps({
   center: { type: Array, default: () => [121.9, 30.9] },
