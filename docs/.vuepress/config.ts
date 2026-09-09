@@ -60,6 +60,7 @@ export default defineUserConfig({
           { text: "校园网络", link: "/service/network/" },
           { text: "打印机", link: "/service/teaching/printer.html" },
           { text: "电子邮件", link: "/service/communication/email.html" },
+          { text: "快递收发", link: "/service/packages/" },
           { text: "就医指南", link: "/service/medical/" },
           {
             text: "软件授权",
