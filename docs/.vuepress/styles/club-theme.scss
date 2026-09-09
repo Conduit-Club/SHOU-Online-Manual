@@ -258,17 +258,17 @@ body {
   color: var(--club-accent);
 }
 
-html.dark {
-  --club-bg: #261f1e;
-  --club-panel: #352827;
-  --club-panel-muted: #2d2423;
+html[data-theme="dark"] {
+  --club-bg: #211b1b;
+  --club-panel: #362927;
+  --club-panel-muted: #2b2221;
   --club-text: #f8eee8;
-  --club-muted: #dbc9c4;
-  --club-accent: #e09aa5;
-  --club-accent-soft: #4c3035;
-  --club-line: #65494c;
-  --club-line-strong: #a47b80;
-  --club-yellow: #e8c39d;
+  --club-muted: #c8b4ad;
+  --club-accent: #d9919e;
+  --club-accent-soft: #4a2e35;
+  --club-line: #5c4546;
+  --club-line-strong: #85666b;
+  --club-yellow: #e4b98d;
   --club-shadow: 0 8px 22px rgb(0 0 0 / 28%);
 
   --vp-c-accent: var(--club-accent);
@@ -282,6 +282,22 @@ html.dark {
   --vp-c-bg-elv: var(--club-panel);
   --vp-c-divider: var(--club-line);
   --vp-c-border: var(--club-line);
+}
+
+html[data-theme="dark"] .vp-navbar-item > .auto-link:hover {
+  color: var(--club-yellow);
+}
+
+html[data-theme="dark"] .vp-page #content a:hover {
+  color: var(--club-yellow);
+}
+
+html[data-theme="dark"] .vp-page #content .hint-container.warning {
+  border-left-color: var(--club-yellow);
+}
+
+html[data-theme="dark"] .vp-page #content pre {
+  background: #181516;
 }
 
 @media (max-width: 719px) {
