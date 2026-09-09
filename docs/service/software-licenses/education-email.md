@@ -99,9 +99,9 @@ Tableau 适合学习数据分析与可视化。当前[Tableau for Students](http
 
 [Microsoft Office 365 教育版](https://www.microsoft.com/zh-cn/education/products/office)面向符合条件教育机构的师生提供免费 A1，主要包括 Word、Excel、PowerPoint 等网页版应用。**免费 A1 不代表拥有完整桌面 Office 授权**；可安装桌面版等权益取决于学校采购及分配的具体计划。
 
-本次未确认上海海洋大学是否为学生提供相关订阅，也未确认可分配的计划。请先向学校[信息化服务部门](../../contact/README.md)核实，再按 Microsoft 官方流程验证。资格通常随在读身份持续，并可能重新验证；资格结束后，学校账号的网页版应用、OneDrive 等服务可能停用，离校前应导出个人资料。
+本次未确认上海海洋大学是否为学生提供相关订阅，也未确认可分配的计划。请先向学校[信息化服务部门](/contact/)核实，再按 Microsoft 官方流程验证。资格通常随在读身份持续，并可能重新验证；资格结束后，学校账号的网页版应用、OneDrive 等服务可能停用，离校前应导出个人资料。
 
-学校统一购买的软件与授权另见[学校已购买的软件](./purchased.md)；邮箱开通与使用说明另见[电子邮件](../communication/email.md)。
+学校统一购买的软件与授权另见[学校已购买的软件](./purchased.md)；邮箱开通与使用说明另见[电子邮件](/service/communication/email.html)。
 
 ## 申请与到期检查
 

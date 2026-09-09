@@ -8,4 +8,5 @@
 :::
 
 ## 潮涌核心社
+
 潮涌核心社是上海海洋大学的Minecraft社团，目前托管有社团服务器。同时，也是[本项目](https://github.com/Conduit-Club/shou-online-guide)的维护组织。
