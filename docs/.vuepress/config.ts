@@ -22,23 +22,8 @@ export default defineUserConfig({
     ["meta", { name: "theme-color", content: color }],
     ["link", { rel: "manifest", href: "/manifest.webmanifest" }],
   ],
-  plugins: [
-    pwaPlugin({
-      skipWaiting: true,
-      clientsClaim: true,
-      cleanupOutdatedCaches: true,
-    }),
-    tocPlugin(),
-  ],
+  plugins: [pwaPlugin(), tocPlugin()],
   theme: defaultTheme({
-    themePlugins: {
-      git: {
-        contributors: {
-          transform: (contributors) =>
-            contributors.filter(({ name }) => ["aer", "moeary"].includes(name.toLowerCase())),
-        },
-      },
-    },
     navbar: [
       { text: "主页", link: "/" },
       { text: "关于", link: "/about/" },
