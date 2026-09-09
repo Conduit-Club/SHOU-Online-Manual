@@ -8,7 +8,7 @@
 
 水专手册支持[PWA](https://sspai.com/post/60928)[(Progressive Web App)](https://web.dev/progressive-web-apps/)，这意味着您可以将它添加到桌面，并作为一个本地应用使用。因此，在下载应用后，即使在网络不佳的环境下，您依然可以阅读水专手册上的内容。
 
-### Andoid
+### Android
 
 以Chrome为例：
 
