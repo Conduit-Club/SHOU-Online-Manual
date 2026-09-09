@@ -54,11 +54,31 @@
     {
       "type": "Feature",
       "properties": {
-        "label": "近邻宝快递中心"
+        "label": "本科生区近邻宝"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [121.8928971, 30.8796825]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "研究生区近邻宝"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.88976861, 30.88934151]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "收发室"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.89300083, 30.88242689]
       }
     },
     {
