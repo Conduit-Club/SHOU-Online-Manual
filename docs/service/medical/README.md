@@ -99,5 +99,5 @@
 - [上海海洋大学后勤与基建管理处](https://hqc.shou.edu.cn/9762/list.htm)
 - [上海海洋大学信息公开 - 医疗服务](https://xxgk.shou.edu.cn/2019/1102/c8124a259514/page.htm)
 - [上海市医疗保障局（大学生医保政策发布平台）](https://ybj.shanghai.gov.cn/)
-- [学校黄页 - 医疗与学生医保](../../contact/README.md#医疗与学生医保)
-- [应急处理指南](../../emergency/README.md)
+- [学校黄页 - 医疗与学生医保](/contact/#医疗与学生医保)
+- [应急处理指南](/emergency/)
