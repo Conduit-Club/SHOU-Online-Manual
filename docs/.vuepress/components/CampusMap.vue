@@ -1,7 +1,7 @@
 <script setup>
 import { onBeforeUnmount, onMounted, ref, watch } from "vue";
 import { useDarkMode } from "@vuepress/theme-default/client";
-import { layers, LIGHT, DARK } from "@protomaps/basemaps";
+import { campusLayers } from "./campusThemes.js";
 import { withBase } from "vuepress/client";
 import { loadPmtiles } from "./campusOverlay.js";
 import "maplibre-gl/dist/maplibre-gl.css";
@@ -19,19 +19,8 @@ const props = defineProps({
 });
 
 const isDark = useDarkMode();
-const flavors = {
-  light: {
-    ...LIGHT,
-    water: "#9bd8f0",
-    buildings: "#d5cec4",
-    school: "#f3e8cf",
-    park_a: "#d9ead3",
-    park_b: "#b8ddb0",
-  },
-  dark: DARK,
-};
 const flavorName = () => (isDark.value ? "dark" : "light");
-const basemapLayers = () => layers("campus", flavors[flavorName()], { lang: "zh-Hans" });
+const basemapLayers = () => campusLayers("campus", flavorName());
 const mapStyle = () => ({
   version: 8,
   glyphs: "https://protomaps.github.io/basemaps-assets/fonts/{fontstack}/{range}.pbf",
@@ -90,6 +79,150 @@ function applyOverlay() {
     constrainCamera();
     loading.value = false;
   }
+
+  if (!map.getSource("canteens")) {
+    map.addSource("canteens", { type: "geojson", data: withBase("/maps/canteens.json") });
+  }
+  if (!map.getLayer("canteens-point")) {
+    map.addLayer({
+      id: "canteens-point",
+      type: "symbol",
+      source: "canteens",
+      minzoom: 14,
+      layout: {
+        "text-field": ["get", "label"],
+        "text-anchor": "center",
+        "text-allow-overlap": true,
+        "text-size": 13,
+      },
+      paint: {
+        "text-color": isDark.value ? "#dfdfdf" : "#1c1c1e",
+        "text-halo-color": isDark.value ? "#242424" : "#ffffff",
+        "text-halo-width": 1,
+      },
+    });
+  }
+  map.moveLayer("canteens-point");
+
+  if (!map.getSource("undergrad-dorms")) {
+    map.addSource("undergrad-dorms", { type: "geojson", data: withBase("/maps/undergrad-dorms.json") });
+  }
+  if (!map.getLayer("undergrad-dorms-point")) {
+    map.addLayer({
+      id: "undergrad-dorms-point",
+      type: "symbol",
+      source: "undergrad-dorms",
+      minzoom: 15,
+      layout: {
+        "text-field": ["get", "label"],
+        "text-anchor": "center",
+        "text-allow-overlap": true,
+        "text-size": 12,
+      },
+      paint: {
+        "text-color": isDark.value ? "#efe3c2" : "#5f4700",
+        "text-halo-color": isDark.value ? "#242424" : "#ffffff",
+        "text-halo-width": 1,
+      },
+    });
+  }
+  map.moveLayer("undergrad-dorms-point");
+
+  if (!map.getSource("grad-dorms")) {
+    map.addSource("grad-dorms", { type: "geojson", data: withBase("/maps/grad-dorms.json") });
+  }
+  if (!map.getLayer("grad-dorms-point")) {
+    map.addLayer({
+      id: "grad-dorms-point",
+      type: "symbol",
+      source: "grad-dorms",
+      minzoom: 15,
+      layout: {
+        "text-field": ["get", "label"],
+        "text-anchor": "center",
+        "text-allow-overlap": true,
+        "text-size": 12,
+      },
+      paint: {
+        "text-color": isDark.value ? "#efe3c2" : "#5f4700",
+        "text-halo-color": isDark.value ? "#242424" : "#ffffff",
+        "text-halo-width": 1,
+      },
+    });
+  }
+  map.moveLayer("grad-dorms-point");
+
+  if (!map.getSource("edu")) {
+    map.addSource("edu", { type: "geojson", data: withBase("/maps/edu.json") });
+  }
+  if (!map.getLayer("edu-point")) {
+    map.addLayer({
+      id: "edu-point",
+      type: "symbol",
+      source: "edu",
+      minzoom: 14.5,
+      layout: {
+        "text-field": ["get", "label"],
+        "text-anchor": "center",
+        "text-allow-overlap": true,
+        "text-size": 13,
+      },
+      paint: {
+        "text-color": isDark.value ? "#cde6ff" : "#184c7c",
+        "text-halo-color": isDark.value ? "#242424" : "#ffffff",
+        "text-halo-width": 1,
+      },
+    });
+  }
+  map.moveLayer("edu-point");
+
+  if (!map.getSource("sports")) {
+    map.addSource("sports", { type: "geojson", data: withBase("/maps/sports.json") });
+  }
+  if (!map.getLayer("sports-point")) {
+    map.addLayer({
+      id: "sports-point",
+      type: "symbol",
+      source: "sports",
+      minzoom: 14.5,
+      layout: {
+        "text-field": ["get", "label"],
+        "text-anchor": "center",
+        "text-allow-overlap": true,
+        "text-size": 14,
+      },
+      paint: {
+        "text-color": isDark.value ? "#c2ece3" : "#005548",
+        "text-halo-color": isDark.value ? "#242424" : "#ffffff",
+        "text-halo-width": 1,
+      },
+    });
+  }
+  map.moveLayer("sports-point");
+
+  if (!map.getSource("gates")) {
+    map.addSource("gates", { type: "geojson", data: withBase("/maps/gates.json") });
+  }
+  if (!map.getLayer("gates-point")) {
+    map.addLayer({
+      id: "gates-point",
+      type: "symbol",
+      source: "gates",
+      minzoom: 13,
+      layout: {
+        "text-field": ["get", "label"],
+        "text-anchor": "center",
+        "text-allow-overlap": true,
+        "text-size": 14,
+      },
+      paint: {
+        "text-color": isDark.value ? "#dfdfdf" : "#1c1c1e",
+        "text-halo-color": isDark.value ? "#242424" : "#ffffff",
+        "text-halo-width": 1,
+      },
+    });
+  }
+  map.moveLayer("gates-point");
 }
 
 async function updateOverlay() {

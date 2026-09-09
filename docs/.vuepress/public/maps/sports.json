@@ -1,0 +1,75 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "风雨操场"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.893259, 30.8801327]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "网球场"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8921591, 30.8826169]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "篮球场"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8901916, 30.8824866]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "西操场"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8892229, 30.882487]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "体育馆"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8983976, 30.8850776]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "游泳馆"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8978123, 30.8856404]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "东操场"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8969042, 30.8840904]
+      }
+    }
+  ]
+}
