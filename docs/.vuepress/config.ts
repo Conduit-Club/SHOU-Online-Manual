@@ -9,14 +9,7 @@ const description = "上海海洋大学校园信息手册";
 const color = "#49BF7C";
 
 export default defineUserConfig({
-  bundler: viteBundler({
-    viteOptions: {
-      optimizeDeps: {
-        // Preserve MapLibre's worker URL relative to its original module.
-        exclude: ["maplibre-gl"],
-      },
-    },
-  }),
+  bundler: viteBundler(),
   shouldPrefetch: false,
   locales: {
     "/": {
