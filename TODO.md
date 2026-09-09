@@ -26,7 +26,7 @@
 - [ ] [电子邮件](docs/service/communication/email.md)：开通、登录、邮箱格式、密码找回、客户端配置和毕业后规则。
 - [ ] [图书馆](docs/service/library/README.md)：借阅、数据库、校外访问、座位预约、开放时间和常见问题。
 - [ ] [打印机](docs/service/teaching/printer.md)：打印地点、开放时间、收费、文件格式、取件和故障处理。
-- [ ] [就医指南](docs/service/medical/README.md)：校内医疗、校外就医、医保、转诊和急救流程。
+- [x] [就医指南](docs/service/medical/README.md)：校内医疗、校外就医、医保、转诊和急救流程。
 - [ ] [学校已购买的软件](docs/service/software-licenses/purchased.md)：软件和数据库名称、适用对象、访问方式及限制。
 - [x] [教育邮箱福利](docs/service/software-licenses/education-email.md)：核验福利项目、申请条件、官方入口和有效期（2026-09-08 核验服务商政策；学校资格以实际申请为准）。
 - [ ] [学号的意义](docs/service/sid/README.md)：核验本科生和研究生编号规则及适用年份。
