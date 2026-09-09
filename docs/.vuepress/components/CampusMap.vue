@@ -5,10 +5,8 @@ import { campusLayers } from "./campusThemes.js";
 import { withBase } from "vuepress/client";
 import { loadPmtiles } from "./campusOverlay.js";
 import "maplibre-gl/dist/maplibre-gl.css";
-import { setWorkerUrl } from "maplibre-gl";
 
 import workerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url";
-setWorkerUrl(workerUrl);
 
 const props = defineProps({
   center: { type: Array, default: () => [121.9, 30.9] },
@@ -296,8 +294,9 @@ watch(
 onMounted(async () => {
   watch(() => props.pmtiles, updateOverlay, { immediate: true });
   try {
-    const { Map, NavigationControl, FullscreenControl } = await import("maplibre-gl");
+    const { Map, NavigationControl, FullscreenControl, setWorkerUrl } = await import("maplibre-gl");
     if (disposed) return;
+    setWorkerUrl(workerUrl);
 
     map = new Map({
       container: container.value,
