@@ -31,7 +31,7 @@
 - [x] [教育邮箱福利](docs/service/software-licenses/education-email.md)：核验福利项目、申请条件、官方入口和有效期（2026-09-08 核验服务商政策；学校资格以实际申请为准）。
 - [ ] [学号的意义](docs/service/sid/README.md)：核验本科生和研究生编号规则及适用年份。
 - [ ] [文档模板](docs/service/document-templates.md)：论文、报告、申请和证明模板的官方来源及适用年份。
-- [ ] 补充邮件与快递收发地点、时间、取件方式和异常件处理流程。
+- [x] [快递与邮件收发](docs/service/packages/README.md)：邮件与快递收发地点、时间、取件方式、大件行李托运及收发室流程（2026-09-09 按照模板整理）。
 
 ## P1：补充校园生活
 

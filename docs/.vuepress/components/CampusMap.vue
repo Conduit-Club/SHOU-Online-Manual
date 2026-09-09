@@ -16,6 +16,7 @@ const props = defineProps({
   height: { type: String, default: "420px" },
   label: { type: String, default: "OpenStreetMap 地图" },
   pmtiles: { type: String, default: "/maps/campus.pmtiles" },
+  markers: { type: Array, default: () => [] },
 });
 
 const isDark = useDarkMode();
@@ -48,6 +49,72 @@ let disposed = false;
 let styleReady = false;
 let overlay;
 let overlayRequest = 0;
+let MarkerClass;
+let PopupClass;
+let activeMarkers = [];
+
+function renderMarkers() {
+  activeMarkers.forEach((m) => m.remove());
+  activeMarkers = [];
+  if (!map || !MarkerClass || !props.markers || !props.markers.length) return;
+
+  for (const item of props.markers) {
+    if (!item) continue;
+    try {
+      let coords = null;
+      if (Array.isArray(item) && item.length >= 2) {
+        coords = item;
+      } else if (Array.isArray(item.position) && item.position.length >= 2) {
+        coords = item.position;
+      } else if (item.lng !== undefined && item.lat !== undefined) {
+        coords = [item.lng, item.lat];
+      }
+      if (!coords || typeof coords[0] !== "number" || typeof coords[1] !== "number") continue;
+
+      const title = item.title || item.label || "";
+      const description = item.description || item.desc || "";
+      const color = item.color || "#e03e3e";
+
+      const escape = (str) =>
+        String(str).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
+      const el = document.createElement("div");
+      el.className = "osm-map__marker";
+      el.innerHTML = `
+        <div class="osm-map__marker-pin">
+          <svg viewBox="0 0 24 24" width="30" height="30" fill="${escape(color)}">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+        </div>
+        ${title ? `<div class="osm-map__marker-label">${escape(title)}</div>` : ""}
+      `;
+
+      const marker = new MarkerClass({ element: el, anchor: "bottom" }).setLngLat(coords);
+
+      if (title || description) {
+        const html = `<div class="osm-map__popup-content"><strong>${escape(title)}</strong>${
+          description ? `<p style="margin:4px 0 0;font-size:12px;">${escape(description)}</p>` : ""
+        }</div>`;
+        const popup = new PopupClass({ offset: [0, -32], closeOnClick: false }).setHTML(html);
+        marker.setPopup(popup);
+      }
+
+      marker.addTo(map);
+
+      if (item.openPopup) {
+        try {
+          marker.togglePopup();
+        } catch {
+          // ignore
+        }
+      }
+
+      activeMarkers.push(marker);
+    } catch (err) {
+      console.warn("Failed to render marker:", item, err);
+    }
+  }
+}
 
 function constrainCamera() {
   if (!map || !overlay) return;
@@ -136,11 +203,15 @@ watch(
   { deep: true },
 );
 
+watch(() => props.markers, renderMarkers, { deep: true });
+
 onMounted(async () => {
   watch(() => props.pmtiles, updateOverlay, { immediate: true });
   try {
-    const { Map, NavigationControl } = await import("maplibre-gl");
+    const { Map, NavigationControl, Marker, Popup } = await import("maplibre-gl");
     if (disposed) return;
+    MarkerClass = Marker;
+    PopupClass = Popup;
 
     map = new Map({
       container: container.value,
@@ -162,6 +233,10 @@ onMounted(async () => {
     map.on("style.load", () => {
       styleReady = true;
       applyOverlay();
+      renderMarkers();
+    });
+    map.on("load", () => {
+      renderMarkers();
     });
     map.on("error", () => {
       loading.value = false;
@@ -184,6 +259,8 @@ onMounted(async () => {
 
 onBeforeUnmount(() => {
   disposed = true;
+  activeMarkers.forEach((m) => m.remove());
+  activeMarkers = [];
   observer?.disconnect();
   map?.remove();
   map = undefined;
@@ -246,5 +323,67 @@ onBeforeUnmount(() => {
   padding: 0.75rem;
   background: var(--map-bg);
   color: var(--map-text);
+}
+.osm-map :deep(.maplibregl-popup-content) {
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.osm-map--dark :deep(.maplibregl-popup-content) {
+  background: var(--map-bg);
+  color: var(--map-text);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+.osm-map--dark :deep(.maplibregl-popup-anchor-top .maplibregl-popup-tip) {
+  border-bottom-color: var(--map-bg);
+}
+.osm-map--dark :deep(.maplibregl-popup-anchor-bottom .maplibregl-popup-tip) {
+  border-top-color: var(--map-bg);
+}
+.osm-map--dark :deep(.maplibregl-popup-anchor-left .maplibregl-popup-tip) {
+  border-right-color: var(--map-bg);
+}
+.osm-map--dark :deep(.maplibregl-popup-anchor-right .maplibregl-popup-tip) {
+  border-left-color: var(--map-bg);
+}
+.osm-map--dark :deep(.maplibregl-popup-close-button) {
+  color: var(--map-text);
+}
+.osm-map :deep(.osm-map__marker) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transform: translate3d(0, 0, 0);
+  user-select: none;
+}
+.osm-map :deep(.osm-map__marker-pin) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.4));
+  transition: transform 0.15s ease;
+}
+.osm-map :deep(.osm-map__marker:hover .osm-map__marker-pin) {
+  transform: scale(1.18);
+}
+.osm-map :deep(.osm-map__marker-label) {
+  margin-top: -2px;
+  padding: 2px 6px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #111;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.2;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+  pointer-events: none;
+}
+.osm-map--dark :deep(.osm-map__marker-label) {
+  background: rgba(36, 36, 36, 0.95);
+  color: #eee;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 </style>
