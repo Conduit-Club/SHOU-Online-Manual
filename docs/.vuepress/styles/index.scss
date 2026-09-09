@@ -1,4 +1,6 @@
 /* 哀悼用黑白遮罩 */
+@use "./club-theme";
+
 .home-gray {
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);

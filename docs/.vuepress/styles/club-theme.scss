@@ -1,0 +1,295 @@
+/*
+ * 潮涌核心社风格主题
+ *
+ * 这是一个独立于默认主题的视觉皮肤：保留 VuePress 的文档结构和交互，
+ * 以社团主页的暖白、酒红和档案感排版重新组织页面层次。
+ */
+:root {
+  --club-bg: #fdf9f3;
+  --club-panel: #f9efe4;
+  --club-panel-muted: #f7f3ed;
+  --club-text: #1c1c18;
+  --club-muted: #534344;
+  --club-accent: #904855;
+  --club-accent-soft: #fdebed;
+  --club-line: #d8c1c3;
+  --club-line-strong: #857274;
+  --club-yellow: #6f5b46;
+  --club-shadow: 0 8px 22px rgb(93 69 62 / 16%);
+
+  /* 覆盖 VuePress 默认的绿色品牌色，避免状态样式漏回默认主题。 */
+  --vp-c-accent: var(--club-accent);
+  --vp-c-accent-bg: var(--club-accent);
+  --vp-c-accent-hover: var(--club-yellow);
+  --vp-c-accent-soft: var(--club-accent-soft);
+  --vp-c-text: var(--club-text);
+  --vp-c-text-mute: var(--club-muted);
+  --vp-c-bg: var(--club-bg);
+  --vp-c-bg-alt: var(--club-panel-muted);
+  --vp-c-bg-elv: var(--club-panel);
+  --vp-c-divider: var(--club-line);
+  --vp-c-border: var(--club-line);
+}
+
+html,
+body {
+  background: var(--club-bg);
+  color: var(--club-text);
+  font-family:
+    "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+}
+
+body {
+  line-height: 1.7;
+}
+
+.vp-theme-container {
+  background: var(--club-bg);
+}
+
+.vp-navbar {
+  background: color-mix(in srgb, var(--club-bg) 94%, transparent);
+  border-bottom: 1px solid var(--club-line);
+  box-shadow: none;
+  backdrop-filter: blur(12px);
+}
+
+.vp-site-name {
+  color: var(--club-text);
+  font-family: Georgia, "Noto Serif SC", serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.vp-navbar-item a {
+  color: var(--club-muted);
+  font-weight: 600;
+  transition:
+    color 160ms ease,
+    background-color 160ms ease;
+}
+
+.vp-navbar-item > .auto-link:hover,
+.vp-navbar-item > .auto-link.route-link-active {
+  background: var(--club-accent-soft);
+  border-bottom-color: var(--club-accent);
+  color: var(--club-accent);
+}
+
+.vp-navbar-item a.external-link::after {
+  opacity: 0.7;
+}
+
+.vp-sidebar {
+  background: var(--club-panel-muted);
+  border-right: 1px solid var(--club-line);
+  padding: 1.1rem 0.8rem;
+}
+
+.vp-sidebar-items {
+  padding: 0.2rem;
+}
+
+.vp-sidebar-item {
+  border-radius: 0.65rem;
+  color: var(--club-muted);
+  font-weight: 600;
+  margin: 0.15rem 0;
+  transition:
+    color 160ms ease,
+    background-color 160ms ease;
+}
+
+.vp-sidebar-item.auto-link:hover {
+  background: var(--club-panel);
+  color: var(--club-text);
+}
+
+.vp-sidebar-item.active:not(p.vp-sidebar-heading) {
+  background: var(--club-accent-soft);
+  box-shadow: inset 3px 0 var(--club-accent);
+  color: var(--club-accent);
+}
+
+.vp-sidebar-children {
+  border-left: 1px solid var(--club-line);
+  margin-left: 1rem;
+  padding-left: 0.55rem;
+}
+
+.vp-sidebar-children .vp-sidebar-item {
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.vp-page {
+  background: var(--club-bg);
+}
+
+.vp-page #content {
+  max-width: 72rem;
+}
+
+.vp-page #content > h1:first-child {
+  color: var(--club-text);
+  font-family: Georgia, "Noto Serif SC", serif;
+  font-size: clamp(2.35rem, 5vw, 4.2rem);
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+  margin-bottom: 1rem;
+}
+
+.vp-page #content > h2 {
+  border-bottom: 1px solid var(--club-line);
+  color: var(--club-text);
+  font-family: Georgia, "Noto Serif SC", serif;
+  letter-spacing: -0.015em;
+  padding-bottom: 0.45rem;
+}
+
+.vp-page #content > h3,
+.vp-page #content > h4 {
+  color: var(--club-accent);
+  font-family: Georgia, "Noto Serif SC", serif;
+}
+
+.vp-page #content a {
+  color: var(--club-accent);
+  font-weight: 600;
+  text-decoration-color: var(--club-line);
+  text-underline-offset: 0.18em;
+}
+
+.vp-page #content a:hover {
+  color: var(--club-yellow);
+  text-decoration-color: currentcolor;
+}
+
+.vp-page #content blockquote {
+  background: var(--club-panel);
+  border-left: 4px solid var(--club-accent);
+  color: var(--club-muted);
+  margin-left: 0;
+  padding: 0.8rem 1rem;
+}
+
+.vp-page #content .hint-container {
+  background: var(--club-panel);
+  border: 1px solid var(--club-line);
+  border-left: 4px solid var(--club-accent);
+  border-radius: 0.75rem;
+  box-shadow: none;
+}
+
+.vp-page #content .hint-container.warning {
+  border-left-color: var(--club-yellow);
+}
+
+.vp-page #content .hint-container-title {
+  color: var(--club-accent);
+  font-family: Georgia, "Noto Serif SC", serif;
+  font-weight: 700;
+}
+
+.vp-page #content table {
+  background: var(--club-panel-muted);
+  border: 1px solid var(--club-line);
+  border-collapse: separate;
+  border-radius: 0.75rem;
+  border-spacing: 0;
+  overflow: hidden;
+}
+
+.vp-page #content th {
+  background: var(--club-panel);
+  color: var(--club-accent);
+}
+
+.vp-page #content th,
+.vp-page #content td {
+  border-color: var(--club-line);
+}
+
+.vp-page #content code {
+  background: var(--club-accent-soft);
+  border: 1px solid var(--club-line);
+  color: var(--club-accent);
+}
+
+.vp-page #content pre {
+  background: #2a2221;
+  border: 1px solid var(--club-line-strong);
+  border-radius: 0.75rem;
+  box-shadow: var(--club-shadow);
+}
+
+.vp-page #content img {
+  border-radius: 0.75rem;
+}
+
+.home-quick-links {
+  gap: 1rem;
+  max-width: 52rem;
+}
+
+.home-quick-links > div {
+  background: var(--club-panel-muted);
+  border: 1px solid var(--club-line);
+  border-radius: 0.85rem;
+  padding: 0.8rem 1.1rem;
+}
+
+.home-quick-links ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.vp-page-meta,
+.vp-page-nav {
+  border-color: var(--club-line);
+}
+
+.vp-page-nav .next {
+  border-color: var(--club-line);
+}
+
+.vp-toggle-color-mode-button,
+.vp-toggle-sidebar-button {
+  color: var(--club-accent);
+}
+
+html.dark {
+  --club-bg: #261f1e;
+  --club-panel: #352827;
+  --club-panel-muted: #2d2423;
+  --club-text: #f8eee8;
+  --club-muted: #dbc9c4;
+  --club-accent: #e09aa5;
+  --club-accent-soft: #4c3035;
+  --club-line: #65494c;
+  --club-line-strong: #a47b80;
+  --club-yellow: #e8c39d;
+  --club-shadow: 0 8px 22px rgb(0 0 0 / 28%);
+
+  --vp-c-accent: var(--club-accent);
+  --vp-c-accent-bg: var(--club-accent);
+  --vp-c-accent-hover: var(--club-yellow);
+  --vp-c-accent-soft: var(--club-accent-soft);
+  --vp-c-text: var(--club-text);
+  --vp-c-text-mute: var(--club-muted);
+  --vp-c-bg: var(--club-bg);
+  --vp-c-bg-alt: var(--club-panel-muted);
+  --vp-c-bg-elv: var(--club-panel);
+  --vp-c-divider: var(--club-line);
+  --vp-c-border: var(--club-line);
+}
+
+@media (max-width: 719px) {
+  .vp-sidebar {
+    box-shadow: var(--club-shadow);
+  }
+
+  .vp-page #content > h1:first-child {
+    font-size: 2.5rem;
+  }
+}
