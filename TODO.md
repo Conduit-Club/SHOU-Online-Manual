@@ -14,7 +14,7 @@
 
 - [ ] 确定手册覆盖的读者范围，并在首页说明。
 - [ ] 核验[常用入口总览](docs/service/official-entrances.md)中的链接、登录条件和适用对象。
-- [ ] 完善[黄页](docs/contact/README.md)：保卫、医疗、信息中心、教务、学生事务、宿管、后勤和心理支持等公开联系方式。
+- [x] 完善[黄页](docs/contact/README.md)：保卫、医疗、信息中心、教务、学生事务、宿管、后勤和心理支持等公开联系方式（2026-09-08 核验公开来源，已标注旧来源与未确认范围）。
 - [ ] 完善[应急处理](docs/emergency/README.md)：校内医疗点、AED、保卫入口、失物招领、心理支持和报修渠道。
 - [ ] 复核交通页面中的班次、首末班、票价、站点和耗时，并标注最近核验日期。
 - [ ] 核验校园地图的版本、覆盖范围、设施名称和来源授权。
@@ -28,7 +28,7 @@
 - [ ] [打印机](docs/service/teaching/printer.md)：打印地点、开放时间、收费、文件格式、取件和故障处理。
 - [ ] [就医指南](docs/service/medical/README.md)：校内医疗、校外就医、医保、转诊和急救流程。
 - [ ] [学校已购买的软件](docs/service/software-licenses/purchased.md)：软件和数据库名称、适用对象、访问方式及限制。
-- [x] [教育邮箱福利](docs/service/software-licenses/education-email.md)：已补充通用福利、申请入口、验证方式和使用注意事项。
+- [x] [教育邮箱福利](docs/service/software-licenses/education-email.md)：核验福利项目、申请条件、官方入口和有效期（2026-09-08 核验服务商政策；学校资格以实际申请为准）。
 - [ ] [学号的意义](docs/service/sid/README.md)：核验本科生和研究生编号规则及适用年份。
 - [ ] [文档模板](docs/service/document-templates.md)：论文、报告、申请和证明模板的官方来源及适用年份。
 - [ ] 补充邮件与快递收发地点、时间、取件方式和异常件处理流程。

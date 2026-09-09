@@ -23,7 +23,7 @@
 
 ## 多语言支持语法检查器
 
-* <https://www.websiteplanet.com/zh-hans/webtools/spell-checker>
+- <https://www.websiteplanet.com/zh-hans/webtools/spell-checker>
 
 ## 秘塔写作猫 （中文）语法检查器
 

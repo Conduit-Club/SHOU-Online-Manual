@@ -67,16 +67,16 @@ URP 依赖学校内网。人在校外时，通常需要先通过深信服 EasyCo
 
 ## 按问题查找
 
-| 你想做什么 | 先看哪里 |
-| --- | --- |
-| 查校历、课表、考试或成绩 | [教务处](https://jwc.shou.edu.cn/) |
-| 查培养方案、转专业或毕业要求 | [教务处的培养与学籍栏目](https://jwc.shou.edu.cn/) |
-| 查图书、数据库或借阅服务 | [图书馆](https://library.shou.edu.cn/) |
-| 查宿舍、餐厅、维修或失物 | [后勤管理处](https://hqc.shou.edu.cn/) |
-| 查资助、心理、就业或团学事务 | [学生在线](https://xszx.shou.edu.cn/) |
-| 查邮件或数字校园 | [官网快速通道](https://www.shou.edu.cn/) |
-| 查招生、交流或就业信息 | [官网“招生就业”栏目](https://www.shou.edu.cn/) |
-| 提交意见建议 | [意见建议平台](https://workflow.shou.edu.cn/infoplus/form/TSFK/start) |
+| 你想做什么                   | 先看哪里                                                              |
+| ---------------------------- | --------------------------------------------------------------------- |
+| 查校历、课表、考试或成绩     | [教务处](https://jwc.shou.edu.cn/)                                    |
+| 查培养方案、转专业或毕业要求 | [教务处的培养与学籍栏目](https://jwc.shou.edu.cn/)                    |
+| 查图书、数据库或借阅服务     | [图书馆](https://library.shou.edu.cn/)                                |
+| 查宿舍、餐厅、维修或失物     | [后勤管理处](https://hqc.shou.edu.cn/)                                |
+| 查资助、心理、就业或团学事务 | [学生在线](https://xszx.shou.edu.cn/)                                 |
+| 查邮件或数字校园             | [官网快速通道](https://www.shou.edu.cn/)                              |
+| 查招生、交流或就业信息       | [官网“招生就业”栏目](https://www.shou.edu.cn/)                        |
+| 提交意见建议                 | [意见建议平台](https://workflow.shou.edu.cn/infoplus/form/TSFK/start) |
 
 ## 学校地址与地图
 
