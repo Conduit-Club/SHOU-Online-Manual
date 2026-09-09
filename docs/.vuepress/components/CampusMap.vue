@@ -139,7 +139,7 @@ watch(
 onMounted(async () => {
   watch(() => props.pmtiles, updateOverlay, { immediate: true });
   try {
-    const { Map, NavigationControl } = await import("maplibre-gl");
+    const { Map, NavigationControl, FullscreenControl } = await import("maplibre-gl");
     if (disposed) return;
 
     map = new Map({
@@ -155,8 +155,8 @@ onMounted(async () => {
       maxPitch: 0,
       touchPitch: false,
     });
-    map.addControl(new NavigationControl(), "top-right");
-    map.scrollZoom.disable();
+    map.addControl(new NavigationControl());
+    map.addControl(new FullscreenControl());
     map.touchZoomRotate.disableRotation();
     map.keyboard.disableRotation();
     map.on("style.load", () => {
