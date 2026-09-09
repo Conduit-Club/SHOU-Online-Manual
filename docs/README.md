@@ -20,9 +20,9 @@
 <div>
 <ul>
 <li><a href="https://portal.shou.edu.cn/">数字校园</a></li>
-<li><a href="./facility/campus-map.md">校园地图</a></li>
+<li><a href="./facilities/campus-map.md">校园地图</a></li>
 <li><a href="./service/">服务与技巧</a></li>
-<li><a href="./organizations/">社团活动</a></li>
+<li><a href="./clubs/">社团活动</a></li>
 </ul>
 </div>
 </div>
@@ -43,7 +43,7 @@
 
 ## 校园地图
 
-目前先收录学校后勤与基建管理处公开的[校园总平图（2025 年 9 月版）](./facility/campus-map.md)。地图和校园设施可能变化，请以现场指引和学校最新通知为准。
+目前先收录学校后勤与基建管理处公开的[校园总平图（2025 年 9 月版）](./facilities/campus-map.md)。地图和校园设施可能变化，请以现场指引和学校最新通知为准。
 
 ## 提交信息前请确认
 

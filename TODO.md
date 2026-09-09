@@ -35,12 +35,12 @@
 
 ## P1：补充校园生活
 
-- [ ] [新生指南](docs/if-you-are-a-freshman/README.md)：报到、材料、住宿、校园卡、网络、军训、选课和缴费。
+- [ ] [新生指南](docs/freshman-guide/README.md)：报到、材料、住宿、校园卡、网络、军训、选课和缴费。
 - [ ] [校园生活](docs/life/README.md)：宿舍、洗浴、饮水、洗衣、超市、维修、快递和充电。
 - [ ] [食堂](docs/canteen/README.md)：位置、营业时间、支付方式、价格区间和特色窗口。
-- [ ] [校园设施](docs/facility/README.md)：教学楼、宿舍、体育场馆、自习空间、医疗点和无障碍设施。
+- [ ] [校园设施](docs/facilities/README.md)：教学楼、宿舍、体育场馆、自习空间、医疗点和无障碍设施。
 - [ ] [什么值得买](docs/service/what-to-buy/README.md)：入学准备清单、购买地点和替代方案。
-- [ ] [社团活动](docs/organizations/README.md)：管理入口、组织名单、招新周期和活动渠道。
+- [ ] [社团活动](docs/clubs/README.md)：管理入口、组织名单、招新周期和活动渠道。
 - [ ] [媒体与网站](docs/media/README.md)：学校及学院官方账号、通知渠道和信息发布入口。
 
 ## P2：站点维护

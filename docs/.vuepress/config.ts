@@ -71,7 +71,7 @@ export default defineUserConfig({
     sidebarDepth: 2,
     sidebar: [
       "/",
-      "/if-you-are-a-freshman/",
+      "/freshman-guide/",
       "/study/",
       {
         text: "服务与技巧",
@@ -98,8 +98,8 @@ export default defineUserConfig({
       },
       "/life/",
       "/canteen/",
-      "/facility/",
-      "/facility/campus-map.html",
+      "/facilities/",
+      "/facilities/campus-map.html",
       {
         text: "交通",
         link: "/transport/",
@@ -111,7 +111,7 @@ export default defineUserConfig({
       "/surroundings/",
       "/contact/",
       "/emergency/",
-      "/organizations/",
+      "/clubs/",
       "/media/",
       "/calendar/",
       "/site-help/contribution-template.html",
