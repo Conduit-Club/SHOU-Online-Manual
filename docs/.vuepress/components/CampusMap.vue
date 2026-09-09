@@ -223,6 +223,30 @@ function applyOverlay() {
     });
   }
   map.moveLayer("gates-point");
+
+  if (!map.getSource("other")) {
+    map.addSource("other", { type: "geojson", data: withBase("/maps/other.json") });
+  }
+  if (!map.getLayer("other-point")) {
+    map.addLayer({
+      id: "other-point",
+      type: "symbol",
+      source: "other",
+      minzoom: 16,
+      layout: {
+        "text-field": ["get", "label"],
+        "text-anchor": "center",
+        "text-allow-overlap": true,
+        "text-size": 10,
+      },
+      paint: {
+        "text-color": isDark.value ? "#dfdfdf" : "#1c1c1e",
+        "text-halo-color": isDark.value ? "#242424" : "#ffffff",
+        "text-halo-width": 1,
+      },
+    });
+  }
+  map.moveLayer("other-point");
 }
 
 async function updateOverlay() {

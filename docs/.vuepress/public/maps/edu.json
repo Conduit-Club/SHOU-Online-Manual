@@ -4,6 +4,26 @@
     {
       "type": "Feature",
       "properties": {
+        "label": "第六教学楼"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.896149, 30.8840313]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "第五教学楼"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8936202, 30.8883718]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "label": "爱恩学院"
       },
       "geometry": {
