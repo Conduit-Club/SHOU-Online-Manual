@@ -1,8 +1,11 @@
 import { defineClientConfig } from "vuepress/client";
-import CampusMap from "./components/CampusMap.vue";
+import { defineAsyncComponent } from "vue";
 
 export default defineClientConfig({
   enhance({ app }) {
-    app.component("CampusMap", CampusMap);
+    app.component(
+      "CampusMap",
+      defineAsyncComponent(() => import("./components/CampusMap.vue")),
+    );
   },
 });
