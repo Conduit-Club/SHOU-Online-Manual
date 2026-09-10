@@ -3,6 +3,7 @@
   "scripts": {
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",
+    "lint": "oxlint",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "docs:clean": "rm -rf docs/.vuepress/.cache docs/.vuepress/.temp docs/.vuepress/dist"
@@ -23,6 +24,7 @@
     "@vuepress/theme-default": "next",
     "markdown-it-task-lists": "^2.1.1",
     "oxfmt": "^0.66.0",
+    "oxlint": "^1.82.0",
     "sass-embedded": "^1.104.0",
     "serve": "14.2.6",
     "vuepress": "next"
