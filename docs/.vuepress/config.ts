@@ -1,5 +1,6 @@
 import { defaultTheme } from "@vuepress/theme-default";
 import { pwaPlugin } from "@vuepress/plugin-pwa";
+import { searchPlugin } from "@vuepress/plugin-search";
 import { tocPlugin } from "@vuepress/plugin-toc";
 import { defineUserConfig } from "@vuepress/cli";
 import { viteBundler } from "@vuepress/bundler-vite";
@@ -22,7 +23,17 @@ export default defineUserConfig({
     ["meta", { name: "theme-color", content: color }],
     ["link", { rel: "manifest", href: "/manifest.webmanifest" }],
   ],
-  plugins: [pwaPlugin(), tocPlugin()],
+  plugins: [
+    pwaPlugin(),
+    tocPlugin(),
+    searchPlugin({
+      locales: {
+        "/": {
+          placeholder: "搜索手册",
+        },
+      },
+    }),
+  ],
   theme: defaultTheme({
     navbar: [
       { text: "主页", link: "/" },
