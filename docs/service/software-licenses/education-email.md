@@ -34,8 +34,8 @@ GitHub Student Developer Pack（下称学生包）把多家服务商的学生优
 | GitHub Copilot Student | 经验证学生可免费激活的AI编程助手计划，提供无限IDE代码补全及一定GitHub AI Credits，可辅助写代码、解释代码与测试 | 聊天和agent有用量限制，模型采用自动选择；具体额度看账号当前页面，不等于所有模型和功能无限用 |
 | JetBrains              | IntelliJ IDEA Ultimate、PyCharm Professional、CLion、Rider等“全家桶”教育授权，适合课程与非商业开发学习         | 授权1年，可按学生资格续期；领取方式与限制见下文                                             |
 | Microsoft Azure        | Azure for Students的100美元额度，可用于学习云服务、部署课程项目                                                | 12个月；年满18岁，并通过Microsoft的申请审核，详见下文                                       |
-| Namecheap              | 1年免费`.me`域名注册及1年SSL证书，可用于个人主页、作品集                                                     | 从学生包的Namecheap条目领取；次年续费另计，续费价格以注册商为准                             |
-| Name.com               | 一个首年免费域名，可选25种以上后缀，例如`.live`、`.studio`、`.software`、`.app`、`.dev`                       | 从学生包的Name.com链接进入并用GitHub登录；需填写可验证的真实联系信息，首年后按标准价格续费  |
+| Namecheap              | 1年免费`.me`域名注册及1年SSL证书，可用于个人主页、作品集                                                       | 从学生包的Namecheap条目领取；次年续费另计，续费价格以注册商为准                             |
+| Name.com               | 一个首年免费域名，可选25种以上后缀，例如`.live`、`.studio`、`.software`、`.app`、`.dev`                        | 从学生包的Name.com链接进入并用GitHub登录；需填写可验证的真实联系信息，首年后按标准价格续费  |
 
 想搭个人网站，可从两个域名优惠中选择合适后缀；想学编程，先领取GitHub Pro、Copilot和JetBrains；想练习云部署，再按课程需要开通Azure。域名注册与服务器托管是两项服务，领到域名后仍需配置网站托管和DNS。
 
