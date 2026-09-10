@@ -323,13 +323,27 @@ body {
   font-weight: 700;
 }
 
-.vp-page #content table {
+.vp-page #content .table-scroll {
+  margin: 1rem 0;
   background: var(--vp-c-bg-alt);
   border: 1px solid var(--vp-c-divider);
-  border-collapse: separate;
   border-radius: 0.75rem;
+  overflow-x: auto;
+}
+
+.vp-page #content .table-scroll:focus-visible {
+  outline: 2px solid var(--vp-c-accent);
+  outline-offset: 2px;
+}
+
+.vp-page #content .table-scroll table {
+  display: table;
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-collapse: separate;
   border-spacing: 0;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .vp-page #content th {
@@ -337,9 +351,18 @@ body {
   color: var(--vp-c-accent-hover);
 }
 
-.vp-page #content th,
-.vp-page #content td {
-  border-color: var(--vp-c-divider);
+.vp-page #content .table-scroll th,
+.vp-page #content .table-scroll td {
+  border: 0;
+}
+
+.vp-page #content .table-scroll tr > :not(:last-child) {
+  border-right: 1px solid var(--vp-c-divider);
+}
+
+.vp-page #content .table-scroll thead tr > *,
+.vp-page #content .table-scroll tbody tr:not(:last-child) > * {
+  border-bottom: 1px solid var(--vp-c-divider);
 }
 
 /* Keep inline-code decoration out of fenced code blocks. */

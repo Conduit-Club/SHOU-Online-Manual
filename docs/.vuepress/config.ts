@@ -12,6 +12,16 @@ const color = "#D17D8A";
 export default defineUserConfig({
   bundler: viteBundler(),
   shouldPrefetch: false,
+  extendsMarkdown(md) {
+    const tableOpen = md.renderer.rules.table_open;
+    const tableClose = md.renderer.rules.table_close;
+    // Render the scroll container into static HTML, including when JS is disabled.
+    md.renderer.rules.table_open = (tokens, index, options, env, self) =>
+      '<div class="table-scroll" role="region" aria-label="表格（可横向滚动）" tabindex="0">' +
+      (tableOpen?.(tokens, index, options, env, self) ?? self.renderToken(tokens, index, options));
+    md.renderer.rules.table_close = (tokens, index, options, env, self) =>
+      (tableClose?.(tokens, index, options, env, self) ?? self.renderToken(tokens, index, options)) + "</div>\n";
+  },
   locales: {
     "/": {
       title,
