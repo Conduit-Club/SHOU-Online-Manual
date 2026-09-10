@@ -146,6 +146,9 @@ importers:
       '@vuepress/theme-default':
         specifier: next
         version: 2.0.0-rc.134(@vuepress/bundler-vite@2.0.0-rc.31(@types/node@26.2.0)(@vue/compiler-sfc@3.5.41)(esbuild@0.28.1)(rollup@4.62.5)(sass-embedded@1.104.0)(sass@1.104.0)(supports-color@8.1.1)(terser@5.50.0)(yaml@2.9.0))(sass-embedded@1.104.0)(sass@1.104.0)(vuepress@2.0.0-rc.31(@vue/compiler-sfc@3.5.41)(@vuepress/bundler-vite@2.0.0-rc.31(@types/node@26.2.0)(@vue/compiler-sfc@3.5.41)(esbuild@0.28.1)(rollup@4.62.5)(sass-embedded@1.104.0)(sass@1.104.0)(supports-color@8.1.1)(terser@5.50.0)(yaml@2.9.0))(esbuild@0.28.1)(rolldown@1.2.5)(rollup@4.62.5)(supports-color@8.1.1)(vite@8.2.2(@types/node@26.2.0)(esbuild@0.28.1)(sass-embedded@1.104.0)(sass@1.104.0)(terser@5.50.0)(yaml@2.9.0))(vue@3.5.41))
+      markdown-it-task-lists:
+        specifier: ^2.1.1
+        version: 2.1.1
       oxfmt:
         specifier: ^0.66.0
         version: 0.66.0
@@ -2745,6 +2748,9 @@ packages:
 
   markdown-it-emoji@3.1.0:
     resolution: {integrity: sha512-NhmMEH2ywduD4Nty1E8uB5NqfLhAT1VR0dyvoJyStKOqCzbZmVdn/+8wj7zpDsb/fLBikpCPsWwxqKlvMmbz4g==}
+
+  markdown-it-task-lists@2.1.1:
+    resolution: {integrity: sha512-TxFAc76Jnhb2OUu+n3yz9RMu4CwGfaT788br6HhEDlvWfdeJcLUsxk1Hgw2yJio0OXsxv7pyIPmvECY7bMbluA==}
 
   markdown-it@14.3.0:
     resolution: {integrity: sha512-RCEsPjR+sr0x+AuYp601tKTkgFG4YEPLCzHST3cQ/fhlJkqAkz1L2/Qbp1j9qw5SBwQHFBoW8+hoN5xssOF0Tw==}
@@ -6716,6 +6722,8 @@ snapshots:
       markdown-it: 14.3.0
 
   markdown-it-emoji@3.1.0: {}
+
+  markdown-it-task-lists@2.1.1: {}
 
   markdown-it@14.3.0:
     dependencies:

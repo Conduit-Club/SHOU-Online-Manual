@@ -4,6 +4,7 @@ import { tocPlugin } from "@vuepress/plugin-toc";
 import { prismjsPlugin } from "@vuepress/plugin-prismjs";
 import { defineUserConfig } from "@vuepress/cli";
 import { viteBundler } from "@vuepress/bundler-vite";
+import taskLists from "markdown-it-task-lists";
 
 const title = "水专手册";
 const description = "上海海洋大学校园信息手册";
@@ -13,6 +14,9 @@ export default defineUserConfig({
   bundler: viteBundler(),
   shouldPrefetch: false,
   extendsMarkdown(md) {
+    // Add GitHub styled task-list checkboxes
+    md.use(taskLists);
+
     const tableOpen = md.renderer.rules.table_open;
     const tableClose = md.renderer.rules.table_close;
     // Render the scroll container into static HTML, including when JS is disabled.

@@ -21,6 +21,7 @@
     "@vuepress/plugin-pwa": "next",
     "@vuepress/plugin-toc": "next",
     "@vuepress/theme-default": "next",
+    "markdown-it-task-lists": "^2.1.1",
     "oxfmt": "^0.66.0",
     "sass-embedded": "^1.104.0",
     "serve": "14.2.6",
