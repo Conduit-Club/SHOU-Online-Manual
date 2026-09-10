@@ -1,0 +1,417 @@
+/*
+ * 潮涌核心社风格主题
+ *
+ * 这是一个独立于默认主题的视觉皮肤：保留 VuePress 的文档结构和交互，
+ * 以社团主页的暖白、酒红和档案感排版重新组织页面层次。
+ */
+:root {
+  --pink-100: oklch(0.99 0.01 12);
+  --pink-200: oklch(0.92 0.05 12);
+  --pink-300: oklch(0.86 0.09 12);
+  --pink-400: oklch(0.79 0.13 12);
+  --pink-500: oklch(0.71 0.16 12);
+  --pink-600: oklch(0.67 0.15 12);
+  --pink-700: oklch(0.58 0.13 12);
+  --pink-800: oklch(0.47 0.11 12);
+  --pink-900: oklch(0.35 0.08 12);
+  --pink-950: oklch(0.24 0.05 12);
+
+  --blue-100: oklch(0.98 0.01 245);
+  --blue-200: oklch(0.92 0.05 245);
+  --blue-300: oklch(0.85 0.09 245);
+  --blue-400: oklch(0.78 0.13 245);
+  --blue-500: oklch(0.69 0.16 245);
+  --blue-600: oklch(0.65 0.15 245);
+  --blue-700: oklch(0.56 0.13 245);
+  --blue-800: oklch(0.45 0.11 245);
+  --blue-900: oklch(0.34 0.08 245);
+  --blue-950: oklch(0.23 0.05 245);
+
+  --green-100: oklch(0.98 0.01 150);
+  --green-200: oklch(0.91 0.05 150);
+  --green-300: oklch(0.84 0.09 150);
+  --green-400: oklch(0.76 0.13 150);
+  --green-500: oklch(0.67 0.16 150);
+  --green-600: oklch(0.63 0.15 150);
+  --green-700: oklch(0.55 0.13 150);
+  --green-800: oklch(0.44 0.11 150);
+  --green-900: oklch(0.34 0.08 150);
+  --green-950: oklch(0.23 0.05 150);
+
+  --yellow-100: oklch(0.98 0.01 90);
+  --yellow-200: oklch(0.92 0.05 90);
+  --yellow-300: oklch(0.85 0.09 90);
+  --yellow-400: oklch(0.78 0.13 90);
+  --yellow-500: oklch(0.69 0.16 90);
+  --yellow-600: oklch(0.65 0.15 90);
+  --yellow-700: oklch(0.57 0.13 90);
+  --yellow-800: oklch(0.46 0.11 90);
+  --yellow-900: oklch(0.35 0.08 90);
+  --yellow-950: oklch(0.23 0.05 90);
+
+  --neutral-100: oklch(97% 0 0);
+  --neutral-200: oklch(92.2% 0 0);
+  --neutral-300: oklch(87% 0 0);
+  --neutral-400: oklch(70.8% 0 0);
+  --neutral-500: oklch(55.6% 0 0);
+  --neutral-600: oklch(43.9% 0 0);
+  --neutral-700: oklch(37.1% 0 0);
+  --neutral-800: oklch(26.9% 0 0);
+  --neutral-900: oklch(20.5% 0 0);
+  --neutral-950: oklch(14.5% 0 0);
+
+  --white: oklch(1 0 0);
+  --black: oklch(0 0 0);
+
+  /* 覆盖 VuePress 默认的绿色品牌色，避免状态样式漏回默认主题。 */
+  --vp-c-accent: var(--pink-600);
+  --vp-c-accent-bg: var(--pink-600);
+  --vp-c-accent-hover: var(--pink-800);
+  --vp-c-accent-text: var(--white);
+  --vp-c-accent-soft: var(--pink-100);
+  --vp-c-bg: var(--white);
+  --vp-c-bg-alt: var(--neutral-100);
+  --vp-c-bg-elv: var(--neutral-100);
+  --vp-c-text: var(--neutral-900);
+  --vp-c-text-mute: var(--neutral-600);
+  --vp-c-text-subtle: var(--neutral-500);
+  --vp-c-divider: var(--neutral-200);
+  --vp-c-border: var(--neutral-300);
+  --vp-c-border-hard: var(--neutral-400);
+  --vp-c-shadow: color-mix(in oklch, var(--black) 15%, transparent);
+  --vp-c-control: color-mix(in oklch, var(--neutral-400) 10%, transparent);
+  --vp-c-control-hover: color-mix(in oklch, var(--neutral-400) 16%, transparent);
+  --vp-c-control-disabled: var(--neutral-200);
+  --vp-c-green-text: var(--green-700);
+  --vp-c-green-soft: var(--green-100);
+  --vp-c-yellow-text: var(--yellow-600);
+  --vp-c-yellow-soft: var(--yellow-100);
+  --vp-c-red-text: var(--pink-700);
+  --vp-c-red-soft: var(--pink-100);
+  --vp-c-indigo-text: var(--blue-700);
+  --vp-c-indigo-soft: var(--blue-100);
+  --vp-c-purple-text: var(--pink-800);
+  --vp-c-purple-soft: var(--pink-100);
+  --vp-c-grey-text: var(--neutral-700);
+  --vp-c-grey-soft: var(--neutral-100);
+  --vp-c-code-tab-title: var(--white);
+  --vp-c-code-tab-bg: var(--neutral-800);
+  --vp-c-code-tab-active: var(--vp-c-accent);
+}
+
+html[data-theme="dark"] {
+  --vp-c-accent: var(--pink-400);
+  --vp-c-accent-bg: var(--pink-500);
+  --vp-c-accent-hover: var(--pink-300);
+  --vp-c-accent-soft: var(--pink-900);
+  --vp-c-bg: var(--neutral-950);
+  --vp-c-bg-alt: var(--neutral-900);
+  --vp-c-bg-elv: var(--neutral-800);
+  --vp-c-text: var(--neutral-100);
+  --vp-c-text-mute: var(--neutral-400);
+  --vp-c-text-subtle: var(--neutral-500);
+  --vp-c-divider: var(--neutral-800);
+  --vp-c-border: var(--neutral-700);
+  --vp-c-border-hard: var(--neutral-600);
+  --vp-c-shadow: color-mix(in oklch, var(--black) 30%, transparent);
+  --vp-c-control: color-mix(in oklch, var(--neutral-400) 12%, transparent);
+  --vp-c-control-hover: color-mix(in oklch, var(--neutral-400) 18%, transparent);
+  --vp-c-control-disabled: var(--neutral-700);
+  --vp-c-green-text: var(--green-300);
+  --vp-c-green-soft: var(--green-900);
+  --vp-c-yellow-text: var(--yellow-300);
+  --vp-c-yellow-soft: var(--yellow-900);
+  --vp-c-red-text: var(--pink-300);
+  --vp-c-red-soft: var(--pink-900);
+  --vp-c-indigo-text: var(--blue-300);
+  --vp-c-indigo-soft: var(--blue-900);
+  --vp-c-purple-text: var(--pink-200);
+  --vp-c-purple-soft: var(--pink-900);
+  --vp-c-grey-text: var(--neutral-300);
+  --vp-c-grey-soft: var(--neutral-800);
+  --vp-c-code-tab-bg: var(--neutral-950);
+}
+
+html,
+body {
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text);
+  text-autospace: normal;
+  corner-shape: squircle;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+
+body {
+  line-height: 1.6;
+}
+
+.vp-theme-container {
+  background: var(--vp-c-bg);
+}
+
+.vp-navbar {
+  background: color-mix(in oklch, var(--vp-c-bg) 50%, transparent);
+  border-bottom: 1px solid var(--vp-c-divider);
+  box-shadow: none;
+  backdrop-filter: blur(12px);
+}
+
+.vp-site-name {
+  color: var(--vp-c-text);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.vp-navbar-item a {
+  color: var(--vp-c-text-mute);
+  font-weight: 600;
+  border-bottom-color: transparent;
+  transition:
+    color 160ms ease,
+    background-color 160ms ease,
+    border-color 160ms ease;
+}
+
+.vp-navbar-item > .auto-link:hover,
+.vp-navbar-item > .auto-link.route-link-active {
+  border-bottom-color: var(--vp-c-accent);
+  color: var(--vp-c-accent-hover);
+}
+
+.vp-sidebar {
+  background: var(--vp-c-bg-alt);
+  border-right: 1px solid var(--vp-c-divider);
+  padding: 1.1rem 0.8rem;
+}
+
+.vp-sidebar-items {
+  padding: 0.2rem;
+}
+
+.vp-sidebar-item {
+  border-radius: 0.75rem;
+  color: var(--vp-c-text-mute);
+  font-weight: 600;
+  margin: 0.15rem 0;
+  transition:
+    color 160ms ease,
+    background-color 160ms ease;
+}
+
+.vp-sidebar-item.auto-link:hover {
+  background: var(--vp-c-control-hover);
+  color: var(--vp-c-text);
+}
+
+.vp-sidebar-item.active:not(p.vp-sidebar-heading) {
+  background: var(--vp-c-accent-soft);
+  border-inline-start-color: transparent;
+  box-shadow: none;
+  color: var(--vp-c-accent);
+}
+
+.vp-sidebar-children {
+  border-left: 1px solid var(--vp-c-divider);
+  margin-left: 1rem;
+  padding-left: 0.55rem;
+}
+
+.vp-sidebar-children .vp-sidebar-item {
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.vp-sidebar-children .vp-sidebar-item:not(.vp-sidebar-heading) {
+  margin-inline-start: 1rem;
+  padding-inline-start: 1rem;
+  width: calc(100% - 1rem);
+}
+
+.vp-sidebar-children .vp-sidebar-children .vp-sidebar-item:not(.vp-sidebar-heading) {
+  padding-inline-start: 0.75rem;
+}
+
+.vp-page {
+  background: var(--vp-c-bg);
+}
+
+.vp-page #content {
+  max-width: 72rem;
+}
+
+.vp-page #content > h1:first-child {
+  color: var(--vp-c-text);
+  font-size: clamp(2.35rem, 5vw, 4.2rem);
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+  margin-bottom: 1rem;
+}
+
+.vp-page #content > h2 {
+  border-bottom: 1px solid var(--vp-c-divider);
+  color: var(--vp-c-text);
+  letter-spacing: -0.015em;
+  padding-bottom: 0.45rem;
+}
+
+.vp-page #content > h3,
+.vp-page #content > h4 {
+  color: var(--vp-c-accent-hover);
+}
+
+.vp-page #content .header-anchor::before {
+  top: 0.1em;
+}
+
+.vp-page #content a {
+  color: var(--vp-c-accent-hover);
+  font-weight: 600;
+  text-decoration-color: var(--vp-c-divider);
+  text-underline-offset: 0.18em;
+  transition:
+    color 160ms ease,
+    text-decoration-color 160ms ease;
+}
+
+.vp-page #content a:hover {
+  color: var(--vp-c-accent);
+  text-decoration-color: currentcolor;
+}
+
+.vp-page #content blockquote {
+  background: var(--vp-c-bg-elv);
+  border-left: 4px solid var(--vp-c-accent);
+  color: var(--vp-c-text-mute);
+  margin-left: 0;
+  padding: 0.8rem 1rem;
+}
+
+.vp-page #content .hint-container {
+  --hint-stripe-color: var(--vp-c-accent);
+  position: relative;
+  background: var(--vp-c-bg-elv);
+  border-radius: 0.75rem;
+  box-shadow: none;
+}
+
+.vp-page #content .hint-container::before {
+  position: absolute;
+  inset: 0px;
+  border-radius: inherit;
+  background: linear-gradient(to right, var(--hint-stripe-color) 6px, transparent 6px);
+  content: "";
+  pointer-events: none;
+}
+
+.vp-page #content .hint-container.warning {
+  --hint-stripe-color: var(--vp-c-yellow-text);
+}
+
+.vp-page #content .hint-container-title {
+  color: var(--vp-c-accent-hover);
+  font-weight: 700;
+}
+
+.vp-page #content table {
+  background: var(--vp-c-bg-alt);
+  border: 1px solid var(--vp-c-divider);
+  border-collapse: separate;
+  border-radius: 0.75rem;
+  border-spacing: 0;
+  overflow: hidden;
+}
+
+.vp-page #content th {
+  background: var(--vp-c-bg-elv);
+  color: var(--vp-c-accent-hover);
+}
+
+.vp-page #content th,
+.vp-page #content td {
+  border-color: var(--vp-c-divider);
+}
+
+/* Keep inline-code decoration out of fenced code blocks. */
+.vp-page #content code:not(pre code) {
+  background: var(--vp-c-accent-soft);
+  border: 1px solid var(--vp-c-divider);
+  color: var(--vp-c-accent-hover);
+}
+
+.vp-page #content img {
+  border-radius: 0.75rem;
+}
+
+.home-quick-links {
+  gap: 1rem;
+  max-width: 52rem;
+}
+
+.home-quick-links > div {
+  background: var(--vp-c-bg-alt);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 0.75rem;
+  padding: 0.8rem 1.1rem;
+}
+
+.home-quick-links ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.vp-page-meta,
+.vp-page-nav {
+  border-color: var(--vp-c-divider);
+}
+
+.vp-page-nav .next {
+  border-color: var(--vp-c-divider);
+}
+
+.vp-toggle-color-mode-button,
+.vp-toggle-sidebar-button {
+  color: var(--vp-c-accent-hover);
+}
+
+.vp-page-nav .auto-link {
+  border-radius: 0.75rem;
+  padding-inline: 0.75rem;
+  padding-bottom: 0.5rem;
+  transition: background-color 160ms ease;
+}
+
+.vp-page-meta .edit-link a {
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 0.2rem;
+  transition:
+    color 160ms ease,
+    border-color 160ms ease;
+}
+
+.vp-page-meta .edit-link a:hover {
+  color: var(--vp-c-accent-hover);
+  text-decoration: none;
+  border-bottom-color: var(--vp-c-accent);
+}
+
+@media (max-width: 719px) {
+  .vp-sidebar {
+    box-shadow: 0 8px 22px var(--vp-c-shadow);
+  }
+
+  .vp-page #content > h1:first-child {
+    font-size: 2.5rem;
+  }
+}

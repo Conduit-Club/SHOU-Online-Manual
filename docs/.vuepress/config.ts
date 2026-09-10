@@ -1,6 +1,7 @@
 import { defaultTheme } from "@vuepress/theme-default";
 import { pwaPlugin } from "@vuepress/plugin-pwa";
 import { tocPlugin } from "@vuepress/plugin-toc";
+import { prismjsPlugin } from "@vuepress/plugin-prismjs";
 import { defineUserConfig } from "@vuepress/cli";
 import { viteBundler } from "@vuepress/bundler-vite";
 
@@ -22,7 +23,7 @@ export default defineUserConfig({
     ["meta", { name: "theme-color", content: color }],
     ["link", { rel: "manifest", href: "/manifest.webmanifest" }],
   ],
-  plugins: [pwaPlugin(), tocPlugin()],
+  plugins: [pwaPlugin(), tocPlugin(), prismjsPlugin({ themes: { light: "one-light", dark: "one-dark" } })],
   theme: defaultTheme({
     navbar: [
       { text: "主页", link: "/" },
