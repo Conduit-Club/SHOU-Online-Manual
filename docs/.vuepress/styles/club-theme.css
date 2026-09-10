@@ -97,6 +97,10 @@
   --vp-c-code-tab-title: var(--white);
   --vp-c-code-tab-bg: var(--neutral-800);
   --vp-c-code-tab-active: var(--vp-c-accent);
+  --code-c-bg: var(--neutral-100);
+
+  --code-border-radius: 0.75rem;
+  --code-font-family: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 html[data-theme="dark"] {
@@ -130,6 +134,7 @@ html[data-theme="dark"] {
   --vp-c-grey-text: var(--neutral-300);
   --vp-c-grey-soft: var(--neutral-800);
   --vp-c-code-tab-bg: var(--neutral-950);
+  --code-c-bg: var(--neutral-900);
 }
 
 html,
@@ -140,6 +145,7 @@ body {
   corner-shape: squircle;
   font-family:
     ui-sans,
+    ui-sans-serif,
     system-ui,
     -apple-system,
     BlinkMacSystemFont,
