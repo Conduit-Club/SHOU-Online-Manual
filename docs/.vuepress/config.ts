@@ -6,7 +6,7 @@ import { viteBundler } from "@vuepress/bundler-vite";
 
 const title = "水专手册";
 const description = "上海海洋大学校园信息手册";
-const color = "#49BF7C";
+const color = "#D17D8A";
 
 export default defineUserConfig({
   bundler: viteBundler(),

@@ -3,6 +3,6 @@
   "short_name": "水专手册",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#49BF7C"
+  "background_color": "#FDF9F3",
+  "theme_color": "#D17D8A"
 }

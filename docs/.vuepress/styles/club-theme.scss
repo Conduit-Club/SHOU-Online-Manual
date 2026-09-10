@@ -9,18 +9,19 @@
   --club-panel: #f9efe4;
   --club-panel-muted: #f7f3ed;
   --club-text: #1c1c18;
-  --club-muted: #534344;
-  --club-accent: #904855;
+  --club-muted: #5d453e;
+  --club-accent: #d17d8a;
+  --club-accent-strong: #904855;
   --club-accent-soft: #fdebed;
-  --club-line: #d8c1c3;
-  --club-line-strong: #857274;
-  --club-yellow: #6f5b46;
-  --club-shadow: 0 8px 22px rgb(93 69 62 / 16%);
+  --club-line: rgb(139 111 100 / 22%);
+  --club-line-strong: #8b6f64;
+  --club-secondary: #f4d9be;
+  --club-shadow: 0 6px 18px rgb(93 69 62 / 10%);
 
   /* 覆盖 VuePress 默认的绿色品牌色，避免状态样式漏回默认主题。 */
   --vp-c-accent: var(--club-accent);
   --vp-c-accent-bg: var(--club-accent);
-  --vp-c-accent-hover: var(--club-yellow);
+  --vp-c-accent-hover: var(--club-accent-strong);
   --vp-c-accent-soft: var(--club-accent-soft);
   --vp-c-text: var(--club-text);
   --vp-c-text-mute: var(--club-muted);
@@ -35,8 +36,7 @@ html,
 body {
   background: var(--club-bg);
   color: var(--club-text);
-  font-family:
-    "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  font-family: "Plus Jakarta Sans", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
 }
 
 body {
@@ -56,7 +56,7 @@ body {
 
 .vp-site-name {
   color: var(--club-text);
-  font-family: Georgia, "Noto Serif SC", serif;
+  font-family: "Space Grotesk", "Noto Sans SC", sans-serif;
   font-weight: 700;
   letter-spacing: 0.02em;
 }
@@ -73,7 +73,7 @@ body {
 .vp-navbar-item > .auto-link.route-link-active {
   background: var(--club-accent-soft);
   border-bottom-color: var(--club-accent);
-  color: var(--club-accent);
+  color: var(--club-accent-strong);
 }
 
 .vp-navbar-item a.external-link::after {
@@ -132,7 +132,7 @@ body {
 
 .vp-page #content > h1:first-child {
   color: var(--club-text);
-  font-family: Georgia, "Noto Serif SC", serif;
+  font-family: "Space Grotesk", "Noto Sans SC", sans-serif;
   font-size: clamp(2.35rem, 5vw, 4.2rem);
   letter-spacing: -0.035em;
   line-height: 1.08;
@@ -142,26 +142,26 @@ body {
 .vp-page #content > h2 {
   border-bottom: 1px solid var(--club-line);
   color: var(--club-text);
-  font-family: Georgia, "Noto Serif SC", serif;
+  font-family: "Space Grotesk", "Noto Sans SC", sans-serif;
   letter-spacing: -0.015em;
   padding-bottom: 0.45rem;
 }
 
 .vp-page #content > h3,
 .vp-page #content > h4 {
-  color: var(--club-accent);
-  font-family: Georgia, "Noto Serif SC", serif;
+  color: var(--club-accent-strong);
+  font-family: "Space Grotesk", "Noto Sans SC", sans-serif;
 }
 
 .vp-page #content a {
-  color: var(--club-accent);
+  color: var(--club-accent-strong);
   font-weight: 600;
   text-decoration-color: var(--club-line);
   text-underline-offset: 0.18em;
 }
 
 .vp-page #content a:hover {
-  color: var(--club-yellow);
+  color: var(--club-accent);
   text-decoration-color: currentcolor;
 }
 
@@ -182,12 +182,12 @@ body {
 }
 
 .vp-page #content .hint-container.warning {
-  border-left-color: var(--club-yellow);
+  border-left-color: var(--club-secondary);
 }
 
 .vp-page #content .hint-container-title {
-  color: var(--club-accent);
-  font-family: Georgia, "Noto Serif SC", serif;
+  color: var(--club-accent-strong);
+  font-family: "Space Grotesk", "Noto Sans SC", sans-serif;
   font-weight: 700;
 }
 
@@ -202,7 +202,7 @@ body {
 
 .vp-page #content th {
   background: var(--club-panel);
-  color: var(--club-accent);
+  color: var(--club-accent-strong);
 }
 
 .vp-page #content th,
@@ -213,7 +213,7 @@ body {
 .vp-page #content code {
   background: var(--club-accent-soft);
   border: 1px solid var(--club-line);
-  color: var(--club-accent);
+  color: var(--club-accent-strong);
 }
 
 .vp-page #content pre {
@@ -255,7 +255,7 @@ body {
 
 .vp-toggle-color-mode-button,
 .vp-toggle-sidebar-button {
-  color: var(--club-accent);
+  color: var(--club-accent-strong);
 }
 
 html[data-theme="dark"] {
@@ -265,15 +265,16 @@ html[data-theme="dark"] {
   --club-text: #f8eee8;
   --club-muted: #c8b4ad;
   --club-accent: #d9919e;
+  --club-accent-strong: #ffb2bc;
   --club-accent-soft: #4a2e35;
   --club-line: #5c4546;
   --club-line-strong: #85666b;
-  --club-yellow: #e4b98d;
+  --club-secondary: #e4b98d;
   --club-shadow: 0 8px 22px rgb(0 0 0 / 28%);
 
   --vp-c-accent: var(--club-accent);
   --vp-c-accent-bg: var(--club-accent);
-  --vp-c-accent-hover: var(--club-yellow);
+  --vp-c-accent-hover: var(--club-secondary);
   --vp-c-accent-soft: var(--club-accent-soft);
   --vp-c-text: var(--club-text);
   --vp-c-text-mute: var(--club-muted);
@@ -285,15 +286,15 @@ html[data-theme="dark"] {
 }
 
 html[data-theme="dark"] .vp-navbar-item > .auto-link:hover {
-  color: var(--club-yellow);
+  color: var(--club-secondary);
 }
 
 html[data-theme="dark"] .vp-page #content a:hover {
-  color: var(--club-yellow);
+  color: var(--club-secondary);
 }
 
 html[data-theme="dark"] .vp-page #content .hint-container.warning {
-  border-left-color: var(--club-yellow);
+  border-left-color: var(--club-secondary);
 }
 
 html[data-theme="dark"] .vp-page #content pre {
