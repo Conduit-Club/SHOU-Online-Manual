@@ -19,6 +19,7 @@
     "@vuepress/cli": "next",
     "@vuepress/plugin-git": "next",
     "@vuepress/plugin-pwa": "next",
+    "@vuepress/plugin-search": "next",
     "@vuepress/plugin-toc": "next",
     "@vuepress/theme-default": "next",
     "oxfmt": "^0.66.0",
