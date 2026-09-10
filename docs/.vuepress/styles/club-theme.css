@@ -305,6 +305,10 @@ body {
   box-shadow: none;
 }
 
+.vp-page #content .hint-container .hint-container {
+  border: 1px solid var(--vp-c-border);
+}
+
 .vp-page #content .hint-container::before {
   position: absolute;
   inset: 0px;
