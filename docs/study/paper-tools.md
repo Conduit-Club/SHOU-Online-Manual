@@ -1,15 +1,15 @@
-# 几个赶 ddl 的好用工具
+# 几个赶ddl的好用工具
 
-赶 ddl 的朋友们，你们还好吗？
-接下来，我来推荐几个赶 ddl，写论文的好用工具🔧
+赶ddl的朋友们，你们还好吗？
+接下来，我来推荐几个赶ddl，写论文的好用工具🔧
 
-## Google Translate 翻译器
+## Google Translate翻译器
 
 <https://translate.google.com>
 
 国际大厂出品，用过都知道。
 
-## DeepL Translate 翻译器
+## DeepL Translate翻译器
 
 <https://www.deepl.com/translator>
 
@@ -31,19 +31,19 @@
 
 同样是一键检查，针对中文特别优化。
 
-## QuillBot 同义转写
+## QuillBot同义转写
 
 <https://quillbot.com/>
 
-一个直接帮你 paraphrase，妈妈再也不用担心我降重啦。
+一个直接帮你paraphrase，妈妈再也不用担心我降重啦。
 
-## Mybib 参考格式化
+## Mybib参考格式化
 
 <https://www.mybib.com/>
 
-Reference 一键式操作，什么 GBT 7714-2015，APA，IEEE 格式都支持。
+Reference一键式操作，什么GBT 7714-2015，APA，IEEE格式都支持。
 
-## Turnitin 查重
+## Turnitin查重
 
 <https://www.turnitin.com/>
 

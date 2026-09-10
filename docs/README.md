@@ -1,6 +1,6 @@
 # 水专手册
 
-面向上海海洋大学 SHOUer 的校园信息手册。
+面向上海海洋大学SHOUer的校园信息手册。
 
 ::: warning 建设中
 本站正在参考上游南科手册，建设上海海洋大学版本。各栏目提供可仿写的模板；其中带有尖括号的内容必须替换并核验后才能发布。
@@ -43,7 +43,7 @@
 
 ## 校园地图
 
-目前先收录学校后勤与基建管理处公开的[校园总平图（2025 年 9 月版）](./facilities/campus-map.md)。地图和校园设施可能变化，请以现场指引和学校最新通知为准。
+目前先收录学校后勤与基建管理处公开的[校园总平图（2025年9月版）](./facilities/campus-map.md)。地图和校园设施可能变化，请以现场指引和学校最新通知为准。
 
 ## 提交信息前请确认
 
@@ -54,5 +54,5 @@
 :::
 
 ::: tip 许可证
-本项目文档内容默认以 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.zh) 发布，完整协议见仓库根目录的 [`LICENSE`](https://github.com/Conduit-Club/SHOU-Online-Manual/blob/master/LICENSE)。改编上游内容时须保留原作者、来源和许可信息，并以相同方式共享；第三方材料以其单独声明为准。
+本项目文档内容默认以[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.zh) 发布，完整协议见仓库根目录的[`LICENSE`](https://github.com/Conduit-Club/SHOU-Online-Manual/blob/master/LICENSE)。改编上游内容时须保留原作者、来源和许可信息，并以相同方式共享；第三方材料以其单独声明为准。
 :::
