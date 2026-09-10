@@ -139,6 +139,7 @@ body {
   text-autospace: normal;
   corner-shape: squircle;
   font-family:
+    ui-sans,
     system-ui,
     -apple-system,
     BlinkMacSystemFont,
@@ -150,6 +151,7 @@ body {
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
+  font-synthesis: none;
 }
 
 body {
@@ -271,7 +273,11 @@ body {
 }
 
 .vp-page #content .header-anchor::before {
-  top: 0.1em;
+  top: 0.15em;
+}
+
+.vp-page #content h1 .header-anchor::before {
+  top: 0.3em;
 }
 
 .vp-page #content a {
@@ -311,7 +317,7 @@ body {
 
 .vp-page #content .hint-container::before {
   position: absolute;
-  inset: 0px;
+  inset: 0;
   border-radius: inherit;
   background: linear-gradient(to right, var(--hint-stripe-color) 4px, transparent 4px);
   content: "";
