@@ -1,0 +1,38 @@
+name: Style check
+
+on:
+  pull_request:
+    branches: [master, dev]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: prefix-dev/setup-pixi@v0.9.0
+        with:
+          pixi-version: v0.76.2
+          cache: true
+          locked: true
+
+      - name: Run style check
+        id: style
+        continue-on-error: true
+        run: pixi run --locked fmt-check
+
+      - name: Run lint check
+        id: lint
+        continue-on-error: true
+        run: pixi run --locked lint
+
+      - name: Fail job if any check fails
+        if: |
+          steps.style.outcome == 'failure' ||
+          steps.lint.outcome == 'failure'
+        run: exit 1
