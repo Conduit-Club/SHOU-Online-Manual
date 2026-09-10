@@ -313,7 +313,7 @@ body {
   position: absolute;
   inset: 0px;
   border-radius: inherit;
-  background: linear-gradient(to right, var(--hint-stripe-color) 6px, transparent 6px);
+  background: linear-gradient(to right, var(--hint-stripe-color) 4px, transparent 4px);
   content: "";
   pointer-events: none;
 }
