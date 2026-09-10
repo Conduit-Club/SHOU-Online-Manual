@@ -177,6 +177,20 @@ function applyOverlay() {
   if (!map.getSource("sports")) {
     map.addSource("sports", { type: "geojson", data: withBase("/maps/sports.json") });
   }
+  if (!map.getLayer("sports-fill")) {
+    map.addLayer({
+      id: "sports-fill",
+      type: "fill",
+      source: "sports",
+      minzoom: 14.5,
+      filter: ["==", ["geometry-type"], "Polygon"],
+      paint: {
+        "fill-color": ["to-color", ["get", "fill"], "transparent"],
+      },
+    });
+  }
+  // Keep polygon fills above the basemap and below all campus labels after overlay updates.
+  map.moveLayer("sports-fill", "canteens-point");
   if (!map.getLayer("sports-point")) {
     map.addLayer({
       id: "sports-point",
@@ -245,6 +259,33 @@ function applyOverlay() {
     });
   }
   map.moveLayer("other-point");
+
+  if (!map.getSource("university")) {
+    map.addSource("university", {
+      type: "geojson",
+      data: withBase("/maps/university.json"),
+    });
+  }
+  if (!map.getLayer("university-point")) {
+    map.addLayer({
+      id: "university-point",
+      type: "symbol",
+      source: "university",
+      maxzoom: 14.5,
+      layout: {
+        "text-field": ["get", "label"],
+        "text-anchor": "center",
+        "text-allow-overlap": true,
+        "text-size": 16,
+      },
+      paint: {
+        "text-color": isDark.value ? "#dfdfdf" : "#1c1c1e",
+        "text-halo-color": isDark.value ? "#242424" : "#ffffff",
+        "text-halo-width": 1,
+      },
+    });
+  }
+  map.moveLayer("university-point");
 }
 
 async function updateOverlay() {
