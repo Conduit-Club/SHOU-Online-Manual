@@ -61,10 +61,19 @@ export default defineUserConfig({
     sidebar: [
       { text: "🏠水专手册", link: "/" },
       { text: "📚新生指南", link: "/freshman-guide/" },
-      { text: "🎓学习与发展", link: "/study/" },
+      {
+        text: "🎓学习与发展",
+        link: "/study/",
+        children: [
+          { text: "课程、学分与 GPA", link: "/study/courses-and-gpa.html" },
+          { text: "刷 GPA 实用网站", link: "/study/learning-sites.html" },
+          { text: "发论文实用工具", link: "/study/paper-tools.html" },
+        ],
+      },
       {
         text: "🧰服务与技巧",
         link: "/service/",
+        collapsible: true,
         children: [
           { text: "学号的意义", link: "/service/sid/" },
           { text: "校园卡与学生证", link: "/service/campus-card/" },
@@ -80,6 +89,7 @@ export default defineUserConfig({
           {
             text: "软件授权",
             link: "/service/software-licenses/",
+            collapsible: true,
             children: [
               { text: "学校已购买的软件", link: "/service/software-licenses/purchased.html" },
               { text: "教育邮箱福利", link: "/service/software-licenses/education-email.html" },
@@ -97,6 +107,7 @@ export default defineUserConfig({
       {
         text: "🚇交通",
         link: "/transport/",
+        collapsible: true,
         children: [
           { text: "机场到校", link: "/transport/airports.html" },
           { text: "火车站到校", link: "/transport/railway-stations.html" },
