@@ -1,0 +1,65 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "第三餐厅\nDZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.89099731268249, 30.88850158528068]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "第一餐厅\nDZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.89316915612511, 30.883145639308523]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "临港大道地铁站\nDZ 1077 中运量2 16号线"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.90684435939187, 30.925760147230612]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "临港共享区枢纽\n1043 1077"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8993817, 30.8843577]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "滴水湖枢纽\n 1043 中运量1 中运量2 16号线"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.9250474, 30.9099556]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "上元路\n中运量1 中运量2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.9000542, 30.8853649]
+      }
+    }
+  ]
+}

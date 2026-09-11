@@ -236,6 +236,33 @@ function applyOverlay() {
   }
   map.moveLayer("gates-point");
 
+  if (!map.getSource("public-transport")) {
+    map.addSource("public-transport", {
+      type: "geojson",
+      data: withBase("/maps/public-transport.json"),
+    });
+  }
+  if (!map.getLayer("public-transport-point")) {
+    map.addLayer({
+      id: "public-transport-point",
+      type: "symbol",
+      source: "public-transport",
+      minzoom: 13,
+      layout: {
+        "text-field": ["get", "label"],
+        "text-anchor": "center",
+        "text-allow-overlap": true,
+        "text-size": 13,
+      },
+      paint: {
+        "text-color": isDark.value ? "#e2c9ff" : "#6b21a8",
+        "text-halo-color": isDark.value ? "#242424" : "#ffffff",
+        "text-halo-width": 1,
+      },
+    });
+  }
+  map.moveLayer("public-transport-point");
+
   if (!map.getSource("other")) {
     map.addSource("other", { type: "geojson", data: withBase("/maps/other.json") });
   }
