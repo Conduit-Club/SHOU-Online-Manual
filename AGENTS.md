@@ -58,6 +58,7 @@ git fetch origin
   ```
 
   两条命令应分别输出 `features/<topic>` 和 `origin/features/<topic>`。
+
 - 任务分支（包括 `features/**`）不得跟踪 `origin/dev`。禁止使用或保留 `git branch -u origin/dev`、`git branch --track features/<topic> origin/dev` 等会建立错误上游关系的配置；若误配置，必须在继续提交前修正：
 
   ```bash
@@ -76,6 +77,18 @@ git fetch origin
 - 完成修改后，通过 Pull Request 合并到 `dev`。
 - 发布时，通过 `dev -> master` Pull Request 进行。
 - feature、fix、docs 等任务分支不得直接合并到 `master`。
+
+#### 任务结束后的分支清理
+
+- 任务分支的工作完成且 Pull Request 已合并（或经维护者确认不再继续）后，分支所有者必须删除该任务分支的本地分支，以及 `origin` 上的同名远端分支。除非维护者明确要求保留，不得长期保留已完成或废弃的任务分支。
+- 删除前应确认没有尚未交付的提交；不得删除 `dev`、`master` 或其他协作者的分支。可按以下顺序清理自己的任务分支：
+
+  ```bash
+  git switch dev
+  git branch -d features/<topic>
+  git push origin --delete features/<topic>
+  git fetch origin --prune
+  ```
 
 ### 无仓库写入权限的贡献者
 
