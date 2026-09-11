@@ -3,6 +3,7 @@
   "scripts": {
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",
+    "lint": "oxlint",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "docs:clean": "rm -rf docs/.vuepress/.cache docs/.vuepress/.temp docs/.vuepress/dist"
@@ -18,9 +19,11 @@
     "@vuepress/cli": "next",
     "@vuepress/plugin-git": "next",
     "@vuepress/plugin-pwa": "next",
+    "@vuepress/plugin-search": "next",
     "@vuepress/plugin-toc": "next",
     "@vuepress/theme-default": "next",
     "oxfmt": "^0.66.0",
+    "oxlint": "^1.82.0",
     "sass-embedded": "^1.103.1",
     "serve": "14.2.6",
     "vuepress": "next"

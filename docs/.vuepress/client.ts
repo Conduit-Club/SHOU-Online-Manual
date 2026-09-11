@@ -1,5 +1,6 @@
 import { defineClientConfig } from "vuepress/client";
 import { defineAsyncComponent } from "vue";
+import GpaCalculator from "./components/GpaCalculator.vue";
 
 export default defineClientConfig({
   enhance({ app }) {
@@ -7,5 +8,6 @@ export default defineClientConfig({
       "CampusMap",
       defineAsyncComponent(() => import("./components/CampusMap.vue")),
     );
+    app.component("GpaCalculator", GpaCalculator);
   },
 });

@@ -54,5 +54,5 @@
 :::
 
 ::: tip 许可证
-本项目文档内容默认以 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.zh) 发布，完整协议见仓库根目录的 [`LICENSE`](https://github.com/Conduit-Club/shou-online-guide/blob/master/LICENSE)。改编上游内容时须保留原作者、来源和许可信息，并以相同方式共享；第三方材料以其单独声明为准。
+本项目文档内容默认以 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.zh) 发布，完整协议见仓库根目录的 [`LICENSE`](https://github.com/Conduit-Club/SHOU-Online-Manual/blob/master/LICENSE)。改编上游内容时须保留原作者、来源和许可信息，并以相同方式共享；第三方材料以其单独声明为准。
 :::
