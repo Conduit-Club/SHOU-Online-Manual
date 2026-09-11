@@ -32,12 +32,40 @@ feature / fix / docs branch
 ```bash
 git status
 git branch --show-current
-git fetch
+git fetch origin
 ```
 
 并检查本地工作区和远端分支状态。
 
-- 从最新 `dev` 创建任务分支。
+- 从最新 `origin/dev` 创建任务分支，并立即在本地和 `origin` 创建同名分支；任务分支的远端跟踪分支必须是 `origin/<同名任务分支>`，不得指向 `origin/dev`。
+
+#### 创建任务分支与设置上游
+
+- 有仓库写入权限的维护者创建任务分支时，必须让同名分支同时存在于本地和 `origin`，并在开始提交前完成远端跟踪配置。
+- 应从最新的 `origin/dev` 创建本地任务分支，并立即推送同名分支到 `origin`：
+
+  ```bash
+  git fetch origin
+  git switch --no-track --create features/<topic> origin/dev
+  git push --set-upstream origin HEAD
+  ```
+
+  `git push --set-upstream origin HEAD` 会在 `origin` 创建当前分支的同名分支，并将上游设置为 `origin/features/<topic>`。创建完成后必须核验：
+
+  ```bash
+  git branch --show-current
+  git rev-parse --abbrev-ref --symbolic-full-name @{upstream}
+  ```
+
+  两条命令应分别输出 `features/<topic>` 和 `origin/features/<topic>`。
+
+- 任务分支（包括 `features/**`）不得跟踪 `origin/dev`。禁止使用或保留 `git branch -u origin/dev`、`git branch --track features/<topic> origin/dev` 等会建立错误上游关系的配置；若误配置，必须在继续提交前修正：
+
+  ```bash
+  git branch --unset-upstream
+  git push --set-upstream origin HEAD
+  ```
+
 - 推荐使用能够表达用途的分支名，例如：
 
   - `feat/<topic>`
@@ -49,6 +77,18 @@ git fetch
 - 完成修改后，通过 Pull Request 合并到 `dev`。
 - 发布时，通过 `dev -> master` Pull Request 进行。
 - feature、fix、docs 等任务分支不得直接合并到 `master`。
+
+#### 任务结束后的分支清理
+
+- 任务分支的工作完成且 Pull Request 已合并（或经维护者确认不再继续）后，分支所有者必须删除该任务分支的本地分支，以及 `origin` 上的同名远端分支。除非维护者明确要求保留，不得长期保留已完成或废弃的任务分支。
+- 删除前应确认没有尚未交付的提交；不得删除 `dev`、`master` 或其他协作者的分支。可按以下顺序清理自己的任务分支：
+
+  ```bash
+  git switch dev
+  git branch -d features/<topic>
+  git push origin --delete features/<topic>
+  git fetch origin --prune
+  ```
 
 ### 无仓库写入权限的贡献者
 
@@ -225,11 +265,11 @@ YYYY-MM-DD
 ## 推荐工作流程
 
 1. 检查工作区、当前分支和远端状态。
-2. 获取最新 `dev`。
-3. 从 `dev` 创建独立任务分支。
+2. 获取最新 `origin/dev`。
+3. 从 `origin/dev` 创建独立任务分支，并在本地和 `origin` 同步创建同名分支；确认上游为 `origin/<任务分支>`，而不是 `origin/dev`。
 4. 完成尽量小且聚焦的修改。
 5. 根据修改范围运行格式检查和构建。
-6. 提交并推送任务分支。
+6. 提交并推送到当前任务分支对应的同名远端分支。
 7. 创建或更新目标为 `dev` 的 Pull Request。
 8. 处理 CI 和 Review 意见。
 9. Required Checks 和评审通过后合并到 `dev`。
