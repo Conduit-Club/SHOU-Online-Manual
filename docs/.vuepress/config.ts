@@ -61,7 +61,15 @@ export default defineUserConfig({
     sidebar: [
       { text: "🏠水专手册", link: "/" },
       { text: "📚新生指南", link: "/freshman-guide/" },
-      { text: "🎓学习与发展", link: "/study/" },
+      {
+        text: "🎓学习与发展",
+        link: "/study/",
+        children: [
+          { text: "课程、学分与 GPA", link: "/study/courses-and-gpa.html" },
+          { text: "刷 GPA 实用网站", link: "/study/learning-sites.html" },
+          { text: "发论文实用工具", link: "/study/paper-tools.html" },
+        ],
+      },
       {
         text: "🧰服务与技巧",
         link: "/service/",
