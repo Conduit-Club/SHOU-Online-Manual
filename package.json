@@ -18,6 +18,7 @@
     "@vuepress/bundler-vite": "next",
     "@vuepress/cli": "next",
     "@vuepress/plugin-git": "next",
+    "@vuepress/plugin-markdown-image": "2.0.0-rc.134",
     "@vuepress/plugin-pwa": "next",
     "@vuepress/plugin-search": "next",
     "@vuepress/plugin-toc": "next",
