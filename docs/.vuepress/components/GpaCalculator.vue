@@ -8,7 +8,6 @@ const courses = ref([newCourse()]);
 const summary = computed(() => summarizeCourses(courses.value));
 function changeMode(course) {
   course.value = "";
-  course.include = !gradeOptions[course.mode];
 }
 function removeCourse(index) {
   courses.value.splice(index, 1);
@@ -17,7 +16,7 @@ function removeCourse(index) {
 </script>
 
 <template>
-  <section class="gpa-calculator" aria-label="北大 4.0 GPA 计算器">
+  <section class="gpa-calculator" aria-label="海大 4.0 GPA 计算器">
     <p class="gpa-intro">填完学分和成绩，GPA 会自动更新。数据只在本页计算，刷新就会清空。</p>
     <form @submit.prevent>
       <fieldset v-for="(course, index) in courses" :key="course.id" class="gpa-course">
@@ -58,8 +57,7 @@ function removeCourse(index) {
           </label>
         </div>
         <div class="gpa-row-actions">
-          <span v-if="gradeOptions[course.mode]">这类成绩只作记录，不计入北大 GPA。</span>
-          <label v-else class="gpa-checkbox"><input v-model="course.include" type="checkbox" />计入 GPA</label>
+          <label class="gpa-checkbox"><input v-model="course.include" type="checkbox" />计入 GPA</label>
           <span v-if="summary.rows[index].point !== undefined"
             >单科绩点：{{ summary.rows[index].point.toFixed(4) }}</span
           >
@@ -70,7 +68,7 @@ function removeCourse(index) {
       <button type="button" class="gpa-add" @click="courses.push(newCourse())">＋ 添加课程</button>
     </form>
     <div class="gpa-result" role="status" aria-live="polite" aria-atomic="true">
-      <p class="gpa-method">计算口径：北大 4.0 连续公式（非海大官方 GPA）</p>
+      <p class="gpa-method">计算口径：海大本科生 4.0 分段制</p>
       <strong>GPA：{{ summary.gpa === null ? "—" : summary.gpa.toFixed(4) }} / 4.0000</strong>
       <p v-if="summary.invalid">还有课程没填完整，或数值超出范围，改好后就能看到总 GPA。</p>
       <p v-else-if="summary.gpa === null">还没有能计入 GPA 的课程，先填一门试试。</p>
@@ -81,8 +79,9 @@ function removeCourse(index) {
       </p>
     </div>
     <p class="gpa-note">
-      已有绩点请用同一种 4.0 制。等级成绩只作记录；如果有正式的百分制总评，可以换成百分制填写。
-      挂科的百分制课程也算在分母里，所以上面的学分不是“已修过的学分”。“普通”是其他等级标签，不是海大正式五级制的一档。
+      百分制成绩按学校规定四舍五入取整后换算；通过／不通过和五级制成绩也按海大对应表计入。 已有绩点请用同一种 4.0
+      制。挂科的百分制课程也算在分母里，所以上面的学分不是“已修过的学分”。
+      如果某门课程或教学环节不应计入你的统计范围，可以取消“计入 GPA”。
     </p>
   </section>
 </template>
