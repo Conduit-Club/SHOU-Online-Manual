@@ -3,6 +3,8 @@
 赶 ddl 的朋友们，你们还好吗？
 接下来，我来推荐几个赶 ddl，写论文的好用工具🔧
 
+[[toc]]
+
 ## Google Translate 翻译器
 
 <https://translate.google.com>
