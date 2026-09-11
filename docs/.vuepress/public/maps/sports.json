@@ -4,8 +4,7 @@
     {
       "type": "Feature",
       "properties": {
-        "label": "西操场",
-        "fill": "#4ccb5e80"
+        "label": "西操场"
       },
       "geometry": {
         "type": "Polygon",
@@ -59,8 +58,7 @@
     {
       "type": "Feature",
       "properties": {
-        "label": "东操场",
-        "fill": "#4ccb5e80"
+        "label": "东操场"
       },
       "geometry": {
         "type": "Polygon",
@@ -84,8 +82,7 @@
     {
       "type": "Feature",
       "properties": {
-        "label": "篮球场",
-        "fill": "#4ccb5e80"
+        "label": "篮球场"
       },
       "geometry": {
         "type": "Polygon",
@@ -103,8 +100,7 @@
     {
       "type": "Feature",
       "properties": {
-        "label": "网球场",
-        "fill": "#4ccb5e80"
+        "label": "网球场"
       },
       "geometry": {
         "type": "Polygon",

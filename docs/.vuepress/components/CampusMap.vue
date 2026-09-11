@@ -185,7 +185,7 @@ function applyOverlay() {
       minzoom: 14.5,
       filter: ["==", ["geometry-type"], "Polygon"],
       paint: {
-        "fill-color": ["to-color", ["get", "fill"], "transparent"],
+        "fill-color": "#4ccb5e80",
       },
     });
   }
