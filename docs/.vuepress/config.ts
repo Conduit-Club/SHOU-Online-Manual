@@ -4,13 +4,21 @@ import { searchPlugin } from "@vuepress/plugin-search";
 import { tocPlugin } from "@vuepress/plugin-toc";
 import { defineUserConfig } from "@vuepress/cli";
 import { viteBundler } from "@vuepress/bundler-vite";
+import { markdownImagePlugin } from "@vuepress/plugin-markdown-image";
 
 const title = "水专手册";
 const description = "上海海洋大学校园信息手册";
 const color = "#49BF7C";
 
 export default defineUserConfig({
-  bundler: viteBundler(),
+  bundler: viteBundler({
+    viteOptions: {
+      build: {
+        // MapLibre is an optional, lazy-loaded feature with its own worker bundle.
+        chunkSizeWarningLimit: 1100,
+      },
+    },
+  }),
   shouldPrefetch: false,
   locales: {
     "/": {
@@ -32,6 +40,18 @@ export default defineUserConfig({
           placeholder: "搜索手册",
         },
       },
+    }),
+    markdownImagePlugin({
+      // Enable figure
+      figure: true,
+      // Enable image lazyloading
+      lazyload: true,
+      // Enable image marking (Light / Dark differences)
+      mark: true,
+      // Enable image sizing
+      size: true,
+      // Enable obsidian-styled sizing
+      obsidianSize: true,
     }),
   ],
   theme: defaultTheme({
@@ -78,7 +98,11 @@ export default defineUserConfig({
           { text: "学号的意义", link: "/service/sid/" },
           { text: "校园卡与学生证", link: "/service/campus-card/" },
           { text: "人脸采集与门禁", link: "/service/face-registration/" },
-          { text: "校园网络", link: "/service/network/" },
+          {
+            text: "校园网络",
+            link: "/service/network/",
+            children: [{ text: "校园无线网络", link: "/service/network/campus-network.html" }],
+          },
           { text: "打印机", link: "/service/teaching/printer.html" },
           { text: "电子邮件", link: "/service/communication/email.html" },
           { text: "快递收发", link: "/service/packages/" },
