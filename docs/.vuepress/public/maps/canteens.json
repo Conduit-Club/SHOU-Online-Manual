@@ -1,0 +1,35 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "第三餐厅"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8918594, 30.8893715]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "第一餐厅"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8934382, 30.8826037]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "第二餐厅"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8912025, 30.8826095]
+      }
+    }
+  ]
+}

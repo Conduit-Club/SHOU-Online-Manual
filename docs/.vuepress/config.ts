@@ -1,15 +1,24 @@
 import { defaultTheme } from "@vuepress/theme-default";
 import { pwaPlugin } from "@vuepress/plugin-pwa";
+import { searchPlugin } from "@vuepress/plugin-search";
 import { tocPlugin } from "@vuepress/plugin-toc";
 import { defineUserConfig } from "@vuepress/cli";
 import { viteBundler } from "@vuepress/bundler-vite";
+import { markdownImagePlugin } from "@vuepress/plugin-markdown-image";
 
 const title = "水专手册";
 const description = "上海海洋大学校园信息手册";
 const color = "#49BF7C";
 
 export default defineUserConfig({
-  bundler: viteBundler(),
+  bundler: viteBundler({
+    viteOptions: {
+      build: {
+        // MapLibre is an optional, lazy-loaded feature with its own worker bundle.
+        chunkSizeWarningLimit: 1100,
+      },
+    },
+  }),
   shouldPrefetch: false,
   locales: {
     "/": {
@@ -22,12 +31,34 @@ export default defineUserConfig({
     ["meta", { name: "theme-color", content: color }],
     ["link", { rel: "manifest", href: "/manifest.webmanifest" }],
   ],
-  plugins: [pwaPlugin(), tocPlugin()],
+  plugins: [
+    pwaPlugin(),
+    tocPlugin(),
+    searchPlugin({
+      locales: {
+        "/": {
+          placeholder: "搜索手册",
+        },
+      },
+    }),
+    markdownImagePlugin({
+      // Enable figure
+      figure: true,
+      // Enable image lazyloading
+      lazyload: true,
+      // Enable image marking (Light / Dark differences)
+      mark: true,
+      // Enable image sizing
+      size: true,
+      // Enable obsidian-styled sizing
+      obsidianSize: true,
+    }),
+  ],
   theme: defaultTheme({
     navbar: [
-      { text: "主页", link: "/" },
-      { text: "关于", link: "/about/" },
-      { text: "站点帮助", link: "/site-help/" },
+      { text: "🏠主页", link: "/" },
+      { text: "ℹ️关于", link: "/about/" },
+      { text: "🛠️站点帮助", link: "/site-help/" },
     ],
     repo: "Conduit-Club/SHOU-Online-Manual",
     repoLabel: "在 GitHub 上查看",
@@ -48,22 +79,38 @@ export default defineUserConfig({
     toggleSidebar: "切换侧边栏",
     sidebarDepth: 2,
     sidebar: [
-      "/",
-      "/freshman-guide/",
-      "/study/",
+      { text: "🏠水专手册", link: "/" },
+      { text: "📚新生指南", link: "/freshman-guide/" },
       {
-        text: "服务与技巧",
+        text: "🎓学习与发展",
+        link: "/study/",
+        children: [
+          { text: "课程、学分与 GPA", link: "/study/courses-and-gpa.html" },
+          { text: "刷 GPA 实用网站", link: "/study/learning-sites.html" },
+          { text: "发论文实用工具", link: "/study/paper-tools.html" },
+        ],
+      },
+      {
+        text: "🧰服务与技巧",
         link: "/service/",
+        collapsible: true,
         children: [
           { text: "学号的意义", link: "/service/sid/" },
           { text: "校园卡与学生证", link: "/service/campus-card/" },
-          { text: "校园网络", link: "/service/network/" },
+          { text: "人脸采集与门禁", link: "/service/face-registration/" },
+          {
+            text: "校园网络",
+            link: "/service/network/",
+            children: [{ text: "校园无线网络", link: "/service/network/campus-network.html" }],
+          },
           { text: "打印机", link: "/service/teaching/printer.html" },
           { text: "电子邮件", link: "/service/communication/email.html" },
+          { text: "快递收发", link: "/service/packages/" },
           { text: "就医指南", link: "/service/medical/" },
           {
             text: "软件授权",
             link: "/service/software-licenses/",
+            collapsible: true,
             children: [
               { text: "学校已购买的软件", link: "/service/software-licenses/purchased.html" },
               { text: "教育邮箱福利", link: "/service/software-licenses/education-email.html" },
@@ -74,26 +121,26 @@ export default defineUserConfig({
           { text: "文档模板", link: "/service/document-templates.html" },
         ],
       },
-      "/life/",
-      "/canteen/",
-      "/facilities/",
-      "/facilities/campus-map.html",
+      { text: "🍽️食堂", link: "/canteen/" },
+      { text: "📍设施", link: "/facilities/" },
+      { text: "🗺️校园地图", link: "/facilities/campus-map.html" },
       {
-        text: "交通",
+        text: "🚇交通",
         link: "/transport/",
+        collapsible: true,
         children: [
           { text: "机场到校", link: "/transport/airports.html" },
           { text: "火车站到校", link: "/transport/railway-stations.html" },
         ],
       },
-      "/surroundings/",
-      "/contact/",
-      "/emergency/",
-      "/clubs/",
-      "/media/",
-      "/calendar/",
-      "/site-help/contribution-template.html",
-      "/site-help/",
+      { text: "🧭周边出行", link: "/surroundings/" },
+      { text: "☎️黄页", link: "/contact/" },
+      { text: "🚨应急", link: "/emergency/" },
+      { text: "🎪社团活动", link: "/clubs/" },
+      { text: "📰媒体与网站", link: "/media/" },
+      { text: "📅校历", link: "/calendar/" },
+      { text: "📝贡献模板", link: "/site-help/contribution-template.html" },
+      { text: "❓站点帮助", link: "/site-help/" },
     ],
   }),
 });

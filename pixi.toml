@@ -18,3 +18,4 @@ build = { cmd = "pnpm run docs:build", depends-on = ["install"] }
 start = { cmd = "pnpm exec serve docs/.vuepress/dist --listen 8080", depends-on = ["build"] }
 fmt = { cmd = "pnpm run fmt", depends-on = ["install"] }
 fmt-check = { cmd = "pnpm run fmt:check", depends-on = ["install"] }
+lint = { cmd = "pnpm run lint", depends-on = ["install"] }

@@ -1,0 +1,65 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "华东师范大学临港校区\n（在建）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.9116972, 30.8739793]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "上海电力大学\n（临港校区）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8878602, 30.9038168]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "上海建桥学院"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8890967, 30.8941891]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "上海电机学院\n（临港校区）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8811548, 30.8901897]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "上海海事大学\n（临港校区）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.9004668, 30.876551]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "上海海洋大学\n（临港校区）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8926514, 30.8844558]
+      }
+    }
+  ]
+}

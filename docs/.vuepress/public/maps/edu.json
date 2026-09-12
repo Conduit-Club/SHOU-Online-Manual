@@ -1,0 +1,265 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "第六教学楼"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.896149, 30.8840313]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "第五教学楼"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8936202, 30.8883718]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "爱恩学院"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.893505, 30.8887497]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "信息工程大楼"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8889482, 30.8837268]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "学生活动中心"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8952129, 30.8832397]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "水产与生命学院"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8902668, 30.8873381]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "海洋生物资源与管理学院"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8921536, 30.8870545]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "食品学院"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8912155, 30.8870728]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "食品学院"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8913221, 30.8878374]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "水生生物楼"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8925373, 30.8904903]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "海洋科技楼"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8927505, 30.8897943]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "工程学院"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8922815, 30.8879739]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "行政楼"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8956434, 30.889216]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "文科大楼"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8936505, 30.8899546]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "海洋生物资源\n与管理学院"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8921536, 30.8870545]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "信息学院"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.894348, 30.8883276]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "图书馆\n图文信息中心"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8921211, 30.8856732]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "苏友楼"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8920556, 30.8842841]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "图书馆\n图文信息中心"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8921211, 30.8856732]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "海洋剧场"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8956578, 30.886966]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "第四教学楼"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8950495, 30.886492]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "第三教学楼"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.894039, 30.8857292]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "第二教学楼"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8935712, 30.8851751]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "第一教学楼"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8938426, 30.8842999]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "实验楼B"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8908953, 30.8836495]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "实验楼A"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8922613, 30.8836655]
+      }
+    }
+  ]
+}
