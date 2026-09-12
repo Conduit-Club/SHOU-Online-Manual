@@ -367,7 +367,7 @@ function InteractiveCampusMap({ center, zoom, height, label, pmtiles, dark }) {
 
       try {
         if (!requestedPath) throw new Error("请指定 PMTiles 文件");
-        const { protocol, PMTiles } = await loadPmtiles();
+        const { protocol, PMTiles } = await loadPmtiles(withBaseUrl("/maplibre/maplibre-gl.mjs"));
         if (disposedRef.current || request !== overlayRequestRef.current) return;
 
         const path =
@@ -403,12 +403,11 @@ function InteractiveCampusMap({ center, zoom, height, label, pmtiles, dark }) {
 
     async function initialize() {
       try {
-        const { maplibre } = await loadPmtiles();
+        const { maplibre } = await loadPmtiles(withBaseUrl("/maplibre/maplibre-gl.mjs"));
         if (cancelled || disposedRef.current || !containerRef.current) return;
         const { Map, NavigationControl, FullscreenControl, setWorkerUrl } = maplibre;
         if (!workerConfigured && typeof setWorkerUrl === "function") {
-          // MapLibre v6 requires an explicit worker URL when bundled by webpack.
-          setWorkerUrl(new URL("maplibre-gl/dist/maplibre-gl-worker.mjs", import.meta.url).toString());
+          setWorkerUrl(withBaseUrl("/maplibre/maplibre-gl-worker.mjs"));
           workerConfigured = true;
         }
 
