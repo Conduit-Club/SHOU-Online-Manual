@@ -90,7 +90,11 @@ export default defineUserConfig({
         children: [
           { text: "学号的意义", link: "/service/sid/" },
           { text: "校园卡与学生证", link: "/service/campus-card/" },
-          { text: "校园网络", link: "/service/network/" },
+          {
+            text: "校园网络",
+            link: "/service/network/",
+            children: [{ text: "校园无线网络", link: "/service/network/campus-network.html" }],
+          },
           { text: "打印机", link: "/service/teaching/printer.html" },
           { text: "电子邮件", link: "/service/communication/email.html" },
           { text: "快递收发", link: "/service/packages/" },
