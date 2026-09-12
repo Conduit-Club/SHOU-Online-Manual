@@ -97,6 +97,7 @@ export default defineUserConfig({
         children: [
           { text: "学号的意义", link: "/service/sid/" },
           { text: "校园卡与学生证", link: "/service/campus-card/" },
+          { text: "人脸采集与门禁", link: "/service/face-registration/" },
           {
             text: "校园网络",
             link: "/service/network/",
@@ -120,7 +121,6 @@ export default defineUserConfig({
           { text: "文档模板", link: "/service/document-templates.html" },
         ],
       },
-      { text: "🏡校园生活", link: "/life/" },
       { text: "🍽️食堂", link: "/canteen/" },
       { text: "📍设施", link: "/facilities/" },
       { text: "🗺️校园地图", link: "/facilities/campus-map.html" },
