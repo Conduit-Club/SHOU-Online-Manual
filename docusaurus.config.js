@@ -31,7 +31,6 @@ const config = {
   projectName: "SHOU-Online-Manual",
   staticDirectories: ["assets"],
 
-  trailingSlash: true,
   onBrokenLinks: "throw",
   onBrokenAnchors: "throw",
   markdown: {
@@ -106,7 +105,7 @@ const config = {
 
   themes: [
     [
-      require.resolve("@easyops-cn/docusaurus-search-local"),
+      require.resolve("./src/plugins/searchLocalCompat.js"),
       {
         hashed: true,
         language: ["zh", "en"],

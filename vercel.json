@@ -4,5 +4,6 @@
   "installCommand": "bash scripts/vercel-install.sh",
   "buildCommand": ".vercel/pixi/bin/pixi run --locked build",
   "outputDirectory": "build",
-  "devCommand": "pixi run --locked dev"
+  "devCommand": "pixi run --locked dev",
+  "cleanUrls": false
 }

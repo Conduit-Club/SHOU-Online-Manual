@@ -8,7 +8,7 @@
     "lint": "oxlint",
     "start": "docusaurus start --host 0.0.0.0 --port 4173",
     "build": "docusaurus build",
-    "serve": "docusaurus serve --host 0.0.0.0 --port 8080",
+    "serve": "serve build --listen 8080 --config ../serve.json",
     "clear": "docusaurus clear",
     "docs:dev": "pnpm run start",
     "docs:build": "pnpm run build",
@@ -33,7 +33,8 @@
   },
   "devDependencies": {
     "oxfmt": "^0.66.0",
-    "oxlint": "^1.82.0"
+    "oxlint": "^1.82.0",
+    "serve": "14.2.6"
   },
   "packageManager": "pnpm@12.3.4"
 }

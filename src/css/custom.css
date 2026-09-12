@@ -127,6 +127,44 @@ body::selection {
   gap: 0.55rem;
 }
 
+.shou-navbar-search-control {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.shou-navbar-search-field .navbar__search {
+  margin-left: 0 !important;
+}
+
+.shou-navbar-search-button {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--shou-line);
+  border-radius: 0.45rem;
+  color: var(--shou-muted);
+  background: var(--shou-surface-muted);
+}
+
+.shou-navbar-search-button svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.shou-navbar-search-button:hover,
+.shou-navbar-search-button:focus-visible {
+  border-color: var(--shou-accent);
+  color: var(--shou-accent);
+  background: var(--shou-accent-soft);
+}
+
+.shou-navbar-search-field {
+  display: block;
+}
+
 .container {
   max-width: 1440px;
 }
@@ -399,10 +437,31 @@ body::selection {
 
 .footer {
   border-top: 1px solid var(--shou-line);
-  background: var(--ifm-footer-background-color);
+  --ifm-footer-background-color: var(--shou-surface-muted);
+  --ifm-footer-color: var(--shou-text);
+  --ifm-footer-link-color: var(--shou-muted);
+  --ifm-footer-link-hover-color: var(--shou-accent);
+  --ifm-footer-title-color: var(--shou-text);
+  background: var(--shou-surface-muted);
+  color: var(--shou-text);
 }
 
-.footer__title,
+/* The dark footer variant sets its own local Infima variables. Keep the
+ * handbook palette and its contrast when that variant is enabled in config. */
+.footer.footer--dark {
+  --ifm-footer-background-color: var(--shou-surface-muted);
+  --ifm-footer-color: var(--shou-text);
+  --ifm-footer-link-color: var(--shou-muted);
+  --ifm-footer-link-hover-color: var(--shou-accent);
+  --ifm-footer-title-color: var(--shou-text);
+  background: var(--shou-surface-muted);
+  color: var(--shou-text);
+}
+
+.footer__title {
+  color: var(--shou-text);
+}
+
 .footer__item,
 .footer__link-item,
 .footer__copyright {
@@ -642,6 +701,88 @@ body::selection {
 }
 
 @media (max-width: 996px) {
+  .navbar {
+    --ifm-navbar-sidebar-width: 80vw;
+    /* A filter on the sticky navbar creates a containing block for the
+     * sidebar's fixed positioning, clipping it to the navbar height. */
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    filter: none;
+    transform: none;
+  }
+
+  .shou-navbar-color-mode-toggle {
+    display: none;
+  }
+
+  .shou-navbar-search-button {
+    display: inline-flex;
+  }
+
+  .shou-navbar-search-field {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 1;
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition:
+      width 160ms ease,
+      opacity 160ms ease,
+      visibility 160ms ease;
+  }
+
+  .shou-navbar-search-control--open .shou-navbar-search-field,
+  .shou-navbar-search-control:focus-within .shou-navbar-search-field {
+    width: min(12rem, calc(100vw - 6rem));
+    overflow: visible;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .shou-navbar-search-field .navbar__search-input {
+    width: 100% !important;
+    cursor: text;
+  }
+
+  .navbar-sidebar__backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
+  .navbar-sidebar {
+    width: 80vw;
+    max-width: 80vw;
+    height: 100dvh;
+    background: var(--shou-surface);
+  }
+
+  .navbar-sidebar__brand {
+    background: var(--shou-surface);
+    border-bottom: 1px solid var(--shou-line);
+  }
+
+  .navbar-sidebar__items {
+    min-height: 0;
+    height: calc(100dvh - var(--ifm-navbar-height));
+  }
+
+  .navbar-sidebar__item {
+    height: 100%;
+    min-height: 0;
+    max-height: 100%;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-color: var(--shou-line-strong) transparent;
+    scrollbar-width: thin;
+  }
+
   .docSidebarContainer {
     position: fixed;
     z-index: 100;
