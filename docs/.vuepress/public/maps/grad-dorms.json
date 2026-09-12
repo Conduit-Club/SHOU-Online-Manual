@@ -1,0 +1,65 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "第18小区"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8895094, 30.8879645]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "第17小区"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8891663, 30.8884061]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "第15小区"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8909544, 30.889765]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "第14小区"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8894108, 30.8888695]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "第13小区"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8901608, 30.8888757]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "第12小区"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8903493, 30.8893981]
+      }
+    }
+  ]
+}

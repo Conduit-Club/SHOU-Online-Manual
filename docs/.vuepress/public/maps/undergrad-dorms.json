@@ -1,0 +1,125 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "第16小区"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8901371, 30.8815908]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "第11小区"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.891229, 30.8818775]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "第10小区"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8912191, 30.8812014]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "第9小区"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8912274, 30.8803475]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "第8小区"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8921965, 30.8818818]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "第7小区"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8922015, 30.8811885]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "第6小区"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8921865, 30.8803369]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "第4小区"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8934442, 30.8808305]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "第5小区"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8934521, 30.881533]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "第3小区"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8944818, 30.8825632]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "第2小区"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8945511, 30.881886]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "第1小区"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8953349, 30.8825717]
+      }
+    }
+  ]
+}

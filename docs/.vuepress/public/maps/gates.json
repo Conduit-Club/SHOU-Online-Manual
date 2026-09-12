@@ -1,0 +1,65 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "三号门"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8882119, 30.8876231]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "二号门"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8916475, 30.8904897]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "一号门"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8964881, 30.8891827]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "六号门"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8983127, 30.8840444]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "五号门（常闭）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8968047, 30.882802]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "四号门"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8939812, 30.880518]
+      }
+    }
+  ]
+}

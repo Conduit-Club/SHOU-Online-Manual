@@ -1,0 +1,105 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "校医门诊部"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8962021, 30.8837411]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "中国邮政"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8925919, 30.8797667]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "校园纪念品商店"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8955979, 30.8882927]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "711便利店"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8917463, 30.8891186]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "711便利店"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8916683, 30.8826233]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "本科生区近邻宝"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8928971, 30.8796825]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "研究生区近邻宝"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.88976861, 30.88934151]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "收发室"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.89300083, 30.88242689]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "海绵广场"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8913672, 30.8795805]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "海星广场"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.8934282, 30.8820144]
+      }
+    }
+  ]
+}
