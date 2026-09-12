@@ -4,6 +4,7 @@ import { searchPlugin } from "@vuepress/plugin-search";
 import { tocPlugin } from "@vuepress/plugin-toc";
 import { defineUserConfig } from "@vuepress/cli";
 import { viteBundler } from "@vuepress/bundler-vite";
+import { markdownImagePlugin } from "@vuepress/plugin-markdown-image";
 
 const title = "水专手册";
 const description = "上海海洋大学校园信息手册";
@@ -32,6 +33,18 @@ export default defineUserConfig({
           placeholder: "搜索手册",
         },
       },
+    }),
+    markdownImagePlugin({
+      // Enable figure
+      figure: true,
+      // Enable image lazyloading
+      lazyload: true,
+      // Enable image marking (Light / Dark differences)
+      mark: true,
+      // Enable image sizing
+      size: true,
+      // Enable obsidian-styled sizing
+      obsidianSize: true,
     }),
   ],
   theme: defaultTheme({
