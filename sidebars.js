@@ -51,7 +51,7 @@ const sidebars = {
         { type: "doc", id: "service/official-entrances", label: "常用入口总览" },
       ],
     },
-    { type: "doc", id: "canteen/canteen", label: "🍽️食堂" },
+    { type: "doc", id: "canteen/canteen", label: "🍽️饮食" },
     { type: "doc", id: "facilities/campus-facilities", label: "📍设施" },
     { type: "doc", id: "facilities/campus-map", label: "🗺️校园地图" },
     {
