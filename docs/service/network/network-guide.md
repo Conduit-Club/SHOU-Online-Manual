@@ -6,6 +6,7 @@ slug: /service/network/
 # 校园网络
 
 - [校园无线网络](/service/network/campus-network.html)
+- [宿舍有线宽带](/service/network/campus-broadband.html)
 
 :::warning[待补充]
 因为学校返修缘故，新的网络架构与以往不同。
