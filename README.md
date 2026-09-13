@@ -24,7 +24,6 @@
 pixi run dev                 # 安装锁定依赖并启动 Docusaurus 开发服务器
 pixi run --locked build      # 安装锁定依赖并构建静态站点
 pixi run --locked start      # 构建后在 http://localhost:4173 预览产物
-pixi run --locked test-gpa   # 运行 GPA 计算逻辑测试
 pixi run --locked fmt-check  # 检查受管文件的格式
 ```
 

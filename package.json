@@ -13,8 +13,7 @@
     "clear": "docusaurus clear",
     "docs:dev": "pnpm run start",
     "docs:build": "pnpm run build",
-    "docs:clean": "pnpm run clear",
-    "test:gpa": "node --test scripts/gpa.test.mjs"
+    "docs:clean": "pnpm run clear"
   },
   "dependencies": {
     "@docusaurus/core": "3.10.2",
