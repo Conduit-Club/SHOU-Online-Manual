@@ -64,7 +64,7 @@ const sidebars = {
         { type: "doc", id: "transport/airports", label: "机场到校" },
         { type: "doc", id: "transport/railway-stations", label: "火车站到校" },
         { type: "doc", id: "transport/driving", label: "自驾到校" },
-        { type: "doc", id: "surroundings/campus-surroundings", label: "🧭周边出行" },
+        { type: "doc", id: "transport/campus-surroundings", label: "周边出行" },
       ],
     },
     { type: "doc", id: "contact/contact", label: "☎️黄页" },

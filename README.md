@@ -28,7 +28,7 @@ pixi run --locked test-gpa   # 运行 GPA 计算逻辑测试
 pixi run --locked fmt-check  # 检查受管文件的格式
 ```
 
-首次运行会自动创建 `.pixi` 环境并安装依赖。构建产物位于 `build/`，可部署到 Vercel 或其他静态文件托管服务。需要指定规范站点 URL 时设置 `SITE_URL`，需要子路径部署时设置 `BASE_URL`；详细的插件迁移对应关系见 [`migration-notes/docusaurus-migration.md`](./migration-notes/docusaurus-migration.md)。
+首次运行会自动创建 `.pixi` 环境并安装依赖。构建产物位于 `build/`，可部署到 Vercel 或其他静态文件托管服务。需要指定规范站点 URL 时设置 `SITE_URL`，需要子路径部署时设置 `BASE_URL`。
 
 如果你想贡献自己的一份力,建议先阅读 [AGENTS.md](./AGENTS.md) 了解开发流程和验证要求。
 
