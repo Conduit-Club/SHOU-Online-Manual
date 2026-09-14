@@ -3,10 +3,14 @@ id: canteen
 slug: /canteen/
 ---
 
-# 食堂
+# 饮食
 
 :::tip[待收集]
 欢迎提交食堂名称、营业时间和官方来源；经验信息请注明日期。
+:::
+
+:::tip[提示]
+关于校外饮食，可以参见[“海大今天吃什么”项目](https://github.com/Conduit-Club/what-to-eat-in-shou-today/)。
 :::
 
 ## 入驻业务
