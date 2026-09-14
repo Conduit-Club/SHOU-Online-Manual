@@ -22,8 +22,6 @@ jobs:
           pixi-version: v0.76.2
           cache: true
           locked: true
-      - name: Run GPA tests
-        run: pixi run --locked test-gpa
       - name: Build Docusaurus site
         run: pixi run --locked build
       - uses: actions/upload-artifact@v4

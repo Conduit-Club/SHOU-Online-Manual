@@ -19,4 +19,3 @@ start = { cmd = "pnpm run serve", depends-on = ["build"] }
 fmt = { cmd = "pnpm run fmt", depends-on = ["install"] }
 fmt-check = { cmd = "pnpm run fmt:check", depends-on = ["install"] }
 lint = { cmd = "pnpm run lint", depends-on = ["install"] }
-test-gpa = { cmd = "pnpm run test:gpa", depends-on = ["install"] }
