@@ -31,7 +31,7 @@ slug: /site-help/
 
 ### iOS
 
-在Safari中打开水专手册**（只有Safari可以添加）**
+在Safari中打开水专手册 **（只有Safari可以添加）**
 
 ![添加到主屏幕](./pwa/ios.png)
 
