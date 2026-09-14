@@ -7,7 +7,7 @@ const sidebars = {
       type: "category",
       label: "🎓学习与发展",
       link: { type: "doc", id: "study/study" },
-      collapsed: false,
+      collapsed: true,
       items: [
         { type: "doc", id: "study/courses-and-gpa", label: "课程、学分与 GPA" },
         { type: "doc", id: "study/learning-sites", label: "刷 GPA 实用网站" },
@@ -29,7 +29,10 @@ const sidebars = {
           label: "校园网络",
           link: { type: "doc", id: "service/network/network" },
           collapsed: true,
-          items: [{ type: "doc", id: "service/network/campus-network", label: "校园无线网络" }],
+          items: [
+            { type: "doc", id: "service/network/campus-network", label: "校园无线网络" },
+            { type: "doc", id: "service/network/campus-broadband", label: "宿舍有线宽带" },
+          ],
         },
         { type: "doc", id: "service/teaching/printer", label: "打印机" },
         { type: "doc", id: "service/communication/email", label: "电子邮件" },
@@ -51,7 +54,7 @@ const sidebars = {
         { type: "doc", id: "service/official-entrances", label: "常用入口总览" },
       ],
     },
-    { type: "doc", id: "canteen/canteen", label: "🍽️食堂" },
+    { type: "doc", id: "canteen/canteen", label: "🍽️饮食" },
     { type: "doc", id: "facilities/campus-facilities", label: "📍设施" },
     { type: "doc", id: "facilities/campus-map", label: "🗺️校园地图" },
     {
