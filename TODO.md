@@ -11,7 +11,7 @@
 
 ## P0：优先核验
 
-- [x] 在[首页](docs/intro.md)明确临港校区、读者及本科新生与研究生的适用边界。
+- [x] [首页](docs/intro.md)保留快速入口，统一简短的内容缺漏与经验说明。
 - [ ] [常用入口](docs/service/official-entrances.md)：已补公开来源与登录差异；仍需各身份用户验证登录后权限与办理结果。
 - [x] [黄页](docs/contact/contact-directory.md)已有公开联系方式；2026-09-14 局部更正餐饮管理部为第一餐厅 312 室，未逐一拨号。
 - [ ] [应急处理](docs/emergency/emergency-guide.md)：已补紧急电话、保卫、门诊、心理、失物与报修；仍缺 AED 点位、状态与开放时段的完整权威清单，旧心理服务渠道须继续复核。
@@ -22,13 +22,13 @@
 
 - [ ] [校园卡与学生证](docs/service/campus-card/campus-card.md)：已补自助补卡机、咨询与申请表；领取、充值、挂失方式、补卡费、余额转移、注册和乘车优惠校内流程仍需确认。
 - [ ] [校园网络](docs/service/network/network-guide.md)：已补认证找回、访客、eduroam、VPN 与 CARSI；2026 现场参数、有线套餐、IPv6 与实际连接仍需核实。
-- [ ] [邮箱](docs/service/communication/email.md)：已补登录、解锁与官方客户端说明；开通、地址格式、容量、独立改密、离校期限仍需确认。
+- [ ] [邮箱](docs/service/communication/email.md)：已补门户登录、解锁与维护者 2025 学年客户端/独立改密失败反馈；征集更多带日期的使用结果，继续确认开通与离校规则。
 - [x] [图书馆](docs/service/library/library-guide.md)：已有借阅、数据库、校外访问、空间预约与开放时间，按当期来源维护。
 - [ ] [打印](docs/service/teaching/printer.md)：已有历史点位及维护者反馈；装修后位置、设备、费用、格式与时段仍需现场确认。
 - [x] [就医指南](docs/service/medical/medical-guide.md)：已有校内外就医、医保、转诊与急救入口，按当期政策维护。
-- [ ] [学校软件](docs/service/software-licenses/purchased.md)：已整理历史采购、数据库区别及咨询方法；仍缺 2026 有效产品、版本、个人设备资格和授权期限清单。
+- [ ] [学校软件](docs/service/software-licenses/purchased.md)：已移除 2011 年采购材料，保留现行授权咨询入口；待补可用产品、版本、资格和期限。
 - [x] [教育邮箱福利](docs/service/software-licenses/education-email.md)：已有服务商政策与条件，学校资格以实际申请结果为准。
-- [ ] [学号](docs/service/sid/student-id.md)：已区分社区编号示例与官方认证账号；完整编号规则与适用年份仍缺官方证明。
+- [ ] [学号](docs/service/sid/student-id.md)：保留同学提供的编号经验；有实际不符的年级或培养类别时补充修正。
 - [ ] [模板](docs/service/document-templates.md)：已补论文、缓考、一般事务与后勤表格；研究生现行排版及各学院/课程版本仍需确认。
 - [x] [快递与邮件](docs/service/packages/package-services.md)：已有收发站点与流程、大件行李说明，按运营安排维护。
 
@@ -56,3 +56,7 @@
 内容按数字服务、新生生活、应急与组织三个方向并行补充，再统一处理首页范围、服务索引、地图/校历来源、交通时效和跨页一致性。原有成熟专题与社区经验保留，旧资料注明年份与边界。
 
 本轮为公开资料整理，未使用学生账号登录，未拨号、现场巡查或取得新的第三方素材授权。未确认内容保留在上述清单，后续贡献提供相应证据后再勾选。
+
+## 审阅修改（2026-09-15）
+
+按 PR #51 的 12 条意见精简正文、保留一手经验；恢复邮箱实际失败记录和学号经验，删除过时软件采购材料与无关校区描述，补回潮涌核心社。具体核验过程留在维护记录，读者正文只保留有用信息和必要提醒。
