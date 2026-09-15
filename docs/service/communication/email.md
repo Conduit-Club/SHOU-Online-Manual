@@ -11,9 +11,7 @@ slug: /service/communication/email.html
 
 目前建议先登录[网上办事大厅](https://portal.shou.edu.cn/)，再点击其中的邮箱入口进入。学校官网另列有[邮件系统](https://mail.shou.edu.cn/)，但直接打开时可能无法正常登录。
 
-:::info[管理员使用反馈 · 2026-09-15]
-管理员 **LagrangeWithLight** 在[PR 审阅中反馈](https://github.com/Conduit-Club/SHOU-Online-Manual/pull/51#discussion_r4015516468)：在 **2025 学年一整年**的使用中，外部邮件客户端配置和邮箱独立改密持续失败，需要通过网上办事大厅内的邮箱入口使用。建议按上述门户路径收发邮件。
-:::
+**使用反馈（2025 学年）：** 有使用者持续遇到第三方邮件客户端配置、独立改密失败的情况，可先从网上办事大厅进入邮箱。这是一份[亲身使用记录](https://github.com/Conduit-Club/SHOU-Online-Manual/pull/51#discussion_r4015516468)，仍需更多同学补充验证。
 
 ## 长期未用，邮箱被锁定
 
