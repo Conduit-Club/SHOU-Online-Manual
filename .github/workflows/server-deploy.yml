@@ -150,9 +150,13 @@ jobs:
           ssh -o BatchMode=yes -p "$SERVER_PORT" "$remote" \
             "SERVER_PATH=${server_path_q} DEPLOY_BRANCH=${deploy_branch_q} DEPLOY_SHA=${deploy_sha_q} REMOTE_ARCHIVE=${remote_archive_q} bash -s" <<'REMOTE_SCRIPT'
           set -euo pipefail
+          releases_dir="${SERVER_PATH}/releases/${DEPLOY_BRANCH}"
           release_dir="${SERVER_PATH}/releases/${DEPLOY_BRANCH}/${DEPLOY_SHA}"
           mkdir -p "$release_dir"
           tar -xzf "$REMOTE_ARCHIVE" -C "$release_dir"
           ln -sfn "$release_dir" "${SERVER_PATH}/current"
+          ls -1dt "${releases_dir}"/* 2>/dev/null | tail -n +6 | while IFS= read -r old_release; do
+            rm -rf "$old_release"
+          done
           rm -f "$REMOTE_ARCHIVE"
           REMOTE_SCRIPT
