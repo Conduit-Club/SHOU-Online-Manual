@@ -1,0 +1,44 @@
+name: Build and release Docusaurus site
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out tagged revision
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Pixi
+        uses: prefix-dev/setup-pixi@v0.9.0
+        with:
+          pixi-version: v0.76.2
+          cache: true
+          locked: true
+
+      - name: Build Docusaurus site
+        run: pixi run --locked build
+
+      - name: Package build output
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: tar -czf "shou-online-manual-${RELEASE_TAG}.tar.gz" -C build .
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          gh release create "$RELEASE_TAG" \
+            "shou-online-manual-${RELEASE_TAG}.tar.gz" \
+            --verify-tag \
+            --title "$RELEASE_TAG" \
+            --generate-notes
