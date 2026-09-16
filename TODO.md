@@ -1,6 +1,6 @@
 # 项目进展与 TODO
 
-> 更新日期：2026-09-15。勾选表示对应整理任务已完成，不表示全站事实已现场验证；未勾选项目也可能已有可用正文，剩余缺口见条目说明。
+> 更新日期：2026-09-16。勾选表示对应整理任务已完成，不表示全站事实已现场验证；未勾选项目也可能已有可用正文，剩余缺口见条目说明。
 
 ## 当前进展
 
@@ -24,7 +24,7 @@
 - [ ] [校园网络](docs/service/network/network-guide.md)：已补认证找回、访客、eduroam、VPN 与 CARSI；2026 现场参数、有线套餐、IPv6 与实际连接仍需核实。
 - [ ] [邮箱](docs/service/communication/email.md)：已补门户登录、解锁与维护者 2025 学年客户端/独立改密失败反馈；征集更多带日期的使用结果，继续确认开通与离校规则。
 - [x] [图书馆](docs/service/library/library-guide.md)：已有借阅、数据库、校外访问、空间预约与开放时间，按当期来源维护。
-- [ ] [打印](docs/service/teaching/printer.md)：已有历史点位及维护者反馈；装修后位置、设备、费用、格式与时段仍需现场确认。
+- [ ] [打印](docs/service/teaching/printer.md)：2026-09-16 已按 2024 年原文照片补充一至四教、图书馆、一餐邮政所旁和大学生活动中心的定位线索；仍需在校学生或熟悉点位的同学确认入口、楼层、机器是否可用，以及现价、上传方式和开放时间，见 [Issue #50](https://github.com/Conduit-Club/SHOU-Online-Manual/issues/50)。
 - [x] [就医指南](docs/service/medical/medical-guide.md)：已有校内外就医、医保、转诊与急救入口，按当期政策维护。
 - [ ] [学校软件](docs/service/software-licenses/purchased.md)：已移除 2011 年采购材料，保留现行授权咨询入口；待补可用产品、版本、资格和期限。
 - [x] [教育邮箱福利](docs/service/software-licenses/education-email.md)：已有服务商政策与条件，学校资格以实际申请结果为准。
