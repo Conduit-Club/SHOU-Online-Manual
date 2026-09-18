@@ -11,7 +11,7 @@ slug: /service/network/campus-network.html
 
 ## 先看较新的官方说明
 
-现教中心[如何连接校园无线网络](https://xjzx.shou.edu.cn/2024/0226/c12937a326541/page.htm)发布于 **2024-02-26**：学生使用 **`ishou_student`**、教职工使用 **`ishou_faculty`**，并要求首次先用手机连接成功后再使用笔记本等设备。这里的网络名使用下划线，与下方 2020 年材料中的连字符不同。
+现教中心[如何连接校园无线网络](https://xjzx.shou.edu.cn/2024/0226/c12937a326541/page.htm)发布于 **2024-02-26**：学生使用 **`ishou-student`**、教职工使用 **`ishou-faculty`**，并要求首次先用手机连接成功后再使用笔记本等设备。
 
 该说明给出的 Android 设置为：EAP 方法 `PEAP`、阶段 2 身份验证 `GTC`、CA 证书“不验证”；如系统要求域名，填 `smp.ruijie.com.cn`。账号和密码使用学校统一身份认证信息。苹果手机按提示输入身份与密码。不同系统若不提供这些选项，应咨询 **021-61900238**，不要套用不匹配的截图。
 
@@ -44,8 +44,13 @@ slug: /service/network/campus-network.html
 1. 打开“设置” → “WLAN”，搜索到对应网络。
 2. 在身份和密码中输入 **“统一身份认证账号和密码”** _（用户名为学号或工号，同网上办事大厅登录账号）_ 。
 3. 弹出证书提示时，点击“信任”，即可连接。
-   ![iOS连接示例图1](./campus-network-ios1.png)
-   ![iOS连接示例图2](./campus-network-ios2.png)
+
+<div align="center">
+
+![iOS连接示例图1](./campus-network-ios1.png)
+![iOS连接示例图2](./campus-network-ios2.png)
+
+</div>
 
 ### Android
 
@@ -58,15 +63,25 @@ slug: /service/network/campus-network.html
 
 如设置错误，可能出现连接成功但无法上网的情况，尝试重新连接并修改设置。
 :::
+
+<div align="center">
+
 ![Android连接示例图1](./campus-network-android1.png)
+
+</div>
 
 ### Windows
 
 1. 点击右下角网络图标，搜索到对应网络。
 2. 在身份和密码中输入 **“统一身份认证账号和密码”** _（用户名为学号或工号，同网上办事大厅登录账号）_ 。
 3. 在弹出的“继续连接”确认页中点击“连接”。
-   ![Windows连接示例图1](./campus-network-windows1.png)
-   ![Windows连接示例图2](./campus-network-windows2.png)
+
+<div align="center">
+
+![Windows连接示例图1](./campus-network-windows1.png)
+![Windows连接示例图2](./campus-network-windows2.png)
+
+</div>
 
 ## 常见问题
 

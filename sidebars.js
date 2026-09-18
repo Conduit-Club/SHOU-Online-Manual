@@ -73,7 +73,17 @@ const sidebars = {
     { type: "doc", id: "contact/contact", label: "☎️黄页" },
     { type: "doc", id: "emergency/emergency", label: "🚨应急" },
     { type: "doc", id: "clubs/clubs", label: "🎪社团活动" },
-    { type: "doc", id: "media/media", label: "📰媒体与网站" },
+    {
+      type: "category",
+      label: "📰媒体与网站",
+      link: { type: "doc", id: "media/media" },
+      collapsible: true,
+      collapsed: true,
+      items: [
+        { type: "doc", id: "media/media", label: "媒体与网站" },
+        { type: "doc", id: "media/all-campus-media", label: "全部媒体与网站速览" },
+      ],
+    },
     { type: "doc", id: "calendar/calendar", label: "📅校历" },
     { type: "doc", id: "site-help/contribution-template", label: "📝贡献模板" },
     { type: "doc", id: "site-help/site-help", label: "❓站点帮助" },
