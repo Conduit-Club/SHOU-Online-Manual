@@ -1,6 +1,7 @@
 ---
 id: study
 slug: /study/
+comment_id: doc-study
 ---
 
 # 学习与发展
@@ -9,19 +10,19 @@ slug: /study/
 
 ## 课程、学分与 GPA
 
-[打开课程、学分与 GPA](/study/courses-and-gpa.html)
+[课程、学分与 GPA](/study/courses-and-gpa.html)
 
 通识课、公共课、专业课分别是什么？创新创业学分怎么攒、能替代哪些课？以 2025 级计算机科学与技术专业为例，读懂培养方案里的学分分类，再用页面里的 GPA 计算器估算成绩。
 
 ## 刷 GPA 实用网站
 
-[打开刷 GPA 实用网站](/study/learning-sites.html)
+[刷 GPA 实用网站](/study/learning-sites.html)
 
 选课评价、思政练习、学长学姐的期末笔记，以及补课和找书的入口。想找计网、操作系统、软工、编译原理的复习资料，可以从这里开始。
 
 ## 发论文实用工具
 
-[打开发论文实用工具](/study/paper-tools.html)
+[发论文实用工具](/study/paper-tools.html)
 
 从找文献、读英文到管理引用、排版和校对，按写作环节挑工具。课程论文、实验报告和毕业论文也用得上。
 

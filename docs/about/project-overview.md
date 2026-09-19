@@ -1,6 +1,7 @@
 ---
 id: about
 slug: /about/
+comment_id: doc-about
 ---
 
 # 关于水专手册

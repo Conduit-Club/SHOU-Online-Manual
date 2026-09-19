@@ -1,6 +1,7 @@
 ---
 id: purchased-software
 slug: /service/software-licenses/purchased.html
+comment_id: doc-purchased-software
 ---
 
 # 学校已购买的软件
@@ -9,4 +10,4 @@ slug: /service/software-licenses/purchased.html
 
 安装前确认产品版本、适用对象、个人设备使用范围和授权期限。欢迎补充当前可用的软件及学校提供的下载方式，不要公开激活码或许可证文件。
 
-学术数据库可从[图书馆](https://library.shou.edu.cn/)查找，校外访问可参考[CARSI 使用说明](https://xjzx.shou.edu.cn/2025/0114/c12937a337554/page.htm)。
+学术数据库可从[图书馆](https://library.shou.edu.cn/)查找，校外访问可参考 [CARSI 使用说明](https://xjzx.shou.edu.cn/2025/0114/c12937a337554/page.htm)。

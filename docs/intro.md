@@ -1,6 +1,7 @@
 ---
 id: intro
 slug: /
+comment_id: doc-intro
 ---
 
 # 水专手册
@@ -34,7 +35,7 @@ slug: /
 
 ## 校园地图
 
-[打开校园地图](/facilities/campus-map.html)，查看交互地图、2025 年 9 月校园总平图和 2026 级迎新参考图。
+[校园地图](/facilities/campus-map.html)，查看交互地图、2025 年 9 月校园总平图和 2026 级迎新参考图。
 
 ## 许可证
 
