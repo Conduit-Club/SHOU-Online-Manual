@@ -41,6 +41,21 @@ const config = {
     },
   },
 
+  // 评论服务在另一个域名上。提前建连可以把 DNS、TCP 与 TLS 握手移出评论区的关键路径，
+  // 用户滚到评论区时只需要发请求本身。只在启用评论时注入，未配置评论的构建不会多连外部域名。
+  headTags: artalkEnabled
+    ? [
+        {
+          tagName: "link",
+          attributes: { rel: "preconnect", href: artalkServerUrl, crossorigin: "anonymous" },
+        },
+        {
+          tagName: "link",
+          attributes: { rel: "dns-prefetch", href: artalkServerUrl },
+        },
+      ]
+    : [],
+
   onBrokenLinks: "throw",
   onBrokenAnchors: "throw",
   markdown: {
