@@ -7,11 +7,10 @@ name: Deploy Docusaurus site to server
 # - SERVER_USER: low-privilege SSH deployment user.
 # - SERVER_PORT: optional SSH port, defaults to 22.
 # - SERVER_PATH: absolute directory owned by SERVER_USER, e.g. /var/www/shou-online-manual.
-# Optional repository variables used while building the site:
-# - ARTALK_ENABLED: defaults to true.
-# - ARTALK_SERVER_URL: defaults to https://comments.moear.de.
-# - ARTALK_SITE: defaults to 水专手册.
-# - SITE_URL: defaults to https://manual.moear.de.
+# - ARTALK_ENABLED: set to true to enable comments in the deployed build.
+# - ARTALK_SERVER_URL: public Artalk HTTPS endpoint.
+# - ARTALK_SITE: Artalk site name.
+# - SITE_URL: canonical URL of the deployed handbook.
 # Automatic runs deploy the branch that was pushed; manual runs choose source_branch.
 # Both branches share SERVER_PATH/current, so the latest completed deployment becomes live.
 
@@ -83,11 +82,17 @@ jobs:
 
       - name: Build Docusaurus site
         env:
-          ARTALK_ENABLED: "${{ vars.ARTALK_ENABLED || 'true' }}"
-          ARTALK_SERVER_URL: "${{ vars.ARTALK_SERVER_URL || 'https://comments.moear.de' }}"
-          ARTALK_SITE: "${{ vars.ARTALK_SITE || '水专手册' }}"
-          SITE_URL: "${{ vars.SITE_URL || 'https://manual.moear.de' }}"
-        run: pixi run --locked build
+          ARTALK_ENABLED: ${{ secrets.ARTALK_ENABLED }}
+          ARTALK_SERVER_URL: ${{ secrets.ARTALK_SERVER_URL }}
+          ARTALK_SITE: ${{ secrets.ARTALK_SITE }}
+          SITE_URL: ${{ secrets.SITE_URL }}
+        run: |
+          set -euo pipefail
+          : "${ARTALK_ENABLED:?ARTALK_ENABLED secret is required}"
+          : "${ARTALK_SERVER_URL:?ARTALK_SERVER_URL secret is required}"
+          : "${ARTALK_SITE:?ARTALK_SITE secret is required}"
+          : "${SITE_URL:?SITE_URL secret is required}"
+          pixi run --locked build
 
       - name: Resolve deployment revision
         id: revision

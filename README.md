@@ -43,7 +43,7 @@ ARTALK_SITE=水专手册
 
 `ARTALK_SERVER_URL` 必须是浏览器可通过 HTTPS 访问的 Artalk 地址，并在 Artalk 的 `trusted_domains` 中允许手册站点来源。Artalk 后端部署模板位于 [`script/artalk`](./script/artalk)。服务器上的 `data/` 目录包含评论数据库，必须持久化并纳入备份，不要提交到仓库。
 
-服务器部署工作流会默认使用 `https://manual.moear.de`、`https://comments.moear.de` 和 `水专手册`；如需覆盖，可在 GitHub Actions Variables 中设置 `SITE_URL`、`ARTALK_SERVER_URL`、`ARTALK_SITE` 和 `ARTALK_ENABLED`。
+服务器部署工作流从 GitHub Actions Secrets 读取 `SITE_URL`、`ARTALK_SERVER_URL`、`ARTALK_SITE` 和 `ARTALK_ENABLED`；这些值不会写入仓库，但构建出的静态站点仍会公开使用它们。
 
 如果你想贡献自己的一份力,建议先阅读 [AGENTS.md](./AGENTS.md) 了解开发流程和验证要求。
 
