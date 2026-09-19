@@ -1,6 +1,7 @@
 ---
 id: shopping-guide
 slug: /service/what-to-buy/
+comment_id: doc-shopping-guide
 ---
 
 # 什么值得买

@@ -1,6 +1,7 @@
 ---
 id: email
 slug: /service/communication/email.html
+comment_id: doc-email
 ---
 
 # 电子邮件

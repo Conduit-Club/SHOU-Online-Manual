@@ -1,6 +1,7 @@
 ---
 id: paper-tools
 slug: /study/paper-tools.html
+comment_id: doc-paper-tools
 ---
 
 # 论文实用工具

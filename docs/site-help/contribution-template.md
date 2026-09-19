@@ -1,6 +1,7 @@
 ---
 id: contribution-template
 slug: /site-help/contribution-template.html
+comment_id: doc-contribution-template
 ---
 
 # 贡献模板与示例

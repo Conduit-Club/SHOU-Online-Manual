@@ -1,6 +1,7 @@
 ---
 id: campus-broadband
 slug: /service/network/campus-broadband.html
+comment_id: doc-campus-broadband
 ---
 
 # 宿舍有线宽带

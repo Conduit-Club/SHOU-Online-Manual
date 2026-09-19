@@ -1,6 +1,7 @@
 ---
 id: campus-map
 slug: /facilities/campus-map.html
+comment_id: doc-campus-map
 ---
 
 # 校园地图

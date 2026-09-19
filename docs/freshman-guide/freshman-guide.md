@@ -1,6 +1,7 @@
 ---
 id: freshman-guide
 slug: /freshman-guide/
+comment_id: doc-freshman-guide
 ---
 
 # 新生指南

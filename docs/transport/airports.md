@@ -1,6 +1,7 @@
 ---
 id: airports
 slug: /transport/airports.html
+comment_id: doc-airports
 ---
 
 # 机场到校

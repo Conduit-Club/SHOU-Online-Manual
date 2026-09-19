@@ -1,6 +1,7 @@
 ---
 id: education-email
 slug: /service/software-licenses/education-email.html
+comment_id: doc-education-email
 ---
 
 # 教育邮箱福利

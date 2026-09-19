@@ -1,6 +1,7 @@
 ---
 id: contact
 slug: /contact/
+comment_id: doc-contact
 ---
 
 # 黄页

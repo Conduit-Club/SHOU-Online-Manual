@@ -1,6 +1,7 @@
 ---
 id: learning-sites
 slug: /study/learning-sites.html
+comment_id: doc-learning-sites
 ---
 
 # 刷 GPA 实用网站

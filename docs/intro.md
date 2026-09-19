@@ -1,6 +1,7 @@
 ---
 id: intro
 slug: /
+comment_id: doc-intro
 ---
 
 # 水专手册

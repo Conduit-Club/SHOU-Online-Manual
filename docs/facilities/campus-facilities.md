@@ -1,6 +1,7 @@
 ---
 id: campus-facilities
 slug: /facilities/
+comment_id: doc-campus-facilities
 ---
 
 # 校园设施

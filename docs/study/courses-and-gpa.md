@@ -1,6 +1,7 @@
 ---
 id: courses-and-gpa
 slug: /study/courses-and-gpa.html
+comment_id: doc-courses-and-gpa
 ---
 
 # 大学学什么：课程、学分与 GPA

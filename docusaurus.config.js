@@ -3,6 +3,9 @@ const { themes: prismThemes } = require("prism-react-renderer");
 const title = "水专手册";
 const description = "上海海洋大学校园信息手册";
 const themeColor = "#49BF7C";
+const artalkServerUrl = (process.env.ARTALK_SERVER_URL || "").trim().replace(/\/+$/, "");
+const artalkSite = (process.env.ARTALK_SITE || "水专手册").trim() || "水专手册";
+const artalkEnabled = process.env.ARTALK_ENABLED === "true" && Boolean(artalkServerUrl);
 
 // SITE_URL is the canonical deployment URL. Vercel supplies a safe build-time
 // fallback for previews; local builds intentionally use localhost instead of
@@ -30,6 +33,13 @@ const config = {
   organizationName: "Conduit-Club",
   projectName: "SHOU-Online-Manual",
   staticDirectories: ["assets"],
+  customFields: {
+    artalk: {
+      enabled: artalkEnabled,
+      server: artalkServerUrl,
+      site: artalkSite,
+    },
+  },
 
   onBrokenLinks: "throw",
   onBrokenAnchors: "throw",

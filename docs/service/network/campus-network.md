@@ -1,6 +1,7 @@
 ---
 id: campus-network
 slug: /service/network/campus-network.html
+comment_id: doc-campus-network
 ---
 
 # 校园无线网络

@@ -1,6 +1,7 @@
 ---
 id: emergency
 slug: /emergency/
+comment_id: doc-emergency
 ---
 
 # 应急处理

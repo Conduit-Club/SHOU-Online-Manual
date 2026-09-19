@@ -1,6 +1,7 @@
 ---
 id: document-templates
 slug: /service/document-templates.html
+comment_id: doc-document-templates
 ---
 
 # 文档模板

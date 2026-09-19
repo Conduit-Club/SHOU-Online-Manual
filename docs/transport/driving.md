@@ -1,6 +1,7 @@
 ---
 id: driving
 slug: /transport/driving.html
+comment_id: doc-driving
 ---
 
 # 自驾到校

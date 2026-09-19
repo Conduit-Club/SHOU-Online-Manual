@@ -1,6 +1,7 @@
 ---
 id: library
 slug: /service/library/
+comment_id: doc-library
 ---
 
 # 图书馆服务

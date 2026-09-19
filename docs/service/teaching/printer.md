@@ -1,6 +1,7 @@
 ---
 id: printer
 slug: /service/teaching/printer.html
+comment_id: doc-printer
 ---
 
 # 校园自助打印

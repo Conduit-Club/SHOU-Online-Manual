@@ -1,6 +1,7 @@
 ---
 id: railway-stations
 slug: /transport/railway-stations.html
+comment_id: doc-railway-stations
 ---
 
 # 火车站到校

@@ -1,6 +1,7 @@
 ---
 id: site-help
 slug: /site-help/
+comment_id: doc-site-help
 ---
 
 # 站点帮助

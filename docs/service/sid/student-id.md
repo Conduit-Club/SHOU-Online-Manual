@@ -1,6 +1,7 @@
 ---
 id: student-id
 slug: /service/sid/
+comment_id: doc-student-id
 ---
 
 # 学号的意义
