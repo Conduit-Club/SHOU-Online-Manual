@@ -1,3 +1,8 @@
+---
+id: all-campus-media
+slug: /service/all-campus-media.html
+---
+
 # 全部媒体与网站速览
 
 本页整理了所有常用的媒体与网站。
