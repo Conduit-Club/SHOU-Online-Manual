@@ -59,6 +59,7 @@ export default function DocComments({ commentId, pageTitle, disabled = false }) 
   const { colorMode } = useColorMode();
   const mountRef = useRef(null);
   const instanceRef = useRef(null);
+  const initGenerationRef = useRef(0);
   const colorModeRef = useRef(colorMode);
   const [nearViewport, setNearViewport] = useState(false);
   const [status, setStatus] = useState("idle");
@@ -110,13 +111,15 @@ export default function DocComments({ commentId, pageTitle, disabled = false }) 
     }
 
     const mount = mountRef.current;
+    const generation = initGenerationRef.current + 1;
+    initGenerationRef.current = generation;
     let disposed = false;
 
     setStatus("loading");
 
     loadArtalkModule()
       .then((Artalk) => {
-        if (disposed || !mountRef.current) {
+        if (disposed || generation !== initGenerationRef.current || !mountRef.current) {
           return;
         }
 
@@ -155,6 +158,12 @@ export default function DocComments({ commentId, pageTitle, disabled = false }) 
 
     return () => {
       disposed = true;
+      // A stale cleanup must not destroy an instance created by a newer effect.
+      if (generation !== initGenerationRef.current) {
+        return;
+      }
+
+      initGenerationRef.current += 1;
       instanceRef.current?.destroy();
       instanceRef.current = null;
       mount.replaceChildren();

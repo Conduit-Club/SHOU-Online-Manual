@@ -7,6 +7,14 @@ const artalkServerUrl = (process.env.ARTALK_SERVER_URL || "").trim().replace(/\/
 const artalkSite = (process.env.ARTALK_SITE || "水专手册").trim() || "水专手册";
 const artalkEnabled = process.env.ARTALK_ENABLED === "true" && Boolean(artalkServerUrl);
 
+function getUrlOrigin(value, base) {
+  try {
+    return new URL(value, base).origin;
+  } catch {
+    return null;
+  }
+}
+
 // SITE_URL is the canonical deployment URL. Vercel supplies a safe build-time
 // fallback for previews; local builds intentionally use localhost instead of
 // guessing a production domain.
@@ -21,6 +29,9 @@ const siteUrl = configuredSiteUrl.replace(/\/+$/, "");
 const configuredBaseUrl = process.env.BASE_URL || "/";
 const baseUrl = configuredBaseUrl === "/" ? "/" : `/${configuredBaseUrl.replace(/^\/+|\/+$/g, "")}/`;
 const withBase = (resource) => `${baseUrl}${resource.replace(/^\/+/, "")}`;
+const siteOrigin = getUrlOrigin(siteUrl);
+const artalkOrigin = getUrlOrigin(artalkServerUrl, siteUrl);
+const artalkIsCrossOrigin = Boolean(siteOrigin && artalkOrigin && siteOrigin !== artalkOrigin);
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -41,20 +52,21 @@ const config = {
     },
   },
 
-  // 评论服务在另一个域名上。提前建连可以把 DNS、TCP 与 TLS 握手移出评论区的关键路径，
-  // 用户滚到评论区时只需要发请求本身。只在启用评论时注入，未配置评论的构建不会多连外部域名。
-  headTags: artalkEnabled
-    ? [
-        {
-          tagName: "link",
-          attributes: { rel: "preconnect", href: artalkServerUrl, crossorigin: "anonymous" },
-        },
-        {
-          tagName: "link",
-          attributes: { rel: "dns-prefetch", href: artalkServerUrl },
-        },
-      ]
-    : [],
+  // 跨域评论服务提前建连可以把 DNS、TCP 与 TLS 握手移出评论区的关键路径。
+  // 同源部署不需要额外的 preconnect；未配置评论的构建也不会注入这些标签。
+  headTags:
+    artalkEnabled && artalkIsCrossOrigin
+      ? [
+          {
+            tagName: "link",
+            attributes: { rel: "preconnect", href: artalkServerUrl, crossorigin: "anonymous" },
+          },
+          {
+            tagName: "link",
+            attributes: { rel: "dns-prefetch", href: artalkServerUrl },
+          },
+        ]
+      : [],
 
   onBrokenLinks: "throw",
   onBrokenAnchors: "throw",

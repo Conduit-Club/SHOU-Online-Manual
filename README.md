@@ -37,11 +37,13 @@ pixi run --locked fmt-check  # 检查受管文件的格式
 
 ```text
 ARTALK_ENABLED=true
-ARTALK_SERVER_URL=https://comments.example.com
+ARTALK_SERVER_URL=https://manual.moear.de
 ARTALK_SITE=水专手册
 ```
 
-`ARTALK_SERVER_URL` 必须是浏览器可通过 HTTPS 访问的 Artalk 地址，并在 Artalk 的 `trusted_domains` 中允许手册站点来源。Artalk 后端部署模板位于 [`script/artalk`](./script/artalk)。服务器上的 `data/` 目录包含评论数据库，必须持久化并纳入备份，不要提交到仓库。
+生产环境推荐把 Artalk API 挂在手册同源地址：`ARTALK_SERVER_URL=https://manual.moear.de`。Artalk 前端随后会请求 `https://manual.moear.de/api/v2/*`，浏览器可以复用手册页面已有的连接，避免再建立 `comments.moear.de` 的 DNS、TCP 和 TLS 路径。服务器的 `manual.moear.de` HTTPS server block 需要加入 [`script/artalk/nginx-manual-api.conf`](./script/artalk/nginx-manual-api.conf)；该片段保留 `/api/v2/` 路径，`proxy_pass` 末尾不要加 `/`。`comments.moear.de` 可以继续保留为 Artalk 管理和调试入口。
+
+如果手册 Nginx 运行在 Docker 中，需要让它与 Artalk 加入同一个 Docker network，并使用 `http://artalk:23366`；宿主机直接运行 Nginx 时可改为 `http://127.0.0.1:23366`。Artalk 的 `trusted_domains` 仍应允许 `https://manual.moear.de` 以及需要使用评论的 Preview 域名。Artalk 后端部署模板位于 [`script/artalk`](./script/artalk)。服务器上的 `data/` 目录包含评论数据库，必须持久化并纳入备份，不要提交到仓库。
 
 服务器部署工作流从 GitHub Actions Secrets 读取 `SITE_URL`、`ARTALK_SERVER_URL`、`ARTALK_SITE` 和 `ARTALK_ENABLED`；这些值不会写入仓库，但构建出的静态站点仍会公开使用它们。
 
