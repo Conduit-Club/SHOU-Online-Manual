@@ -1,6 +1,7 @@
 ---
 id: package-services
 slug: /service/packages/
+comment_id: doc-package-services
 ---
 
 # 快递与邮件收发

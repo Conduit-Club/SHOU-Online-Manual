@@ -1,6 +1,7 @@
 ---
 id: transport
 slug: /transport/
+comment_id: doc-transport
 ---
 
 # 交通

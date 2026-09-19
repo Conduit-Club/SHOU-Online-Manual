@@ -1,6 +1,7 @@
 ---
 id: campus-surroundings
 slug: /surroundings/
+comment_id: doc-campus-surroundings
 ---
 
 # 校园周边与公共交通出游

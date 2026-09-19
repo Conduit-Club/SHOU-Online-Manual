@@ -29,6 +29,22 @@ pixi run --locked fmt-check  # 检查受管文件的格式
 
 首次运行会自动创建 `.pixi` 环境并安装依赖。构建产物位于 `build/`，可部署到 Vercel 或其他静态文件托管服务。需要指定规范站点 URL 时设置 `SITE_URL`，需要子路径部署时设置 `BASE_URL`。
 
+### 评论区配置
+
+文档默认带有评论区，并通过 front matter 中固定的 `comment_id` 绑定 Artalk 页面；移动或改名时请保留这个值，复制新文档时再生成新的值。`comments: false` 可以关闭单篇文档的评论区。
+
+本地和 Preview 默认不连接评论服务。生产构建需要设置以下公开配置：
+
+```text
+ARTALK_ENABLED=true
+ARTALK_SERVER_URL=https://comments.example.com
+ARTALK_SITE=水专手册
+```
+
+`ARTALK_SERVER_URL` 必须是浏览器可通过 HTTPS 访问的 Artalk 地址，并在 Artalk 的 `trusted_domains` 中允许手册站点来源。Artalk 后端部署模板位于 [`script/artalk`](./script/artalk)。服务器上的 `data/` 目录包含评论数据库，必须持久化并纳入备份，不要提交到仓库。
+
+服务器部署工作流从 GitHub Actions Secrets 读取 `SITE_URL`、`ARTALK_SERVER_URL`、`ARTALK_SITE` 和 `ARTALK_ENABLED`；这些值不会写入仓库，但构建出的静态站点仍会公开使用它们。
+
 如果你想贡献自己的一份力,建议先阅读 [AGENTS.md](./AGENTS.md) 了解开发流程和验证要求。
 
 ## 参与贡献

@@ -1,6 +1,7 @@
 ---
 id: software-licenses
 slug: /service/software-licenses/
+comment_id: doc-software-licenses
 ---
 
 # 软件授权

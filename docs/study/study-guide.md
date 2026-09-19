@@ -1,6 +1,7 @@
 ---
 id: study
 slug: /study/
+comment_id: doc-study
 ---
 
 # 学习与发展
