@@ -1,6 +1,7 @@
 ---
 id: calendar
 slug: /calendar/
+comment_id: doc-calendar
 ---
 
 # 校历

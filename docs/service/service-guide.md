@@ -1,6 +1,7 @@
 ---
 id: service
 slug: /service/
+comment_id: doc-service
 ---
 
 # 服务与技巧
@@ -47,7 +48,7 @@ slug: /service/
 
 临港校区快递网点集中于本科生区与研究生区近邻宝服务站；平信与报刊收发室位于第一餐厅一楼。
 
-## 医疗服务/就诊
+## 医疗服务与就诊
 
 - [就医指南](./medical/)
 

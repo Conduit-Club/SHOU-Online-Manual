@@ -1,6 +1,7 @@
 ---
 id: campus-map
 slug: /facilities/campus-map.html
+comment_id: doc-campus-map
 ---
 
 # 校园地图
@@ -21,7 +22,7 @@ slug: /facilities/campus-map.html
 
 ![上海海洋大学校园总平图](/assets/campus-map-202509.jpg)
 
-- [下载原始 PDF](/assets/campus-map-202509.pdf)
+- [校园地图原始 PDF](/assets/campus-map-202509.pdf)
 - [后勤与基建管理处原页面](https://hqc.shou.edu.cn/2024/0822/c9765a333088/page.htm)
 - [学校官网校园地图栏目](https://www.shou.edu.cn/xydt/list.htm)
 
