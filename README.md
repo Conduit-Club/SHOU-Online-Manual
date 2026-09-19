@@ -29,6 +29,19 @@ pixi run --locked fmt-check  # 检查受管文件的格式
 
 首次运行会自动创建 `.pixi` 环境并安装依赖。构建产物位于 `build/`，可部署到 Vercel 或其他静态文件托管服务。需要指定规范站点 URL 时设置 `SITE_URL`，需要子路径部署时设置 `BASE_URL`。
 
+### 评论区配置
+
+文档默认带有评论区，页面标识来自 front matter 中固定的 `comment_id`；移动或改名文档时保留这个值，复制成新文档时再生成新值。`comments: false` 可以关闭单篇文档的评论区。
+
+评论服务使用 Twikoo，后端部署在 Netlify 上，与站点托管无关；站点仍然可以部署到 Vercel。本地与 Preview 默认不连接评论服务，生产构建需要设置两项公开配置：
+
+```text
+TWIKOO_ENABLED=true
+TWIKOO_ENV_ID=https://<站点名>.netlify.app/.netlify/functions/twikoo
+```
+
+`TWIKOO_ENV_ID` 必须带 `/.netlify/functions/twikoo` 后缀，否则评论请求会 404。前端脚本默认从 npm 镜像加载锁定版本并带 SRI 校验，可以用 `TWIKOO_SCRIPT_URL` 和 `TWIKOO_SCRIPT_INTEGRITY` 覆盖。部署步骤、审核流程和未完成事项见 [`script/twikoo`](./script/twikoo)。
+
 如果你想贡献自己的一份力,建议先阅读 [AGENTS.md](./AGENTS.md) 了解开发流程和验证要求。
 
 ## 参与贡献

@@ -1,6 +1,7 @@
 ---
 id: canteen
 slug: /canteen/
+comment_id: doc-canteen
 ---
 
 # 饮食

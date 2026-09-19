@@ -1,6 +1,7 @@
 ---
 id: media
 slug: /media/
+comment_id: doc-media
 ---
 
 # 媒体与网站

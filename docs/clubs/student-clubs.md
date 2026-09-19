@@ -1,6 +1,7 @@
 ---
 id: clubs
 slug: /clubs/
+comment_id: doc-clubs
 ---
 
 # 社团活动

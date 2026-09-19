@@ -889,3 +889,122 @@ body::selection {
     animation-duration: 0.01ms !important;
   }
 }
+
+.shou-comments {
+  margin-top: 2.75rem;
+  padding: 1.25rem 1.25rem 0.75rem;
+  border: 1px solid var(--shou-line);
+  border-radius: 0.7rem;
+  background: var(--shou-surface);
+  color: var(--shou-text);
+}
+
+.shou-comments__header {
+  margin-bottom: 1rem;
+}
+
+.shou-comments__header h2 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+}
+
+.shou-comments__header p,
+.shou-comments__fallback,
+.shou-comments__status,
+.shou-comments__error p {
+  margin: 0.45rem 0 0;
+  color: var(--shou-muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.shou-comments__fallback a,
+.shou-comments__error a {
+  margin-left: 0.25rem;
+  color: var(--shou-accent);
+}
+
+.shou-comments__widget {
+  min-height: 12.5rem;
+}
+
+.shou-comments__status {
+  text-align: center;
+}
+
+.shou-comments__error {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+  margin: 0.75rem 0;
+  padding: 0.75rem;
+  border: 1px solid var(--shou-line);
+  border-radius: 0.45rem;
+  background: var(--shou-surface-muted);
+}
+
+.shou-comments__error p {
+  flex: 1 1 100%;
+  margin: 0;
+}
+
+.shou-comments__error button {
+  min-height: 2rem;
+  padding: 0.25rem 0.7rem;
+  border: 1px solid var(--shou-line-strong);
+  border-radius: 0.35rem;
+  color: var(--shou-muted);
+  background: var(--shou-surface);
+  font: inherit;
+  cursor: pointer;
+}
+
+.shou-comments__error button:hover,
+.shou-comments__error button:focus-visible {
+  border-color: var(--shou-accent);
+  color: var(--shou-accent);
+  background: var(--shou-accent-soft);
+}
+
+.shou-comments__mount .tk-comments,
+.shou-comments__mount .tk-submit {
+  font-family: var(--ifm-font-family-base);
+}
+
+/* Twikoo 自带浅色样式，这里先覆盖深色模式下面积最大的几块。
+   具体观感需要连接真实评论服务后人工复查。 */
+[data-theme="dark"] .shou-comments__mount .tk-comment,
+[data-theme="dark"] .shou-comments__mount .tk-comments-container,
+[data-theme="dark"] .shou-comments__mount .tk-submit {
+  color: var(--shou-text);
+}
+
+[data-theme="dark"] .shou-comments__mount .el-input__inner,
+[data-theme="dark"] .shou-comments__mount .el-textarea__inner {
+  background-color: var(--shou-surface-muted);
+  border-color: var(--shou-line);
+  color: var(--shou-text);
+}
+
+[data-theme="dark"] .shou-comments__mount .el-button {
+  background-color: var(--shou-surface-muted);
+  border-color: var(--shou-line-strong);
+  color: var(--shou-text);
+}
+
+[data-theme="dark"] .shou-comments__mount .el-button:hover,
+[data-theme="dark"] .shou-comments__mount .el-button:focus {
+  background-color: var(--shou-accent-soft);
+  border-color: var(--shou-accent);
+  color: var(--shou-accent);
+}
+
+@media (max-width: 600px) {
+  .shou-comments {
+    margin-top: 2.25rem;
+    padding: 1rem 0.75rem 0.5rem;
+  }
+}

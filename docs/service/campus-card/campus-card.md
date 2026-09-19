@@ -1,6 +1,7 @@
 ---
 id: campus-card
 slug: /service/campus-card/
+comment_id: doc-campus-card
 ---
 
 # 校园卡与学生证

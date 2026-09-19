@@ -1,6 +1,7 @@
 ---
 id: purchased-software
 slug: /service/software-licenses/purchased.html
+comment_id: doc-purchased-software
 ---
 
 # 学校已购买的软件

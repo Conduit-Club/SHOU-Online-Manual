@@ -1,6 +1,7 @@
 ---
 id: medical
 slug: /service/medical/
+comment_id: doc-medical
 ---
 
 # 就医指南

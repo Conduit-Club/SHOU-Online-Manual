@@ -1,6 +1,7 @@
 ---
 id: official-entrances
 slug: /service/official-entrances.html
+comment_id: doc-official-entrances
 ---
 
 # 海大常用入口总览

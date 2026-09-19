@@ -1,6 +1,7 @@
 ---
 id: service
 slug: /service/
+comment_id: doc-service
 ---
 
 # 服务与技巧

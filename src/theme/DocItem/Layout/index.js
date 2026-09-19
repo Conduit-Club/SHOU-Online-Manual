@@ -14,6 +14,8 @@ import DocItemPaginator from "@theme/DocItem/Paginator";
 import DocVersionBadge from "@theme/DocVersionBadge";
 import DocVersionBanner from "@theme/DocVersionBanner";
 
+import DocComments from "@site/src/components/DocComments";
+
 function useDocTOC() {
   const { frontMatter, toc } = useDoc();
   const windowSize = useWindowSize();
@@ -30,7 +32,7 @@ function useDocTOC() {
 export default function DocItemLayout({ children }) {
   const docTOC = useDocTOC();
   const [tocCollapsed, setTocCollapsed] = useState(false);
-  const { metadata } = useDoc();
+  const { frontMatter, metadata } = useDoc();
   const hasDesktopToc = Boolean(docTOC.desktop);
   const showDesktopToc = hasDesktopToc && !tocCollapsed;
 
@@ -50,6 +52,7 @@ export default function DocItemLayout({ children }) {
             {docTOC.mobile}
             <DocItemContent>{children}</DocItemContent>
             <DocItemFooter />
+            <DocComments commentId={frontMatter?.comment_id} disabled={frontMatter?.comments === false} />
           </article>
           <DocItemPaginator />
         </div>

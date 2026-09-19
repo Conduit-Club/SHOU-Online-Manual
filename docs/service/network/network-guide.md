@@ -1,6 +1,7 @@
 ---
 id: network
 slug: /service/network/
+comment_id: doc-network
 ---
 
 # 校园网络

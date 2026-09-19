@@ -19,6 +19,17 @@ const configuredBaseUrl = process.env.BASE_URL || "/";
 const baseUrl = configuredBaseUrl === "/" ? "/" : `/${configuredBaseUrl.replace(/^\/+|\/+$/g, "")}/`;
 const withBase = (resource) => `${baseUrl}${resource.replace(/^\/+/, "")}`;
 
+// 评论服务（Twikoo）在构建期注入。未配置时评论区只显示降级提示。
+// 脚本锁定版本并从 npm 镜像加载，避免 jsDelivr 在中国大陆不稳定。
+const twikooEnvId = (process.env.TWIKOO_ENV_ID || "").trim().replace(/\/+$/, "");
+const twikooEnabled = process.env.TWIKOO_ENABLED === "true" && Boolean(twikooEnvId);
+const twikooScriptUrl = (
+  process.env.TWIKOO_SCRIPT_URL || "https://registry.npmmirror.com/twikoo/1.7.24/files/dist/twikoo.min.js"
+).trim();
+const twikooScriptIntegrity = (
+  process.env.TWIKOO_SCRIPT_INTEGRITY || "sha384-MBLY+RoqDEZK4I717ZgoY5s965suYEUI1beTmbsMjADd9ksncLX2tWxqVobl7GZd"
+).trim();
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title,
@@ -65,6 +76,15 @@ const config = {
   i18n: {
     defaultLocale: "zh-Hans",
     locales: ["zh-Hans"],
+  },
+
+  customFields: {
+    twikoo: {
+      enabled: twikooEnabled,
+      envId: twikooEnvId,
+      scriptUrl: twikooScriptUrl,
+      integrity: twikooScriptIntegrity,
+    },
   },
 
   plugins: [

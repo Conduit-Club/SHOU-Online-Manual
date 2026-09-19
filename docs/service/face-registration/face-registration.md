@@ -1,6 +1,7 @@
 ---
 id: face-registration
 slug: /service/face-registration/
+comment_id: doc-face-registration
 ---
 
 # 人脸采集与门禁
