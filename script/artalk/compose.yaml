@@ -13,4 +13,10 @@ services:
       ATK_SITE_DEFAULT: ${ATK_SITE_DEFAULT:-水专手册}
       ATK_SITE_URL: ${ATK_SITE_URL:?set the public handbook URL}
       ATK_TRUSTED_DOMAINS: ${ATK_TRUSTED_DOMAINS:?set the allowed handbook origins}
+    networks:
+      - nginx-proxy-manager_default
     command: ["server", "--host", "0.0.0.0", "--port", "23366"]
+
+networks:
+  nginx-proxy-manager_default:
+    external: true
