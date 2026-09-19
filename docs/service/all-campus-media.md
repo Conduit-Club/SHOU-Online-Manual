@@ -11,6 +11,7 @@ comment_id: doc-all-campus-media
 :::warning[经验整理内容]
 以下内容为经验整理，如有误可指出并修改。也欢迎补充。**最后验证日期：2026-09-18**
 :::
+
 :::warning[二维码待补充]
 考虑到部分默认微信公众号搜索较麻烦，其二维码有待补充。
 :::
@@ -22,7 +23,7 @@ comment_id: doc-all-campus-media
 |          名称          |                                                                                网址/微信号                                                                                 |
 | :--------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |    上海海洋大学官网    |                                                             [https://www.shou.edu.cn](https://www.shou.edu.cn)                                                             |
-|  上海海洋大学Bilibili  |                                                [https://space.bilibili.com/423391819](https://space.bilibili.com/423391819)                                                |
+| 上海海洋大学 Bilibili  |                                                [https://space.bilibili.com/423391819](https://space.bilibili.com/423391819)                                                |
 |    上海海洋大学微博    |                                                          [https://weibo.com/shou1912](https://weibo.com/shou1912)                                                          |
 |    上海海洋大学抖音    | [https://www.douyin.com/user/MS4wLjABAAAAu2xrMsxSNndXBH3ujB5kKOGLURmBOhWM8FKTzk8eAyE](https://www.douyin.com/user/MS4wLjABAAAAu2xrMsxSNndXBH3ujB5kKOGLURmBOhWM8FKTzk8eAyE) |
 | 上海海洋大学微信公众号 |                                                                                 iSHOU1912                                                                                  |
@@ -38,8 +39,8 @@ comment_id: doc-all-campus-media
 | 上海海洋大学信息公开网 |                   [https://xxgk.shou.edu.cn](https://xxgk.shou.edu.cn)                   |                                                           |
 |      网上办事大厅      |                 [https://portal.shou.edu.cn](https://portal.shou.edu.cn)                 |                                                           |
 |      大学生创新网      |                   [https://cxw.shou.edu.cn](https://cxw.shou.edu.cn/)                    |                 用于查询年度赛事立项等。                  |
-|          URP           |                    [https://urp.shou.edu.cn](https://urp.shou.edu.cn)                    |                     需要VPN或校园网。                     |
-|      体测成绩查询      | [http://202.121.66.196/servlet/adminservlet](http://202.121.66.196/servlet/adminservlet) |           **必须使用校园网**，校外VPN不可访问。           |
+|          URP           |                    [https://urp.shou.edu.cn](https://urp.shou.edu.cn)                    |                    需要 VPN 或校园网。                    |
+|      体测成绩查询      | [http://202.121.66.196/servlet/adminservlet](http://202.121.66.196/servlet/adminservlet) |          **必须使用校园网**，校外 VPN 不可访问。          |
 |  学生工作管理信息系统  |               [http://202.121.66.69:82/xgxt](http://202.121.66.69:82/xgxt)               | 用于困难生认定、奖学金申请、助学贷款等。需要VPN或校园网。 |
 
 ### 部门微信公众号
@@ -81,10 +82,10 @@ comment_id: doc-all-campus-media
 
 此处补充部分其他常用但非校园官方网站。
 
-|              名称               |                               网址                               |                                       备注                                       |
-| :-----------------------------: | :--------------------------------------------------------------: | :------------------------------------------------------------------------------: |
-| 超星（泛雅/学习通）网络教育平台 | [https://passport2.chaoxing.com](https://passport2.chaoxing.com) |                              校内课程常用绑定平台。                              |
-|   智慧树（知到）网络教育平台    |      [https://www.zhihuishu.com](https://www.zhihuishu.com)      | 用于完成在线课程（刷网课），包括 **标有在线课程的课程** 与部分 **高学分课程** 。 |
-|               PTA               |              [https://pintia.cn](https://pintia.cn)              |                            用于完成部分编程课程作业。                            |
+|              名称               |                               网址                               |                                      备注                                       |
+| :-----------------------------: | :--------------------------------------------------------------: | :-----------------------------------------------------------------------------: |
+| 超星（泛雅/学习通）网络教育平台 | [https://passport2.chaoxing.com](https://passport2.chaoxing.com) |                             校内课程常用绑定平台。                              |
+|   智慧树（知到）网络教育平台    |      [https://www.zhihuishu.com](https://www.zhihuishu.com)      | 用于完成在线课程（刷网课），包括 **标有在线课程的课程** 与部分 **高学分课程**。 |
+|               PTA               |              [https://pintia.cn](https://pintia.cn)              |                           用于完成部分编程课程作业。                            |
 
-_欲查看其他学习网站，请参见[刷 GPA 实用网站](/study/learning-sites.html)一节。_
+欲查看其他学习网站，请参见[刷 GPA 实用网站](/study/learning-sites.html)一节。
