@@ -1,6 +1,7 @@
 ---
 id: all-campus-media
 slug: /service/all-campus-media.html
+comment_id: doc-all-campus-media
 ---
 
 # 全部媒体与网站速览
