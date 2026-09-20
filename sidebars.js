@@ -52,6 +52,7 @@ const sidebars = {
         { type: "doc", id: "service/what-to-buy/shopping-guide", label: "什么值得买" },
         { type: "doc", id: "service/document-templates", label: "文档模板" },
         { type: "doc", id: "service/official-entrances", label: "常用入口总览" },
+        { type: "doc", id: "service/all-campus-media", label: "全部媒体与网站速览" },
       ],
     },
     { type: "doc", id: "canteen/canteen", label: "🍽️饮食" },
