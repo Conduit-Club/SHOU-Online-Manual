@@ -1,0 +1,173 @@
+name: Deploy Docusaurus site to server
+
+# Required repository secrets:
+# - SSH_PRIVATE_KEY: private key corresponding to the deploy user's authorized_keys entry.
+# - SSH_KNOWN_HOSTS: verified server host key line(s), not generated on the runner.
+# - SERVER_HOST: server hostname or IP address.
+# - SERVER_USER: low-privilege SSH deployment user.
+# - SERVER_PORT: optional SSH port, defaults to 22.
+# - SERVER_PATH: absolute directory owned by SERVER_USER, e.g. /var/www/shou-online-manual.
+# - ARTALK_ENABLED: set to true to enable comments in the deployed build.
+# - ARTALK_SERVER_URL: public Artalk HTTPS endpoint.
+# - ARTALK_SITE: Artalk site name.
+# - SITE_URL: canonical URL of the deployed handbook.
+# Automatic runs deploy the branch that was pushed; manual runs choose source_branch.
+# Both branches share SERVER_PATH/current, so the latest completed deployment becomes live.
+
+on:
+  push:
+    branches:
+      - master
+      - dev
+  workflow_dispatch:
+    inputs:
+      source_branch:
+        description: Branch to build and deploy
+        required: true
+        type: choice
+        options:
+          - dev
+          - master
+        default: dev
+
+concurrency:
+  group: server-deploy
+  cancel-in-progress: false
+
+jobs:
+  authorize-manual:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      # workflow_dispatch is available to users with write access. This gate
+      # prevents non-admin manual runs from reaching the deployment job.
+      - name: Verify repository administrator
+        env:
+          ACTOR: ${{ github.triggering_actor }}
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          permission="$(gh api \
+            --header 'Accept: application/vnd.github+json' \
+            --header 'X-GitHub-Api-Version: 2022-11-28' \
+            "/repos/${REPOSITORY}/collaborators/${ACTOR}/permission" \
+            --jq '.permission' 2>/dev/null || true)"
+          if [[ "$permission" != "admin" ]]; then
+            echo "Manual deployment is restricted to repository administrators."
+            exit 1
+          fi
+
+  deploy:
+    needs: authorize-manual
+    if: ${{ always() && (github.event_name != 'workflow_dispatch' || needs.authorize-manual.result == 'success') }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Check out deployment branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'workflow_dispatch' && inputs.source_branch || github.ref_name }}
+          fetch-depth: 0
+
+      - name: Set up Pixi
+        uses: prefix-dev/setup-pixi@v0.9.0
+        with:
+          pixi-version: v0.76.2
+          cache: true
+          locked: true
+
+      - name: Build Docusaurus site
+        env:
+          ARTALK_ENABLED: ${{ secrets.ARTALK_ENABLED }}
+          ARTALK_SERVER_URL: ${{ secrets.ARTALK_SERVER_URL }}
+          ARTALK_SITE: ${{ secrets.ARTALK_SITE }}
+          SITE_URL: ${{ secrets.SITE_URL }}
+        run: |
+          set -euo pipefail
+          : "${ARTALK_ENABLED:?ARTALK_ENABLED secret is required}"
+          : "${ARTALK_SERVER_URL:?ARTALK_SERVER_URL secret is required}"
+          : "${ARTALK_SITE:?ARTALK_SITE secret is required}"
+          : "${SITE_URL:?SITE_URL secret is required}"
+          pixi run --locked build
+
+      - name: Resolve deployment revision
+        id: revision
+        env:
+          DEPLOY_BRANCH: ${{ github.event_name == 'workflow_dispatch' && inputs.source_branch || github.ref_name }}
+        run: |
+          set -euo pipefail
+          echo "branch=${DEPLOY_BRANCH}" >> "$GITHUB_OUTPUT"
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          echo "short_sha=$(git rev-parse --short=12 HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Package build output
+        env:
+          DEPLOY_BRANCH: ${{ steps.revision.outputs.branch }}
+          DEPLOY_SHA: ${{ steps.revision.outputs.short_sha }}
+        run: |
+          set -euo pipefail
+          archive="shou-online-manual-${DEPLOY_BRANCH}-${DEPLOY_SHA}.tar.gz"
+          tar -czf "$archive" -C build .
+
+      - name: Set up SSH
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
+        run: |
+          set -euo pipefail
+          : "${SSH_PRIVATE_KEY:?SSH_PRIVATE_KEY secret is required}"
+          : "${SSH_KNOWN_HOSTS:?SSH_KNOWN_HOSTS secret is required}"
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s\n' "$SSH_PRIVATE_KEY" | tr -d '\r' > "$HOME/.ssh/id_ed25519"
+          chmod 600 "$HOME/.ssh/id_ed25519"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 644 "$HOME/.ssh/known_hosts"
+
+      - name: Upload and deploy site
+        env:
+          DEPLOY_BRANCH: ${{ steps.revision.outputs.branch }}
+          DEPLOY_SHA: ${{ steps.revision.outputs.short_sha }}
+          SERVER_HOST: ${{ secrets.SERVER_HOST }}
+          SERVER_PORT: ${{ secrets.SERVER_PORT }}
+          SERVER_PATH: ${{ secrets.SERVER_PATH }}
+          SERVER_USER: ${{ secrets.SERVER_USER }}
+        run: |
+          set -euo pipefail
+          : "${SERVER_HOST:?SERVER_HOST secret is required}"
+          : "${SERVER_USER:?SERVER_USER secret is required}"
+          : "${SERVER_PATH:?SERVER_PATH secret is required}"
+          SERVER_PORT="${SERVER_PORT:-22}"
+          if ! [[ "$SERVER_PORT" =~ ^[0-9]+$ ]]; then
+            echo "SERVER_PORT must be a numeric SSH port."
+            exit 1
+          fi
+          case "$SERVER_PATH" in
+            /*) ;;
+            *)
+              echo "SERVER_PATH must be an absolute Unix path."
+              exit 1
+              ;;
+          esac
+
+          remote="${SERVER_USER}@${SERVER_HOST}"
+          archive="shou-online-manual-${DEPLOY_BRANCH}-${DEPLOY_SHA}.tar.gz"
+          remote_archive="/tmp/${archive}"
+          scp -o BatchMode=yes -P "$SERVER_PORT" "$archive" "${remote}:${remote_archive}"
+
+          server_path_q="$(printf '%q' "$SERVER_PATH")"
+          deploy_branch_q="$(printf '%q' "$DEPLOY_BRANCH")"
+          deploy_sha_q="$(printf '%q' "$DEPLOY_SHA")"
+          remote_archive_q="$(printf '%q' "$remote_archive")"
+          ssh -o BatchMode=yes -p "$SERVER_PORT" "$remote" \
+            "SERVER_PATH=${server_path_q} DEPLOY_BRANCH=${deploy_branch_q} DEPLOY_SHA=${deploy_sha_q} REMOTE_ARCHIVE=${remote_archive_q} bash -s" <<'REMOTE_SCRIPT'
+          set -euo pipefail
+          release_dir="${SERVER_PATH}/releases/${DEPLOY_BRANCH}/${DEPLOY_SHA}"
+          mkdir -p "$release_dir"
+          tar -xzf "$REMOTE_ARCHIVE" -C "$release_dir"
+          ln -sfn "$release_dir" "${SERVER_PATH}/current"
+          rm -f "$REMOTE_ARCHIVE"
+          REMOTE_SCRIPT

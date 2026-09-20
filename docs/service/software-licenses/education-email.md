@@ -1,14 +1,17 @@
+---
+id: education-email
+slug: /service/software-licenses/education-email.html
+comment_id: doc-education-email
+---
+
 # 教育邮箱福利
 
 > 学校邮箱可以作为部分服务的学生身份凭证，但不等于自动获得所有教育优惠。
+> :::tip[核验]
+> **最近核验日期：2026-09-08**。
+> :::
 
-[[toc]]
-
-::: tip 核验
-**最近核验日期：2026-09-08**。
-:::
-
-::: warning 申请前确认资格
+:::warning[申请前确认资格]
 以下核验的是服务商公开政策，未确认上海海洋大学邮箱在各服务中都能通过认证，也未实际申请或兑换。请使用学校当前发放的学生邮箱，按官方要求验证在读身份；学校识别、地区可用性和最终权益以申请结果为准。
 :::
 
@@ -16,7 +19,7 @@
 
 GitHub Student Developer Pack（下称学生包）把多家服务商的学生优惠集中在一起。准备学习编程、部署课程项目或搭建个人网站时，可以先申请 GitHub 学生认证，再从学生包页面选择需要的项目。
 
-- **福利与入口**：[Student Developer Pack](https://education.github.com/pack)包含学生期内免费 GitHub Pro 及合作伙伴优惠，从[学生申请页](https://education.github.com/pack/join)申请。
+- **福利与入口**：[Student Developer Pack](https://education.github.com/pack) 包含学生期内免费 GitHub Pro 及合作伙伴优惠，从[学生申请页](https://education.github.com/pack/join)申请。
 - **申请条件**：年满 13 岁，正在就读可授予学位或文凭的项目，并拥有个人 GitHub 账号。须证明当前学生身份，可能需要学校邮箱或学生证、课表、成绩单等材料。
 - **有效期**：学生身份验证有效期为 2 年，到期后需重新验证。合作伙伴福利各有兑换期限、额度和续期规则，不能按 GitHub 的认证期限统一计算。
 - **使用提醒**：GitHub 学生认证通过后，合作伙伴的账号、授权和云资源通常仍需分别开通；首年免费、一次性额度与每年可续期是不同的权益。
@@ -38,18 +41,18 @@ GitHub Student Developer Pack（下称学生包）把多家服务商的学生优
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | GitHub Pro             | 学生期间免费使用 GitHub Pro，适合管理代码仓库和个人开发项目                                                         | 保持有效学生身份；与 Copilot 是两项不同权益                                                    |
 | GitHub Copilot Student | 经验证学生可免费激活的 AI 编程助手计划，提供无限 IDE 代码补全及一定 GitHub AI Credits，可辅助写代码、解释代码与测试 | 聊天和 agent 有用量限制，模型采用自动选择；具体额度看账号当前页面，不等于所有模型和功能无限用  |
-| JetBrains              | IntelliJ IDEA Ultimate、PyCharm Professional、CLion、Rider 等“全家桶”教育授权，适合课程与非商业开发学习             | 授权 1 年，可按学生资格续期；领取方式与限制见下文                                              |
+| JetBrains              | IntelliJ IDEA Ultimate、PyCharm Professional、CLion、Rider 等「全家桶」教育授权，适合课程与非商业开发学习           | 授权 1 年，可按学生资格续期；领取方式与限制见下文                                              |
 | Microsoft Azure        | Azure for Students 的 100 美元额度，可用于学习云服务、部署课程项目                                                  | 12 个月；年满 18 岁，并通过 Microsoft 的申请审核，详见下文                                     |
 | Namecheap              | 1 年免费 `.me` 域名注册及 1 年 SSL 证书，可用于个人主页、作品集                                                     | 从学生包的 Namecheap 条目领取；次年续费另计，续费价格以注册商为准                              |
 | Name.com               | 一个首年免费域名，可选 25 种以上后缀，例如 `.live`、`.studio`、`.software`、`.app`、`.dev`                          | 从学生包的 Name.com 链接进入并用 GitHub 登录；需填写可验证的真实联系信息，首年后按标准价格续费 |
 
 想搭个人网站，可从两个域名优惠中选择合适后缀；想学编程，先领取 GitHub Pro、Copilot 和 JetBrains；想练习云部署，再按课程需要开通 Azure。域名注册与服务器托管是两项服务，领到域名后仍需配置网站托管和 DNS。
 
-Copilot 计划及用量依据：[Copilot plans](https://docs.github.com/en/copilot/get-started/plans)、[个人计划 AI Credits 规则](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals)。旧教程中的“免费 Copilot Pro”“每月 300 次 premium requests”不宜直接作为当前学生计划承诺。
+Copilot 计划及用量依据：[Copilot plans](https://docs.github.com/en/copilot/get-started/plans)、[个人计划 AI Credits 规则](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals)。旧教程中的「免费 Copilot Pro」「每月 300 次 premium requests」不宜直接作为当前学生计划承诺。
 
-**激活 Copilot**：打开 [GitHub 教育福利设置](https://github.com/settings/education/benefits)，在学生和教师免费开发资源区域选择 “Learn more”，按提示激活 Copilot Student。学生审批与福利同步可能需要数日；若只显示付费方案，先检查认证状态或联系支持。操作依据：[官方学生设置指南](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-students)。
+**激活 Copilot**：打开 [GitHub 教育福利设置](https://github.com/settings/education/benefits)，在学生和教师免费开发资源区域选择 「Learn more」，按提示激活 Copilot Student。学生审批与福利同步可能需要数日；若只显示付费方案，先检查认证状态或联系支持。操作依据：[官方学生设置指南](https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-students)。
 
-域名依据：[学生包福利列表](https://education.github.com/pack#offers)、[Name.com 领取说明](https://www.name.com/support/articles/360036364834-signing-up-for-github-student-developer-pack)（2026-06-09 更新）、[Namecheap `.me` 域名说明](https://www.namecheap.com/domains/registration/cctld/me/)。Name.com 要求账户地址唯一，避免重复申请；注册时检查续费价和自动续费设置，不将“首年免费”理解为永久免费。
+域名依据：[学生包福利列表](https://education.github.com/pack#offers)、[Name.com 领取说明](https://www.name.com/support/articles/360036364834-signing-up-for-github-student-developer-pack)（2026-06-09 更新）、[Namecheap `.me` 域名说明](https://www.namecheap.com/domains/registration/cctld/me/)。Name.com 要求账户地址唯一，避免重复申请；注册时检查续费价和自动续费设置，不将「首年免费」理解为永久免费。
 
 ### DigitalOcean：旧学生包服务器优惠已不在当前列表
 
@@ -71,14 +74,14 @@ Copilot 计划及用量依据：[Copilot plans](https://docs.github.com/en/copil
 
 ### Notion 教育版
 
-- **福利与入口**：[Notion 教育版说明](https://www.notion.com/zh-cn/help/notion-for-education)。在网页或桌面端进入“设置 → 升级方案 → 获取免费教育版方案”，申请个人教育版。
+- **福利与入口**：[Notion 教育版说明](https://www.notion.com/zh-cn/help/notion-for-education)。在网页或桌面端进入「设置 → 升级方案 → 获取免费教育版方案」，申请个人教育版。
 - **申请条件**：经认证且列入 WHED 的高校学生或教师，必须使用学校邮箱作为 Notion 账号主邮箱；不接受学生证等材料替代邮箱验证。
 - **福利范围**：个人教育版为单成员工作区，提供无限页面和区块、无限上传、最多 100 位访客及 30 天页面历史。邀请访客与增加工作区成员不同。
 - **有效期**：每年通过学校邮箱重新验证；无法验证时转为 Free Plan。学生组织有独立申请规则，不能将个人教育版视为多人团队免费方案。
 
 ### Azure for Students
 
-- **福利与入口**：[Azure for Students](https://azure.microsoft.com/zh-cn/free/students)提供 12 个月内可用的 100 美元额度和有额度限制的免费服务，申请不需要信用卡。
+- **福利与入口**：[Azure for Students](https://azure.microsoft.com/zh-cn/free/students) 提供 12 个月内可用的 100 美元额度和有额度限制的免费服务，申请不需要信用卡。
 - **通过学生包申请**：打开学生包的 Azure 条目，按入口的 GitHub 连接或验证步骤申请；如转入学校邮箱验证，则继续按 Microsoft 表单完成。学生包获批不会自动创建 Azure 订阅，也不保证免除 Microsoft 的额外审核。
 - **申请条件**：年满 18 岁，经认证、可授予学位的两年制或四年制高校全日制学生，通过学校组织邮箱验证；不适用于 MOOC 或营利机构的职业培训，每人限一个订阅。
 - **有效期**：额度有效期为 12 个月；一年后仍符合学生资格可重新注册续期。额度耗尽或到期后，若不升级为即用即付，订阅及已部署产品会被停用。
@@ -97,9 +100,9 @@ Copilot 计划及用量依据：[Copilot plans](https://docs.github.com/en/copil
 
 ### Tableau：当前学生入口提供 Public Edition
 
-Tableau 适合学习数据分析与可视化。当前[Tableau for Students](https://www.tableau.com/en-gb/academic/students)入口提供免费 **Tableau Desktop Public Edition**：注册 Tableau Public 后下载，无需按年续期；旧版“一年 Desktop 与 Prep Builder 学生授权”的说明已不适用。
+Tableau 适合学习数据分析与可视化。当前 [Tableau for Students](https://www.tableau.com/en-gb/academic/students) 入口提供免费 **Tableau Desktop Public Edition**：注册 Tableau Public 后下载，无需按年续期；旧版「一年 Desktop 与 Prep Builder 学生授权」的说明已不适用。
 
-学生页面说明该方案面向学习、不可商用，发布目标为 Tableau Public，不能发布到 Tableau Cloud。准备发布前确认数据可以公开，不上传个人隐私或未获授权的数据。个人 Public Edition 不含 Prep Builder；需要课程授权时由教师按[教学计划](https://www.tableau.com/academic/teaching)申请。产品能力与限制见[Tableau 桌面版本对比](https://help.tableau.com/current/pro/desktop/en-us/desktop_comparison.htm)。
+学生页面说明该方案面向学习、不可商用，发布目标为 Tableau Public，不能发布到 Tableau Cloud。准备发布前确认数据可以公开，不上传个人隐私或未获授权的数据。个人 Public Edition 不含 Prep Builder；需要课程授权时由教师按[教学计划](https://www.tableau.com/academic/teaching)申请。产品能力与限制见 [Tableau 桌面版本对比](https://help.tableau.com/current/pro/desktop/en-us/desktop_comparison.htm)。
 
 ## Office 365：先确认学校资格与分配的计划
 
@@ -107,7 +110,7 @@ Tableau 适合学习数据分析与可视化。当前[Tableau for Students](http
 
 本次未确认上海海洋大学是否为学生提供相关订阅，也未确认可分配的计划。请先向学校[信息化服务部门](/contact/)核实，再按 Microsoft 官方流程验证。资格通常随在读身份持续，并可能重新验证；资格结束后，学校账号的网页版应用、OneDrive 等服务可能停用，离校前应导出个人资料。
 
-学校统一购买的软件与授权另见[学校已购买的软件](./purchased.md)；邮箱开通与使用说明另见[电子邮件](/service/communication/email.html)。
+学校统一购买的软件与授权另见[学校已购买的软件](/service/software-licenses/purchased.html)；邮箱开通与使用说明另见[电子邮件](/service/communication/email.html)。
 
 ## 申请与到期检查
 
@@ -118,4 +121,4 @@ Tableau 适合学习数据分析与可视化。当前[Tableau for Students](http
 
 以上来源均为服务商官方页面，政策核验日为 **2026-09-08**。发现条款调整时，请附对应官方链接修订。
 
-内容结构参考[南科手册“教育邮箱福利”](https://sustech.online/service/#%E6%95%99%E8%82%B2%E9%82%AE%E7%AE%B1%E7%A6%8F%E5%88%A9)。
+内容结构参考[南科手册「教育邮箱福利」](https://sustech.online/service/#%E6%95%99%E8%82%B2%E9%82%AE%E7%AE%B1%E7%A6%8F%E5%88%A9)。

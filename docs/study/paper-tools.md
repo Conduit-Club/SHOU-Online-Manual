@@ -1,12 +1,14 @@
 ---
-sidebarDepth: 0
+id: paper-tools
+slug: /study/paper-tools.html
+comment_id: doc-paper-tools
 ---
 
 # 论文实用工具
 
 课程论文和准备投稿的论文，用的工具不太一样。课程作业通常只需要按老师要求写清楚、引好文献，提交前做一次相似度自查；准备正式投稿，则要从检索、文献管理、写作到选刊一步步来，而且每一步都应该和指导老师保持沟通。
 
-::: tip 核验时间
+:::tip[核验时间]
 最近核验：**2026-09-11**。
 :::
 
@@ -19,7 +21,7 @@ sidebarDepth: 0
 
 大雅报告适合帮你找到漏标引用、与资料表述过近的段落。它给出的相似度只是参考；如果老师指定了检测系统、引用格式或相似度要求，最后按课程要求提交。
 
-## 正式的Paper
+## 正式的 Paper
 
 ### 准备投稿：先和老师定方向
 
@@ -29,17 +31,17 @@ sidebarDepth: 0
 
 #### Google Scholar：先把相关工作找全
 
-[打开 Google Scholar](https://scholar.google.com/)
+[Google Scholar](https://scholar.google.com/)
 
-Google Scholar 适合第一轮广泛检索。先用英文关键词找近几年的综述和高相关论文，再顺着“被引用次数”、参考文献和相关文章扩展。找到题名后，可以回学校图书馆或出版社页面找全文。
+Google Scholar 适合第一轮广泛检索。先用英文关键词找近几年的综述和高相关论文，再顺着「被引用次数」、参考文献和相关文章扩展。找到题名后，可以回学校图书馆或出版社页面找全文。
 
 它的覆盖面广，但筛选条件、收录边界和数据清洗不如专业数据库明确。检索结果多时，再到 Web of Science 缩小范围、核对引文关系。
 
 #### Web of Science：再做精确检索和引文追踪
 
-[打开 Web of Science](https://www.webofscience.com/)
+[Web of Science](https://www.webofscience.com/)
 
-上海海洋大学图书馆当前把 **Web of Science** 列在“外文数据库”中，而不是“试用数据库”。连接校园网后打开网站，可通过校园 IP 使用学校订购的内容。进入后再用学校邮箱注册或登录个人账户，方便保存检索式、收藏记录和设置提醒；个人账户本身不能代替学校的机构授权。
+上海海洋大学图书馆当前把 **Web of Science** 列在「外文数据库」中，而不是「试用数据库」。连接校园网后打开网站，可通过校园 IP 使用学校订购的内容。进入后再用学校邮箱注册或登录个人账户，方便保存检索式、收藏记录和设置提醒；个人账户本身不能代替学校的机构授权。
 
 校外访问可以先登录学校 [SSL VPN](https://vpn.shou.edu.cn/)，再进入数据库。Web of Science 主要提供文献记录、引文网络和检索分析；能否下载某篇全文，还要看图书馆是否订购了对应期刊。
 
@@ -47,13 +49,13 @@ Google Scholar 适合第一轮广泛检索。先用英文关键词找近几年�
 
 1. 在 Google Scholar 用多组关键词找到综述、经典论文和近年论文。
 2. 在 Web of Science 用题名、作者和主题词重新检索，筛年份、文献类型和学科。
-3. 顺着参考文献与“施引文献”补齐前后工作，把真正要读和要引用的文献留下。
+3. 顺着参考文献与「施引文献」补齐前后工作，把真正要读和要引用的文献留下。
 
 ### 第二步：管理文献和引用
 
 #### EndNote：适合 Word 写作，但桌面版是商业软件
 
-[打开 EndNote](https://endnote.com/)
+[EndNote](https://endnote.com/)
 
 EndNote 可以建文献库、管理 PDF，并在 Word 中插入和切换引文格式。已经使用 EndNote 的课题组，通常也会有现成的文献库、期刊样式和使用习惯，跟着老师的工作流会更省事。
 
@@ -61,7 +63,7 @@ EndNote 可以建文献库、管理 PDF，并在 Word 中插入和切换引文�
 
 #### JabRef：免费开源，适合 LaTeX
 
-[打开 JabRef](https://www.jabref.org/)
+[JabRef](https://www.jabref.org/)
 
 JabRef 是免费的开源文献管理器，以 BibTeX / BibLaTeX 文件为核心。用 LaTeX 写论文时，可以直接维护 `.bib` 文献库、清理重复条目、补 DOI，再用 `\cite{}` 插入引用。文献数据保存在普通文本文件里，也方便和论文一起备份或使用 Git 管理。
 
@@ -71,7 +73,7 @@ JabRef 是免费的开源文献管理器，以 BibTeX / BibLaTeX 文件为核心
 
 #### 本地写作：TeXstudio
 
-[打开 TeXstudio](https://www.texstudio.org/)
+[TeXstudio](https://www.texstudio.org/)
 
 TeXstudio 是免费开源的 LaTeX 编辑器，适合本地写作：文件一直留在电脑上，编译次数也不受在线平台额度影响。它只是编辑器，首次使用还要安装 [TeX Live](https://tug.org/texlive/) 等 LaTeX 发行版，模板用期刊或老师提供的版本。
 
@@ -79,13 +81,13 @@ TeXstudio 是免费开源的 LaTeX 编辑器，适合本地写作：文件一直
 
 #### 在线协作：Overleaf
 
-[打开 Overleaf](https://www.overleaf.com/)
+[Overleaf](https://www.overleaf.com/)
 
 需要让老师直接在线批注、多人一起修改时，可以用 Overleaf。它省去本地环境配置，老师也能在同一个项目里评论和查看改动。免费方案的协作者数量、编译时长和历史记录等限制可能变化，使用前看当前方案说明。
 
 #### 国内部署：中国科技云论文协同编译服务
 
-[查看中国科技云服务说明](https://www1.cstcloud.cn/resources/452) · [打开新版服务](https://latex.cstcloud.cn/)
+[中国科技云服务说明](https://www1.cstcloud.cn/resources/452) · [新版服务](https://latex.cstcloud.cn/)
 
 如果 Overleaf 免费方案的限制不合适，可以试试中国科技云部署的版本。当前新版提供多人协作、审阅批注、可视化编辑和 TeX Live 版本选择等功能；也可以在国内访问，编译速度比海外服务器快。使用前请先注册账户并阅读服务说明。
 
@@ -93,7 +95,7 @@ TeXstudio 是免费开源的 LaTeX 编辑器，适合本地写作：文件一直
 
 翻译方面，各位同学可以用大模型。在正文部分仍由自己完成。
 
-> 现在AI AGENT时代，甚至可以说AGI已经来了,该用大模型的就用大模型,大模型写作可比普通人好多了,用AI打败AI!
+> 现在 AI agent 时代，甚至可以说 AGI 已经来了，该用大模型的就用大模型，大模型写作可比普通人好多了，用 AI 打败 AI。
 
 需要读英文或把自己的中文初稿译成英文时，可以让熟悉的大模型辅助翻译和解释术语，比较稳妥的用法是一次处理一小段，同时给出领域和固定术语，再逐句核对数字、单位、否定关系、引用与专业名词。
 
@@ -101,13 +103,13 @@ TeXstudio 是免费开源的 LaTeX 编辑器，适合本地写作：文件一直
 
 #### JCR：看官方分区与影响因子
 
-[打开 Journal Citation Reports](https://jcr.clarivate.com/)
+[Journal Citation Reports](https://jcr.clarivate.com/)
 
 我们建议你选刊时优先看 JCR 分区与影响因子，不把中科院分区作为默认依据。如果学院考核、项目或老师明确要求另一套分区，仍按对应文件执行。分区和影响因子也不能单独决定期刊是否适合，还要看研究方向、文章类型、读者群和期刊范围。
 
 #### LetPub：看投稿经验和审稿周期
 
-[打开 LetPub SCI 期刊查询](https://www.letpub.com.cn/index.php?page=journalapp)
+[LetPub SCI 期刊查询](https://www.letpub.com.cn/index.php?page=journalapp)
 
 LetPub 可以按刊名、ISSN 和研究方向查影响因子、分区、投稿难度、审稿周期及作者评论，适合做候选期刊的第一轮比较。
 
@@ -120,8 +122,8 @@ LetPub 可以按刊名、ISSN 和研究方向查影响因子、分区、投稿�
 
 ### 学校资源核验记录
 
-- [上海海洋大学图书馆](https://library.shou.edu.cn/)：2026-09-11 实际访问时，Web of Science 与 JCR 位于“外文数据库”，页面的“试用数据库”显示暂无数据。
+- [上海海洋大学图书馆](https://library.shou.edu.cn/)：2026-09-11 实际访问时，Web of Science 与 JCR 位于「外文数据库」，页面的「试用数据库」显示暂无数据。
 - [上海海洋大学食品学院研究生科研成果加分规定](https://spxy.shou.edu.cn/_upload/article/files/0a/c4/0904f64a4735ad8fb1a54c4b80cb/b786608c-933a-4986-9f48-9298255b8aa8.pdf)：其中注明 JCR 分区以图书馆 Web of Science 数据库为准。
 - [学校 VPN 使用说明](https://xjzx.shou.edu.cn/2019/1012/c12937a253578/page.htm)：说明可通过学校 SSL VPN 在校外访问图书馆资源。
 
-还在找课程复习资料？返回 [刷 GPA 实用网站](./learning-sites.md)，或查看 [课程、学分与 GPA](./courses-and-gpa.md)。
+还在找课程复习资料？返回 [刷 GPA 实用网站](/study/learning-sites.html)，或查看 [课程、学分与 GPA](/study/courses-and-gpa.html)。
