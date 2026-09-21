@@ -20,7 +20,7 @@ comment_id: doc-driving
 
 ## 2026 级报到临时交通组织图
 
-![2026 级新生报到自驾临时交通组织图](/assets/2026-new-student/campus-traffic-plan.jpg)
+![2026 级新生报到自驾临时交通组织图](./campus-traffic-plan.jpg)
 
 来源：[学校 2026 级本科新生报到推送入口](https://mp.weixin.qq.com/s/OBRC8VLqiBz-1eIH35JUqA)，`迎新.pdf` 第 7 页，核对于 **2026-09-13**。图示仅适用于 2026 级报到期间的临时停车区、校门和行驶组织，不是日常校园交通图；现场指挥、临时围挡和当日通知优先。
 

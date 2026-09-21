@@ -47,11 +47,11 @@ comment_id: doc-freshman-guide
 
 下面两张原图用于定位报到点、宿舍和办理动线，不再重复抄录图中的文字；图示仅适用于 2026 级迎新，现场安排有变化时以工作人员指引为准。
 
-![2026 级新生报到点（风雨操场）布局图](/assets/2026-new-student/reporting-site-layout.jpg)
+![2026 级新生报到点（风雨操场）布局图](./reporting-site-layout.jpg)
 
 来源：`迎新.pdf` 第 3 页，核对于 **2026-09-13**；图示为 2026 级风雨操场报到布局，学院入口和后勤服务点以当日现场为准。
 
-![2026 年新生宿舍分布图与报到流程](/assets/2026-new-student/dormitory-map-and-check-in-flow.jpg)
+![2026 年新生宿舍分布图与报到流程](./dormitory-map-and-check-in-flow.jpg)
 
 来源：`迎新.pdf` 第 3 页，核对于 **2026-09-13**；宿舍分配和办理顺序仅供本年度报到参考，具体住宿信息以个人通知和现场安排为准。
 
