@@ -12,7 +12,7 @@ comment_id: doc-campus-map
 
 ## 2026 级新生集中报到参考图
 
-![2026 级新生集中报到校园标注图](/assets/2026-new-student/campus-report-map.jpg)
+![2026 级新生集中报到校园标注图](./campus-report-map.jpg)
 
 来源：[学校 2026 级本科新生报到推送](https://mp.weixin.qq.com/s/OBRC8VLqiBz-1eIH35JUqA)，`迎新.pdf` 第 2 页。图中报到点适用于 2026 级迎新。
 
@@ -20,9 +20,9 @@ comment_id: doc-campus-map
 
 上海海洋大学后勤与基建管理处发布的 **校园总平图 202509**（2025-09-23）。
 
-![上海海洋大学校园总平图](/assets/campus-map-202509.jpg)
+![上海海洋大学校园总平图](./campus-map-202509.jpg)
 
-- [校园地图原始 PDF](/assets/campus-map-202509.pdf)
+- [校园地图原始 PDF](./campus-map-202509.pdf)
 - [后勤与基建管理处原页面](https://hqc.shou.edu.cn/2024/0822/c9765a333088/page.htm)
 - [学校官网校园地图栏目](https://www.shou.edu.cn/xydt/list.htm)
 
