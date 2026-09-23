@@ -53,6 +53,10 @@ ARTALK_SITE=水专手册
 
 欢迎通过 Issue 或 Pull Request 提供内容。涉及电话、地址、流程、价格、时间表和链接的内容，请附官方来源及核验日期；经验分享请注明适用学年。
 
+<a href="https://github.com/Conduit-Club/SHOU-Online-Manual/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Conduit-Club/SHOU-Online-Manual" />
+</a>
+
 ## 上游来源与许可证
 
 本项目基于 [南科手册 / SUSTech-CRA/sustech-online-ng](https://github.com/SUSTech-CRA/sustech-online-ng) 的结构与内容改编。上游贡献者署名记录可在其[提交历史](https://github.com/SUSTech-CRA/sustech-online-ng/commits/master/)中查阅。新仓库历史从导入快照开始，随后保留 Aer 的海大改编提交；导入记录不代表对上游原创内容的作者认领。
