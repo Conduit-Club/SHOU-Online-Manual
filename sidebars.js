@@ -9,6 +9,7 @@ const sidebars = {
       link: { type: "doc", id: "study/study" },
       collapsed: true,
       items: [
+        { type: "doc", id: "study/study-plan", label: "本科培养计划" },
         { type: "doc", id: "study/courses-and-gpa", label: "课程、学分与 GPA" },
         { type: "doc", id: "study/learning-sites", label: "刷 GPA 实用网站" },
         { type: "doc", id: "study/paper-tools", label: "发论文实用工具" },
