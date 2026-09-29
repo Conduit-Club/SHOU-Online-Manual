@@ -18,6 +18,14 @@ comment_id: doc-about
 - [Moeary](https://github.com/Moeary)
 - [Aaron Ruan](https://github.com/Aaron-212)
 
+## 贡献者
+
+项目的所有贡献者见 GitHub 贡献者页面：
+
+<a href="https://github.com/Conduit-Club/SHOU-Online-Manual/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Conduit-Club/SHOU-Online-Manual" />
+</a>
+
 ## 如何贡献
 
 - 通过 Issue 报告错误、失效链接或希望新增的栏目。
