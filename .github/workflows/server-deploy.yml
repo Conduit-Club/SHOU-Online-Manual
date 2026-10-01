@@ -6,7 +6,7 @@ name: Deploy Docusaurus site to server
 # - SERVER_HOST: server hostname or IP address.
 # - SERVER_USER: low-privilege SSH deployment user.
 # - SERVER_PORT: optional SSH port, defaults to 22.
-# - SERVER_PATH: absolute directory owned by SERVER_USER, e.g. /var/www/shou-online-manual.
+# - SERVER_PATH: absolute directory owned by SERVER_USER, e.g. /srv/handbook.
 # - ARTALK_ENABLED: set to true to enable comments in the deployed build.
 # - ARTALK_SERVER_URL: handbook HTTPS origin for the same-origin /api/v2/ proxy.
 #   The standalone comments hostname is not used by handbook clients.
