@@ -1,4 +1,36 @@
-# 水专手册 / SHOU Online Manual
+<h1 align="center">水专手册 · SHOU Online Manual</h1>
+
+<p align="center">
+  面向上海海洋大学 SHOUer 的校园生活、学习与办事信息入口
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Docusaurus-3-3e5eab?style=flat-square&logo=docusaurus&logoColor=white" alt="Docusaurus 3" />
+  <img src="https://img.shields.io/badge/React-19-149eca?style=flat-square&logo=react&logoColor=white" alt="React 19" />
+  <img src="https://img.shields.io/badge/JavaScript-f7df1e?style=flat-square&logo=javascript&logoColor=111827" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/MapLibre%20GL-6-396cb2?style=flat-square&logo=maplibre&logoColor=white" alt="MapLibre GL 6" />
+  <img src="https://img.shields.io/badge/Node.js-24-339933?style=flat-square&logo=node.js&logoColor=white" alt="Node.js 24" />
+  <img src="https://img.shields.io/badge/Pixi-0.76%2B-5d2f8a?style=flat-square" alt="Pixi 0.76 or newer" />
+</p>
+
+<p align="center">
+  <a href="https://manual.shoumc.com/">在线阅读</a> ·
+  <a href="https://manual.shoumc.com/facilities/campus-map.html">校园地图</a> ·
+  <a href="https://github.com/Conduit-Club/SHOU-Online-Manual">源代码</a> ·
+  <a href="https://github.com/Conduit-Club/SHOU-Online-Manual/issues">问题反馈</a>
+</p>
+
+<p align="center">
+  <img src="./.github/readme/manual-home.png" alt="水专手册首页" width="100%" />
+</p>
+
+<p align="center">
+  <img src="./.github/readme/manual-map.png" alt="校园地图页面" width="100%" />
+</p>
+
+<p align="center"><sub>页面截图取自本地构建产物，内容仍在持续维护与核验中。</sub></p>
+
+## 项目说明
 
 本手册面向上海海洋大学学生、教师与校友，集中整理校内生活信息和办事入口，方便查找。
 
