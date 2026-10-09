@@ -14,7 +14,7 @@ comment_id: doc-clubs
 
 ## 管理入口与报名准备
 
-学校社团由校团委具体指导，实行校院两级管理，并进行年度审核。可以从[学校机构设置](https://www.shou.edu.cn/jgsz/list.htm)、所在学院网站和[学生在线](https://xszx.shou.edu.cn/)查找团学信息；体育方向还可查看[体育部校园体育栏目](https://tyb.shou.edu.cn/8850/list.htm)。
+学校社团由校团委指导，实行校院两级管理，每年审核。团学信息可从[学校机构设置](https://www.shou.edu.cn/jgsz/list.htm)、所在学院网站和[学生在线](https://xszx.shou.edu.cn/)查找；体育方向还可查看[体育部校园体育栏目](https://tyb.shou.edu.cn/8850/list.htm)。
 
 报名前可以了解社团的活动方向、平时活动时间和报名渠道，再评估与课程的冲突。
 

@@ -2,7 +2,9 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 
 import BrowserOnly from "@docusaurus/BrowserOnly";
 import { useColorMode } from "@docusaurus/theme-common";
-import useBaseUrl, { useBaseUrlUtils } from "@docusaurus/useBaseUrl";
+import { useBaseUrlUtils } from "@docusaurus/useBaseUrl";
+import campusMapImageUrl from "@site/docs/facilities/campus-map-202509.jpg";
+import campusMapPdfUrl from "@site/docs/facilities/campus-map-202509.pdf";
 
 import { campusLayers } from "./campusThemes.js";
 import { loadPmtiles } from "./campusOverlay.js";
@@ -543,14 +545,18 @@ export default function CampusMap({
 }) {
   const { colorMode } = useColorMode();
   const normalizedCenter = normalizeCenter(center);
-  const mapImageUrl = useBaseUrl("/assets/campus-map-202509.jpg");
-  const mapPdfUrl = useBaseUrl("/assets/campus-map-202509.pdf");
   const dark = colorMode === "dark";
 
   return (
     <BrowserOnly
       fallback={
-        <MapFallback height={height} label={label} mapImageUrl={mapImageUrl} mapPdfUrl={mapPdfUrl} dark={dark} />
+        <MapFallback
+          height={height}
+          label={label}
+          mapImageUrl={campusMapImageUrl}
+          mapPdfUrl={campusMapPdfUrl}
+          dark={dark}
+        />
       }
     >
       {() => (

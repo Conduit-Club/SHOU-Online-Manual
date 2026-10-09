@@ -6,6 +6,10 @@ const themeColor = "#49BF7C";
 const artalkServerUrl = (process.env.ARTALK_SERVER_URL || "").trim().replace(/\/+$/, "");
 const artalkSite = (process.env.ARTALK_SITE || "水专手册").trim() || "水专手册";
 const artalkEnabled = process.env.ARTALK_ENABLED === "true" && Boolean(artalkServerUrl);
+const gaMeasurementId = (process.env.GA_MEASUREMENT_ID || "").trim();
+if (gaMeasurementId && !/^G-[A-Z0-9]+$/.test(gaMeasurementId)) {
+  throw new Error("GA_MEASUREMENT_ID must be a GA4 measurement ID beginning with G-.");
+}
 
 function getUrlOrigin(value, base) {
   try {
@@ -92,8 +96,13 @@ const config = {
         },
         blog: false,
         pages: false,
+        gtag: gaMeasurementId ? { trackingID: gaMeasurementId } : false,
         theme: {
           customCss: "./src/css/custom.css",
+        },
+        gtag: {
+          trackingID: "G-F0LYKL6LMP",
+          anonymizeIP: true,
         },
       }),
     ],

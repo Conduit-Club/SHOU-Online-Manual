@@ -6,7 +6,7 @@ comment_id: doc-canteen
 
 # 饮食
 
-关于校外饮食，可以参见[海大今天吃什么](https://github.com/Conduit-Club/what-to-eat-in-shou-today/)项目。
+关于校外饮食及同学餐饮体验，可以参见[今日海大吃什么](https://github.com/Conduit-Club/what-to-eat-in-shou-today-done-right)。
 
 ## 供餐时间与就餐准备
 
@@ -19,25 +19,24 @@ comment_id: doc-canteen
 
 店铺点位沿用同学提供的信息。欢迎按店补充商品、推荐、实付价格和到店日期。
 
-### A 区 7-11 便利店
+### 校内便利店与饮品
+
+#### A 区 7-11 便利店
 
 - **位置**：A 区，具体楼栋待补充。
 - **有什么**：便利店，具体商品和熟食待补充。
-- **推荐与评价**：待同学补充。
 - **消费范围**：待补充实付价格。
 
-### B 区 7-11 便利店
+#### B 区 7-11 便利店
 
 - **位置**：研究生区，与第三食堂同楼。
 - **有什么**：便利店，具体商品和熟食待补充。
-- **推荐与评价**：待同学补充。
 - **消费范围**：待补充实付价格。
 
-### 二餐一楼 蜜雪冰城区
+#### 二餐一楼 蜜雪冰城区
 
 - **位置**：第二食堂一楼。
 - **有什么**：蜜雪冰城饮品店，当前菜单待补充。
-- **推荐与评价**：待同学补充口味、甜度等体验。
 - **消费范围**：待补充本店实付价格。
 
 ## 校内餐厅
@@ -48,19 +47,15 @@ comment_id: doc-canteen
 
 ### 一食堂
 
-后勤介绍中列有芝士焗饭、砂锅煲、麻辣烫等品类，具体楼层和窗口待补充。炸物窗口的鸡排和鸡腿评价不错，只是没说清在一楼还是二楼，先记在这里。
+后勤介绍中列有芝士焗饭、砂锅煲、麻辣烫等品类，具体楼层和窗口待补充。
 
 #### 一楼
 
-- **有什么**：早餐；正餐时段有「大伙」窗口的一排打菜，另有面食、馄饨、酱香饼和铁板窗口。
-- **评价**：早餐便宜实惠。「大伙」那一排的窗口基本都好吃；铁板鸡排尤其受欢迎，有同学的原话是「我将永远追随一餐一楼的铁板鸡排」。新上的生滚粥还没人试过。
-- **消费范围**：铁板饭和铁板鸡排大概 8 元一份，旁边的锅贴 1 元到 1.5 元一个。其余餐品和现价待补充。
+有早餐、「大伙」打菜、面食、馄饨、酱香饼和铁板窗口。后续可在[一食堂条目](https://github.com/Conduit-Club/what-to-eat-in-shou-today-done-right/blob/main/src/content/restaurants/first-canteen.json)查看同学餐品与体验。窗口及价格以现场为准。
 
 #### 二楼
 
-- **有什么**：现煮酸菜鱼窗口，另有滑蛋饭。
-- **评价**：酸菜鱼是现煮的，泼上油之后很香，带花椒的时候会有点呛。滑蛋饭的评价也还行。
-- **消费范围**：酸菜鱼大概 19 元一份，略贵但值得。其余待补充。
+有现煮酸菜鱼窗口和滑蛋饭，窗口及现价可能变化。详见[一食堂条目](https://github.com/Conduit-Club/what-to-eat-in-shou-today-done-right/blob/main/src/content/restaurants/first-canteen.json)。
 
 ### 二食堂
 
@@ -68,23 +63,15 @@ comment_id: doc-canteen
 
 #### 一楼
 
-- **有什么**：打菜窗口、砂锅窗口，以及上方单列的蜜雪冰城。
-- **评价**：二餐一楼打菜的评价不太一致：有人更喜欢这里的打菜，也有人觉得选择不多，砂锅更好吃。砂锅以前配小青菜，后来换成大白菜，之后就没再点过。
-- **消费范围**：待补充菜品搭配与实付价格。
+有打菜窗口、砂锅窗口和蜜雪冰城。档口、配菜与菜单可能变化，以现场为准；餐品体验见[二食堂条目](https://github.com/Conduit-Club/what-to-eat-in-shou-today-done-right/blob/main/src/content/restaurants/second-canteen.json)。
 
 #### 二楼
 
-- **有什么**：炸鸡、酸辣粉、凉皮、葱油拌面；烧腊、河南烩面（含炒刀削之类的炒面）；另有单独列出的风味餐厅。
-- **评价**：炸鸡好吃，酸辣粉、凉皮、葱油拌面也都有人推荐；也有人觉得二餐二楼的这些档口整体比一餐好吃不少。
-- **消费范围**：待补充菜品搭配与实付价格。
+同学提到炸鸡、酸辣粉、凉皮、葱油拌面、烧腊、河南烩面、炒刀削、咖喱饭和盖浇饭等品类。具体窗口、开设时间和评价见[二食堂条目](https://github.com/Conduit-Club/what-to-eat-in-shou-today-done-right/blob/main/src/content/restaurants/second-canteen.json)。
 
 #### 风味餐厅
 
-风味餐厅面向少数民族师生，有特殊饮食需求可以直接问工作人员。餐厅在第二食堂二楼靠外侧的窗口，做新疆风味，位置可以在[校园地图](/facilities/campus-map.html)上找到。
-
-- **有什么**：牛肉面、羊肉泡馍等。
-- **评价**：牛肉面好吃；羊肉泡馍汤鲜、料多，有人专门推荐过。
-- **消费范围**：牛肉面大概 8 元一碗。其余菜品和现价待补充。
+风味餐厅面向少数民族师生，有特殊饮食需求可以直接问工作人员。餐厅在第二食堂二楼靠外侧，位置可以在[校园地图](/facilities/campus-map.html)上找到。菜单、价格及同学体验见[风味餐厅条目](https://github.com/Conduit-Club/what-to-eat-in-shou-today-done-right/blob/main/src/content/restaurants/flavor-restaurant.json)。
 
 ### 第三食堂
 
@@ -94,9 +81,13 @@ comment_id: doc-canteen
 
 一楼大致可以分为三个区域。早餐期间，一般只有面食区域和靠近糕点房的窗口开放。这里有豆浆、白粥、油条、豆花、肉包等常见的早餐，整体上属于比较常规的食堂早餐。
 
-面食区域主要提供面条，可以添加雪菜、素鸡等简单的配菜。糕点房则顾名思义，是售卖一些常见糕点的窗口，想买点简单的早餐或者带走的东西，可以在这里看看。
+面食区域主要卖面条，可以添加雪菜、素鸡等配菜。糕点房供应常见糕点，想买早餐或打包带走，可以到这里看看。
 
 早餐时段以外，一楼通常可以打菜，就是常规的大学食堂打菜，菜品种类不算丰富，选择也没有特别多。单纯想吃打菜的话，不如去二餐一楼。
+
+- **吃饱首选**：铁板炒（新出现的窗口，不以口感和充分营养为优先，单纯想吃饱的选择）。
+
+![三食堂一楼铁板炒窗口](./canteen-3-iron-plate.jpg)
 
 #### 二楼
 
@@ -114,4 +105,4 @@ comment_id: doc-canteen
 
 ## 更多餐饮体验
 
-[海大今天吃什么](https://github.com/Conduit-Club/what-to-eat-in-shou-today/)按店铺收集位置、消费范围和同学评价，已有[校内餐饮目录](https://github.com/Conduit-Club/what-to-eat-in-shou-today/blob/main/website/docs/on-campus/index.md)与[校外店铺目录](https://github.com/Conduit-Club/what-to-eat-in-shou-today/blob/main/website/docs/off-campus/index.md)。补充本页时也可附对应店铺链接，便于继续完善。
+[今日海大吃什么](https://github.com/Conduit-Club/what-to-eat-in-shou-today-done-right)按店铺整理校内及学校周边的餐品、位置、价格来源和同学体验。校内窗口与价格会变化，具体以现场和当前记录为准。

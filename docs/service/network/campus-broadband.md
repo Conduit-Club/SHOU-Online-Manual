@@ -19,7 +19,7 @@ comment_id: doc-campus-broadband
 
 ## 认证与拨号
 
-- **拨号方式**：现似乎需使用学号进行拨号认证。
+- **拨号方式**：目前看需要使用学号拨号认证，具体以运营商页面提示为准。
 
 ## 运营商与套餐
 
@@ -47,7 +47,7 @@ comment_id: doc-campus-broadband
 
 ## 已知限制
 
-- **校内外访问**：实验室工作站的校外公网 IP 暂无法直接访问校内资源。校内需通过 EasyConnect VPN（联通线路）访问校外资源。
+- **校内外访问**：实验室工作站的校外公网 IP 暂无法直接访问校内资源。校内需通过 VPN 访问校外资源；VPN 客户端正从 EasyConnect 迁移到 aTrust，**2026-10-16** 起只用 aTrust，见[校园网络：校外访问 VPN](/service/network/#校外访问-vpn)。
 
 :::warning[待补充详情]
 
