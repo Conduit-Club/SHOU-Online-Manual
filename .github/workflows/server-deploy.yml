@@ -12,6 +12,8 @@ name: Deploy Docusaurus site to server
 #   The standalone comments hostname is not used by handbook clients.
 # - ARTALK_SITE: Artalk site name.
 # - SITE_URL: canonical URL of the deployed handbook.
+# Optional repository secrets:
+# - GA_MEASUREMENT_ID: GA4 web stream measurement ID (G-...). Omit to disable analytics.
 # Automatic runs deploy the branch that was pushed; manual runs choose source_branch.
 # Both branches share SERVER_PATH/current, so the latest completed deployment becomes live.
 
@@ -87,6 +89,7 @@ jobs:
           ARTALK_SERVER_URL: ${{ secrets.ARTALK_SERVER_URL }}
           ARTALK_SITE: ${{ secrets.ARTALK_SITE }}
           SITE_URL: ${{ secrets.SITE_URL }}
+          GA_MEASUREMENT_ID: ${{ secrets.GA_MEASUREMENT_ID }}
         run: |
           set -euo pipefail
           : "${ARTALK_ENABLED:?ARTALK_ENABLED secret is required}"
