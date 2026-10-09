@@ -14,6 +14,7 @@ name: Deploy Docusaurus site to server
 # - SITE_URL: canonical URL of the deployed handbook.
 # Optional repository secrets:
 # - GA_MEASUREMENT_ID: GA4 web stream measurement ID (G-...). Omit to disable analytics.
+# Analytics setup and verification: .github/docs/google-analytics.md
 # Automatic runs deploy the branch that was pushed; manual runs choose source_branch.
 # Both branches share SERVER_PATH/current, so the latest completed deployment becomes live.
 
