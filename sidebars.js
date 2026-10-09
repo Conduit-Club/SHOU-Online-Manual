@@ -1,7 +1,7 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
   manualSidebar: [
-    { type: "doc", id: "intro", label: "🏠水专手册" },
+    { type: "doc", id: "intro", label: "🏠SHOU指北" },
     { type: "doc", id: "freshman-guide/freshman-guide", label: "📚新生指南" },
     {
       type: "category",

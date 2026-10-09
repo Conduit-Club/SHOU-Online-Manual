@@ -1,4 +1,4 @@
-<h1 align="center">水专手册 · SHOU Online Manual</h1>
+<h1 align="center">SHOU指北</h1>
 
 <p align="center">
   面向上海海洋大学 SHOUer 的校园生活、学习与办事信息入口
@@ -21,7 +21,7 @@
 </p>
 
 <p align="center">
-  <img src="./.github/readme/manual-home.png" alt="水专手册首页" width="100%" />
+  <img src="./.github/readme/manual-home.png" alt="SHOU指北首页" width="100%" />
 </p>
 
 <p align="center">
@@ -34,7 +34,7 @@
 
 本手册面向上海海洋大学学生、教师与校友，集中整理校内生活信息和办事入口，方便查找。
 
-[在线阅读水专手册](https://manual.shoumc.com/)
+[在线阅读 SHOU指北](https://manual.shoumc.com/)
 
 本项目由南科手册改编而来，目前正处于内容迁移与重建阶段，使用 Docusaurus 生成静态文档站。通用经验会保留，涉及学校制度、地址、系统、联系方式和时间表的内容必须重新核验后才能发布。
 

@@ -46,7 +46,7 @@ function getArtalkConfig(siteConfig) {
   return {
     enabled: config?.enabled === true && typeof config.server === "string" && config.server.length > 0,
     server: typeof config?.server === "string" ? config.server : "",
-    site: typeof config?.site === "string" && config.site.length > 0 ? config.site : "水专手册",
+    site: typeof config?.site === "string" && config.site.length > 0 ? config.site : "SHOU指北",
   };
 }
 

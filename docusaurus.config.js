@@ -1,10 +1,10 @@
 const { themes: prismThemes } = require("prism-react-renderer");
 
-const title = "水专手册";
+const title = "SHOU指北";
 const description = "上海海洋大学校园信息手册";
 const themeColor = "#49BF7C";
 const artalkServerUrl = (process.env.ARTALK_SERVER_URL || "").trim().replace(/\/+$/, "");
-const artalkSite = (process.env.ARTALK_SITE || "水专手册").trim() || "水专手册";
+const artalkSite = (process.env.ARTALK_SITE || "SHOU指北").trim() || "SHOU指北";
 const artalkEnabled = process.env.ARTALK_ENABLED === "true" && Boolean(artalkServerUrl);
 const gaMeasurementId = (process.env.GA_MEASUREMENT_ID || "").trim();
 if (gaMeasurementId && !/^G-[A-Z0-9]+$/.test(gaMeasurementId)) {
@@ -199,7 +199,7 @@ const config = {
             ],
           },
         ],
-        copyright: `水专手册 · 上海海洋大学校园信息手册 · ${new Date().getFullYear()}`,
+        copyright: `SHOU指北 · 上海海洋大学校园信息手册 · ${new Date().getFullYear()}`,
       },
       colorMode: {
         defaultMode: "light",
