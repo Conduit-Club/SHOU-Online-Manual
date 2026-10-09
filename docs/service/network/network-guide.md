@@ -39,20 +39,36 @@ comment_id: doc-network
 
 来源：[2026 级新生报到指南](https://mp.weixin.qq.com/s/Ij-n7Y8YEUuHfKWTxkcUuA)；**2026-09-12** 按维护者提供的正文核对入口及认证方式，未测试登录或客户端配置。
 
+:::warning[EasyConnect 迁移到 aTrust]
+现代信息与教育技术中心于 **2026 年 10 月 4 日**发布通知：零信任 VPN（aTrust）于 **2026 年 10 月 5 日至 10 月 16 日**试运行，期间与现有 VPN（EasyConnect）并行；试运行结束后，VPN 接入地址改为 `https://vpn.shou.edu.cn`，EasyConnect 停止使用。
+
+aTrust 迁移信息已由维护者根据通知原文亲自核验，通知附件暂未收录。aTrust 初次使用需要绑定 **TOTP**（基于时间的一次性密码）。
+:::
+
+### 初次绑定 aTrust 的 TOTP（免安装客户端）
+
+下面的流程适用于手机或电脑尚未安装 aTrust 的情况，已由维护者亲自验证。电脑上已安装 aTrust 后的绑定流程仍待补充；预计可以跳过第 1 步，具体步骤以实际页面为准。
+
+1. 将手机或电脑浏览器的 User-Agent（UA）设置为手机，访问 [`https://vpn4.shou.edu.cn`](https://vpn4.shou.edu.cn)。
+2. 在跳转到的「网上办事大厅」界面正常登录。
+3. 进入 TOTP 设置界面后，扫码或保存 `secret`，再用验证器生成一次性密码并完成验证，保存 TOTP 配置。
+
+如果不清楚使用什么软件或方法绑定 TOTP，可参考通知附件中的教程。
+
 ### 访问教务、图书馆等校内资源
 
 现教中心的 [VPN 使用说明](https://xjzx.shou.edu.cn/2019/1012/c12937a253578/page.htm)（**2019-10-12**）给出了通用步骤：在校外从学校 VPN 页面下载适合系统的 EasyConnect，服务器填 `https://vpn.shou.edu.cn`，使用统一身份认证登录，连接成功后再打开目标系统；用完后退出连接。
 
-该说明指出校园网内不支持 VPN 登录及客户端下载。因 2026 年宿舍网络调整，本页不能据此判断某个宿舍出口属于哪种网络；连接异常时向现教中心提供当前接入方式咨询，系统问题电话 **021-61900245**。
+该说明发布日期较早，仍以 EasyConnect 为例；**2026 年 10 月 16 日迁移到 aTrust 后，请以网上办事大厅通知中的 aTrust 配置为准**，不要继续套用 EasyConnect 的服务器地址和客户端。校园网内不支持 VPN 登录及客户端下载。因 2026 年宿舍网络调整，本页不能据此判断某个宿舍出口属于哪种网络；连接异常时向现教中心提供当前接入方式咨询，系统问题电话 **021-61900245**。
 
 如果只需访问学术数据库，可先查看 [CARSI 说明](https://xjzx.shou.edu.cn/2025/0114/c12937a337554/page.htm)（**2025-01-14**）：支持 CARSI 且学校已有访问权限的资源，可在「机构登录」或「校外登录」选择上海海洋大学，以统一身份认证访问，无需先连接 VPN。具体数据库范围以[图书馆](https://library.shou.edu.cn/)为准。
 
-### 人脸采集使用 EasyConnect
+### 人脸采集使用 VPN
 
-[新生入校与人脸采集操作指南](https://mp.weixin.qq.com/s/UdDRp1-35VbvNGGtSwkiew)说明，校外办理人脸采集时：
+[新生入校与人脸采集操作指南](https://mp.weixin.qq.com/s/UdDRp1-35VbvNGGtSwkiew)说明，校外办理人脸采集时需要先连接学校 VPN。该指南按当时的 **EasyConnect** 说明，服务器地址为 `vpn.shou.edu.cn`；**2026 年 10 月 16 日迁移到 aTrust 后，按网上办事大厅通知使用 aTrust 客户端**。步骤如下：
 
-1. 按原文图文指引下载安装 **EasyConnect**，服务器地址填写 **vpn.shou.edu.cn**。
-2. 使用学校统一身份认证账号和密码登录。首次使用须先激活账号，原文提供的[账号激活入口](http://authx-service.shou.edu.cn/active-account)为 `http://authx-service.shou.edu.cn/active-account`。
+1. 按官方图文指引下载安装 VPN 客户端（迁移前为 **EasyConnect**，迁移后为 **aTrust**）；EasyConnect 的服务器地址填写 `vpn.shou.edu.cn`。
+2. 使用学校统一身份认证账号和密码登录；aTrust 首次使用需先绑定 TOTP。首次使用统一身份认证须先激活账号，原文提供的[账号激活入口](http://authx-service.shou.edu.cn/active-account)为 `http://authx-service.shou.edu.cn/active-account`。
 3. VPN 连接成功后，回到「上海海洋大学」公众号，选择 **我的海大 → 人脸采集**，按[人脸采集说明](/service/face-registration/)办理。
 
 本节于 **2026-09-12** 按维护者提供的正文整理，已拼接原文换行拆开的激活网址；未测试账号激活、下载或登录。完整截图和下载方式请查看原文。

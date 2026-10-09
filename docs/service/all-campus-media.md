@@ -37,7 +37,7 @@ comment_id: doc-all-campus-media
 |      大学生创新网      |                   [https://cxw.shou.edu.cn](https://cxw.shou.edu.cn/)                    |                 用于查询年度赛事立项等。                  |
 |          URP           |                    [https://urp.shou.edu.cn](https://urp.shou.edu.cn)                    |                    需要 VPN 或校园网。                    |
 |      体测成绩查询      | [http://202.121.66.196/servlet/adminservlet](http://202.121.66.196/servlet/adminservlet) |          **必须使用校园网**，校外 VPN 不可访问。          |
-|  学生工作管理信息系统  |               [http://202.121.66.69:82/xgxt](http://202.121.66.69:82/xgxt)               | 用于困难生认定、奖学金申请、助学贷款等。需要VPN或校园网。 |
+|  学生工作管理信息系统  |            [https://xxfgxt.shou.edu.cn/xgxt](https://xxfgxt.shou.edu.cn/xgxt)            | 用于困难生认定、奖学金申请、助学贷款等。需要VPN或校园网。 |
 
 ### 部门微信公众号
 
