@@ -10,7 +10,7 @@ services:
     environment:
       TZ: Asia/Shanghai
       ATK_LOCALE: zh-CN
-      ATK_SITE_DEFAULT: ${ATK_SITE_DEFAULT:-水专手册}
+      ATK_SITE_DEFAULT: ${ATK_SITE_DEFAULT:-SHOU指北}
       ATK_SITE_URL: ${ATK_SITE_URL:?set the public handbook URL}
       ATK_TRUSTED_DOMAINS: ${ATK_TRUSTED_DOMAINS:?set the allowed handbook origins}
     networks:

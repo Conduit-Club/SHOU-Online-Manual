@@ -10,9 +10,9 @@ comment_id: doc-site-help
 
 如果栏目首页还是占位页，请先阅读[贡献模板与示例](/site-help/contribution-template.html)。里面按校历、服务、设施、交通、应急、组织等场景提供了可复制的条目结构。
 
-## 添加水专手册到桌面
+## 添加 SHOU指北到桌面
 
-在支持安装网站的浏览器中，可以将水专手册添加到桌面，并作为一个独立窗口打开。是否能够离线阅读取决于浏览器缓存和站点当前配置；外部链接与交互式校园地图仍可能需要网络连接。可先阅读 [PWA（Progressive Web App）简介](https://web.dev/progressive-web-apps/)了解浏览器的通用提示。
+在支持安装网站的浏览器中，可以将 SHOU指北添加到桌面，并作为一个独立窗口打开。是否能够离线阅读取决于浏览器缓存和站点当前配置；外部链接与交互式校园地图仍可能需要网络连接。可先阅读 [PWA（Progressive Web App）简介](https://web.dev/progressive-web-apps/)了解浏览器的通用提示。
 
 ### Android
 
@@ -32,7 +32,7 @@ comment_id: doc-site-help
 
 ### iOS
 
-在 Safari 中打开水专手册 **（只有 Safari 可以添加）**
+在 Safari 中打开 SHOU指北 **（只有 Safari 可以添加）**
 
 ![添加到主屏幕](./pwa/ios.png)
 

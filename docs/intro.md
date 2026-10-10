@@ -4,7 +4,7 @@ slug: /
 comment_id: doc-intro
 ---
 
-# 水专手册
+# SHOU指北
 
 面向上海海洋大学 SHOUer 的校园信息手册，收集校园生活、学习与办事经验。
 
