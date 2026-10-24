@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <title>SHOU指北</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#55C98A"/>
+      <stop offset="1" stop-color="#3DAE6E"/>
+    </linearGradient>
+  </defs>
+  <!-- 背景铺满画布，兼容 maskable 图标裁切；主体保持在中心安全区内 -->
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <g transform="translate(0 -12)">
+  <!-- 罗盘外圈 -->
+  <circle cx="256" cy="226" r="118" fill="none" stroke="#FFFFFF" stroke-width="20"/>
+  <!-- 指北针：北半实色，南半半透明 -->
+  <polygon points="256,124 292,226 220,226" fill="#FFFFFF"/>
+  <polygon points="256,328 292,226 220,226" fill="#FFFFFF" fill-opacity="0.45"/>
+  <circle cx="256" cy="226" r="13" fill="#3DAE6E" stroke="#FFFFFF" stroke-width="6"/>
+  <!-- 海浪 -->
+  <path d="M150 396 q26.5 -22 53 0 t53 0 t53 0 t53 0" fill="none" stroke="#FFFFFF" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M176 430 q20 -17 40 0 t40 0 t40 0 t40 0" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.7"/>
+  </g>
+</svg>
