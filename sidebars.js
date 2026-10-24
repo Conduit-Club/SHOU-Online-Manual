@@ -12,6 +12,7 @@ const sidebars = {
         { type: "doc", id: "study/courses-and-gpa", label: "课程、学分与 GPA" },
         { type: "doc", id: "study/learning-sites", label: "刷 GPA 实用网站" },
         { type: "doc", id: "study/paper-tools", label: "发论文实用工具" },
+        { type: "doc", id: "study/ai-agent", label: "AI Agent 使用指南" },
       ],
     },
     {
