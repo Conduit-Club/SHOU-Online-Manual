@@ -6,7 +6,7 @@ comment_id: doc-study
 
 # 学习与发展
 
-选课前看学分，学期中找资料，赶论文时找工具。这里分成三个入口：
+选课前看学分，学期中找资料，赶论文时找工具，想让 AI 帮忙干活时看看怎么用好它。这里分成四个入口：
 
 ## 课程、学分与 GPA
 
@@ -25,6 +25,12 @@ comment_id: doc-study
 [发论文实用工具](/study/paper-tools.html)
 
 从找文献、读英文到管理引用、排版和校对，按写作环节挑工具。课程论文、实验报告和毕业论文也用得上。
+
+## AI Agent 使用指南
+
+[AI Agent 使用指南](/study/ai-agent.html)
+
+LLM、Agent 和 Agent Harness 分别是什么？以 ChatGPT 订阅和 DeepSeek API 为例准备好使用条件，再学会怎样把调试代码、处理数据、整理文件这类活交给 AI，并守住学术规范。
 
 ## 学校的消息去哪里找
 
